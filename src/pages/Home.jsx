@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import AboutDMX from './AboutDMX'
 import ProfileImg from '../assets/images/image.png'
 import AccountPropsDMX from '../components/AccountPropsDMX'
 import NavBarDMX from '../static/NavBarDMX'
@@ -25,8 +27,13 @@ const Profile = () => {
             <h4>Account</h4>
         </MainContainer>
         <AccountContainer>
-            <AccountPropsDMX text="About Me" icon={ProfileIcon} width="15px" divMargin="45px"/>
-            <AccountPropsDMX text="My Address" icon={Location} width="17.51px" divMargin="48px"/>
+            
+            <Link to="/about" style={{textDecoration: "none", color: "black"}}>
+                <AccountPropsDMX text="About Me" icon={ProfileIcon} width="15px" divMargin="45px"/>
+            </Link>
+            <Link to="/address" style={{textDecoration: "none", color: "black"}}>
+                <AccountPropsDMX text="My Address" icon={Location} width="17.51px" divMargin="48px"/>
+            </Link>
             <AccountPropsDMX text="Credit Cards" icon={Card} width="15px" divMargin="45px"/>
             <AccountPropsDMX text="Transactions" icon={Transaction} width="13.99px" divMargin="44px"/>
             <AccountPropsDMX text="View trash activities" icon={Scroll} width="11px" divMargin="41px"/>
@@ -72,6 +79,7 @@ const AccountContainer = styled.div`
     background-color: white;
     /* border: 1px solid red; */
     padding: 20px 50px 10px 0px;
+    text-decoration: none;
 
 
 `
