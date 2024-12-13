@@ -21,12 +21,6 @@ const Profile = () => {
         alertBox.style.display = "flex"
         console.log(alertBox);  
     }
-    const closePopupBtn = ()=> {
-        const Btn = document.getElementsByClassName("popUp")
-        alertBox.style.display = "flex"
-        // console.log(alertBox); 
-    }
-    
 
   return (
     <Wrapper>
@@ -56,12 +50,9 @@ const Profile = () => {
         </OtherHeader>
         <OtherContainer>
             <AccountPropsDMX text="Version" icon={Privacy} divMargin="39px"/>
-            <Link to="/">
-                <div onClick={toggleSave}>
-                    <AccountPropsDMX text="Sign Out" icon={SignOut} divMargin="45px"/>
-                </div>
-            </Link>
-
+            <div onClick={toggleSave}>
+                <AccountPropsDMX text="Sign Out" icon={SignOut} divMargin="45px"/>
+            </div>
         </OtherContainer>
         <CustomAlertDMX text="Sign Out Success"/>
         <NavBar>
@@ -99,9 +90,9 @@ const AccountContainer = styled.div`
     /* border: 1px solid red; */
     padding: 20px 50px 10px 0px;
     text-decoration: none;
-
-
 `
+
+
 const ImageContainer = styled.div`
     margin: auto;
     width: 150px;
@@ -133,7 +124,7 @@ const OtherHeader = styled.div`
 const OtherContainer = styled.div`
     background-color: white;
     padding: 20px 50px 10px 0px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     /* border: 1px solid red; */
 `
 const NavBar = styled.div`
@@ -142,6 +133,6 @@ const NavBar = styled.div`
 
     @media (min-width: 500px) {
         display: none;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 `

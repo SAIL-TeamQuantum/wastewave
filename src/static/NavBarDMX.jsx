@@ -14,7 +14,9 @@ const NavBarDMX = ()=> {
                 <MdRecycling/>           
             </MainIcon>
             <SlSettings />
-            <VscAccount />
+            <Link to="/profile">
+                <VscAccount />
+            </Link>
 
         </NavIcons>
 

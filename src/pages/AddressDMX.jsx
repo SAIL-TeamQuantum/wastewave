@@ -32,7 +32,7 @@ const AddressDMX = () => {
   return (
     <Wrapper>
         <Header>
-            <Link to="/" style={{textDecoration: "none", color: "black"}}>
+            <Link to="/profile" style={{textDecoration: "none", color: "black"}}>
                 <img src={Arrow} alt="" />
             </Link>
             <h3>Add Address</h3>
@@ -59,7 +59,6 @@ const AddressDMX = () => {
             <BtnContainer onClick={toggleSave}>
                 <ButtonDMX text="Add Address" style={btnStyle}/>
             </BtnContainer>
-
     </Wrapper>
   )
 }

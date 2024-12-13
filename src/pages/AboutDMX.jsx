@@ -33,7 +33,7 @@ const AboutDMX = () => {
   return (
     <Wrapper>
         <Header>
-            <Link to="/" style={{textDecoration: "none", color: "black"}}>
+            <Link to="/profile" style={{textDecoration: "none", color: "black"}}>
                 <img src={Arrow} alt="" />
             </Link>
             <h3>About me</h3>
