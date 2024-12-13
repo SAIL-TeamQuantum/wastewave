@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import AboutDMX from './AboutDMX'
+import CustomAlertDMX from '../components/CustomAlertDMX'
 import ProfileImg from '../assets/images/image.png'
 import AccountPropsDMX from '../components/AccountPropsDMX'
 import NavBarDMX from '../static/NavBarDMX'
@@ -15,6 +16,18 @@ import Privacy from '../assets/icons/privacy.png'
 import SignOut from '../assets/icons/signout.png'
 
 const Profile = () => {
+    const toggleSave = ()=> {
+        const alertBox = document.getElementById("popUp")
+        alertBox.style.display = "flex"
+        console.log(alertBox);  
+    }
+    const closePopupBtn = ()=> {
+        const Btn = document.getElementsByClassName("popUp")
+        alertBox.style.display = "flex"
+        // console.log(alertBox); 
+    }
+    
+
   return (
     <Wrapper>
         <MainContainer>
@@ -43,8 +56,14 @@ const Profile = () => {
         </OtherHeader>
         <OtherContainer>
             <AccountPropsDMX text="Version" icon={Privacy} divMargin="39px"/>
-            <AccountPropsDMX text="Sign Out" icon={SignOut} divMargin="45px"/>
+            <Link to="/">
+                <div onClick={toggleSave}>
+                    <AccountPropsDMX text="Sign Out" icon={SignOut} divMargin="45px"/>
+                </div>
+            </Link>
+
         </OtherContainer>
+        <CustomAlertDMX text="Sign Out Success"/>
         <NavBar>
             <NavBarDMX />
         </NavBar>
