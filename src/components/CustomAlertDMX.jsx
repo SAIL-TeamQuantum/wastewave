@@ -24,7 +24,7 @@ const CustomAlertDMX = ({text}) => {
             <div>
                 <img src={Check} alt="" />
             </div>
-            <Link to="/">
+            <Link to="/profile">
                 <ButtonDMX text="Back to Account" style={BtnStyle}/>
             </Link>
         </Container>
