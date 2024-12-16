@@ -17,7 +17,7 @@ const Buttondiv = styled.div`
   justify-content: center;
   gap: 15px;
   background-color: white;
-  border: 2px solid red;
+
 
 
 `;

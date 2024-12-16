@@ -56,7 +56,6 @@ const SignUpProps = ({
       <Wrapper>
       <p>I have read the privacy policy</p>
      <h4><TiTick/></h4>
-    
     </Wrapper>
 
       <Signinbtn>
@@ -80,33 +79,50 @@ export default SignUpProps;
 
 const Signinbtn = styled.button`
 width: 374px;
-height: 93px;
+height: 63px;
+font-weight: 400;
+font-size: 22px;
 gap: 0px;
 border-radius: 38px;
 opacity: 0px;
 background-color: #81B622;
+color: white;
+border: none;
 
   
 `
 
 const Previosbtn = styled.button`
+width: 374px;
+height: 63px;
+gap: 0px;
+border-radius: 38px;
+opacity: 0px;
+background-color: #FFFFFF;
+margin-top: 20px;
+color: #81B622;
+border: none;
+
+
+
   
 `
-
-
-
 
     
 const SignupWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 374px;
-    height: 63px;
+    height: 100vh;
+    border: 2px solid red;
+  
+    /* width: 374px;
+    height: 63px; 
     gap: 0px;
-    border-radius: 15px 0px 0px 0px;
+    /* border-radius: 15px 0px 0px 0px; */
     opacity: 0px;
     margin: auto;
+
 
 
  
@@ -126,15 +142,13 @@ const Buttons = styled.button`
   align-items: center;
   background-color: #f5f5f5;
   width: 374px;
-height: 63px;
-/* top: 190.47px;
-left: 50.24px; */
-gap: 0px;
-border-radius: 35px ;
-border-color:#004AAD;
-border: 1px ;
-opacity: 0px;
-  cursor: pointer;
+  height: 63px;
+  gap: 0px;
+  border-radius: 35px ;
+  border-color:#004AAD;
+  border: 1px ;
+  opacity: 0px;
+    cursor: pointer;
 
 
 
@@ -154,8 +168,8 @@ const Icon = styled.div`
 const InsideText = styled.div`
 /* background-color: #81B622; */
     color: #004AAD;
-    width: 300px;
-    /* height: 63px; */
+    width: 200px;
+  
     gap: 0px;
     border-radius: 38px ;
     opacity: 0px;
@@ -175,13 +189,14 @@ font-weight: 400;
 line-height: 15.13px;
 letter-spacing: 0.05em;
 text-align: center;
+margin-top: 10px;
 `
 
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 100%;
+  /* width: 100%; */
   margin-top: 50px;
 `;
 
@@ -219,17 +234,18 @@ const Input = styled.input`
 `;
 const Wrapper = styled.div`
       display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+      align-items: center;
+      gap: 0.5rem;
 
-  p {
+  /* p {
     margin: 0;
     margin-top: 0.5rem;
-  }
+  } */
 
   img {
     width: 16px;
     height: 16px;
     margin-top: 0.5rem;
+    border: 2px solid blue;
   }
 `
