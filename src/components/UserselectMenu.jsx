@@ -6,6 +6,8 @@ import ButtonProps from "../Reusables/Buttonprops";
 
 
 
+
+
 const UserSelectMenu = () => {
     return (
     <MenuDiv>
@@ -13,7 +15,8 @@ const UserSelectMenu = () => {
         <h2>Which option best describes <br /> your position in the waste  <br />management 
         chain?</h2>
         <ButtonProps/>
-     
+       
+        
       
       
     </MenuDiv>);

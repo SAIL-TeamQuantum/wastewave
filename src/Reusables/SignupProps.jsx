@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import GoogleIconImg from "../assets/google.png";
-
+import UserImg from '../assets/usericonimg.png'
 import EmailIconImg from "../assets/email.png"; 
 import PasswordIconImg from "../assets/password.jpg"; 
 import { TiTick } from "react-icons/ti";
 
 const SignUpProps = ({
   GoogleIcon = GoogleIconImg,
-  Title = "SIGNUP GOOGLE",
+  Title = "Signup Google",
   Text = "OR SIGNUP WITH EMAIL",
 }) => {
   return (
@@ -28,37 +28,49 @@ const SignUpProps = ({
     
         <InputContainer>
           <InputIcon>
-            {/* <img src={UserImg} alt="User Icon" /> */}
-          </InputIcon>
           <Input type="text" placeholder="Isaac Diya" />
+          <img src={UserImg} alt=" Icon" />
+           
+          </InputIcon>
+  
         </InputContainer>
 
 
         <InputContainer>
           <InputIcon>
+          <Input type="email" placeholder="kinikan@yahoo.com" />
             <img src={EmailIconImg} alt="Email Icon" />
           </InputIcon>
-          <Input type="email" placeholder="kinikan@yahoo.com" />
+         
         </InputContainer>
 
      
         <InputContainer>
           <InputIcon>
+          <Input type="password" placeholder="*******" />
             <img src={PasswordIconImg} alt="Password Icon" />
           </InputIcon>
-          <Input type="password" placeholder="*******" />
+         
         </InputContainer>
       </InputWrapper>
       <Wrapper>
       <p>I have read the privacy policy</p>
-      <img src={TiTick} alt="icon" />
+     <h4><TiTick/></h4>
+    
     </Wrapper>
 
-    {/* <SignInBtns>
-         <Button></Button>
+      <Signinbtn>
+            Sign in
+      </Signinbtn>
 
-    </SignInBtns> */}
+    <Previosbtn>
+        Previous
+    </Previosbtn>
+
+   
+
     </SignupWrapper>
+    
 
 
   );
@@ -66,13 +78,22 @@ const SignUpProps = ({
 
 export default SignUpProps;
 
-const SignInBtns = styled.div`
- display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #831b1b;
+const Signinbtn = styled.button`
+width: 374px;
+height: 93px;
+gap: 0px;
+border-radius: 38px;
+opacity: 0px;
+background-color: #81B622;
 
+  
 `
+
+const Previosbtn = styled.button`
+  
+`
+
+
 
 
     
@@ -87,6 +108,8 @@ const SignupWrapper = styled.div`
     opacity: 0px;
     margin: auto;
 
+
+ 
 `;
 
 const SignupBtn = styled.div`
@@ -95,17 +118,24 @@ const SignupBtn = styled.div`
   align-items: center;
   gap: 0.5rem;
   margin-top: 100px;
+ 
 `;
 
 const Buttons = styled.button`
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  width: 374px;
+height: 63px;
+/* top: 190.47px;
+left: 50.24px; */
+gap: 0px;
+border-radius: 35px ;
+border-color:#004AAD;
+border: 1px ;
+opacity: 0px;
   cursor: pointer;
-  transition: all 0.3s;
+
 
 
 `;
@@ -113,34 +143,39 @@ const Buttons = styled.button`
 const Icon = styled.div`
   margin-right: 0.5rem;
 
+
   img {
     width: 20px;
     height: 20px;
+    margin-left: 2rem;
   }
 `;
 
 const InsideText = styled.div`
 /* background-color: #81B622; */
-    color: black;
+    color: #004AAD;
     width: 300px;
     /* height: 63px; */
     gap: 0px;
     border-radius: 38px ;
     opacity: 0px;
-    border: none;
+    border: 2px;
     cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 21.62px;
-    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.3px;
+    letter-spacing: 5%;
     text-align: center;
 `;
 
 const OutText = styled.div`
-  font-size: 14px;
-  color: #666;
-  margin-top: 10px;
-`;
+ font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+line-height: 15.13px;
+letter-spacing: 0.05em;
+text-align: center;
+`
 
 const InputWrapper = styled.div`
   display: flex;
@@ -154,17 +189,17 @@ const InputContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5rem;
+  border: 0.5px solid #ccc;
+  border-radius: 15px;
+  width: 374px;
+  /* padding: 0.5rem; */
+  height: 63px;
 `;
 
 const InputIcon = styled.div`
-  margin-right: 0.5rem;
+  margin-left: 100px;
   display: flex;
-  flex-wrap: wrap-reverse;
-
-
+  
   img {
     width: 20px;
     height: 20px;
@@ -189,10 +224,12 @@ const Wrapper = styled.div`
 
   p {
     margin: 0;
+    margin-top: 0.5rem;
   }
 
   img {
     width: 16px;
     height: 16px;
+    margin-top: 0.5rem;
   }
 `

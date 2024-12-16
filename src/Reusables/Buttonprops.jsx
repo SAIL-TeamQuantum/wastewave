@@ -17,6 +17,7 @@ const Buttondiv = styled.div`
   justify-content: center;
   gap: 15px;
   background-color: white;
+  border: 2px solid red;
 
 
 `;
@@ -29,6 +30,7 @@ line-height: 21.6px;
 text-align: left;
 /* margin-bottom: 20px; */
 color: #A1A4B2;
+
 
 
 `;
