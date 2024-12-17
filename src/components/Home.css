@@ -1,0 +1,90 @@
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    height: auto;
+    gap: 30px
+  }
+  
+  /* Left Content Section */
+  .content {
+    max-width: 50%;
+  }
+  .icons{
+    display: flex;
+    gap: 190px;
+  }
+  h1 {
+    font: inter;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    line-height: 30px;
+    color: #73b42d;
+    
+  }
+  span img {
+    margin-left: 30px;
+  }
+  
+  .highlight-green {
+    color: #73b42d;
+  }
+  
+  .highlight-blue {
+    color: #004aad;
+    
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #004aad;
+    
+    
+  }
+  
+  /* Button Styling */
+  .action-button {
+    background-color: #73b42d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 100px;
+  }
+  
+  .action-button:hover {
+    background-color: #5a8f20;
+  }
+  
+  /* Right Image Section */
+  .image-container {
+    max-width: 35%;
+    margin: 0;
+    /* left: 1000px; */
+    
+   
+    
+    
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    
+    
+    
+   
+
+  }
+  
