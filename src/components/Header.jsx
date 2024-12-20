@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <li>
-          <a href="#home" className="active">
+          <a href="/home" className="active">
             HOME
           </a>
           {/* <span className="underline"></span> */}

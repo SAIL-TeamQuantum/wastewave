@@ -1,6 +1,9 @@
 /* General Navbar Styling */
 .navbar {
     display: flex;
+    max-width: 1440px;
+    max-height: 56px;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
@@ -8,11 +11,18 @@
     font-family: Arial, sans-serif;
     position: relative;
     z-index: 1000;
+    /* border: 1px solid red; */
   }
   
   /* Logo Section */
   .logo img {
     height: 40px;
+    margin-top: 7px;
+
+    @media (max-width: 450px) {
+      margin-top: 22px;
+    }
+    /* border: 1px solid red; */
   }
   /* Hamburger Menu Styling */
 .hamburger {
@@ -42,7 +52,7 @@
   .nav-links a {
     text-decoration: none;
     color: #73b42d; /* Green Color */
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     transition: color 0.3s ease;
   }
@@ -72,7 +82,7 @@
     border: 1px solid #73b42d;
     background-color: transparent;
     color: #73b42d;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
