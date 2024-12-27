@@ -14,8 +14,9 @@ import SignUpProps from './Reusables/SignupProps';
 const app = () => {
   return ( <div>
     <UserSelectMenu/> 
-    <LoginPage/>
     <SignUpProps/>
+    <LoginPage/>
+   
   
    
  
