@@ -1,13 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
-const ButtonProps = () => (
+const ButtonProps = () => {
+  const navigate = useNavigate() 
+  return(
+
     <Buttondiv>
-      <ResidentButton>Resident</ResidentButton>
-      <CompanyButton>Waste Management Company</CompanyButton>
-      <AgencyButton>Waste Management Agency</AgencyButton>
+      <ResidentButton onClick={()=>navigate("/SignupProps")}>Resident</ResidentButton>
+      <CompanyButton onClick={()=>navigate("/SignupProps")}>Waste Management Company</CompanyButton>
+      <AgencyButton onClick={()=>navigate("/SignupProps")}>Waste Management Agency</AgencyButton>
     </Buttondiv>
-  );
+      )
+    };
   
 const Buttondiv = styled.div`
   display: flex;
