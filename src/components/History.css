@@ -1,0 +1,50 @@
+.list{
+    height: 80vh;
+    background-color: #F4F5F9;
+    text-align: center;
+
+    .detail{
+
+        img{
+            width: 100px;
+            margin-right: 500px;
+        }
+
+        h3{
+            font-weight: 40px;
+            font-weight: 700;
+            margin-top: -80px;
+        }
+
+
+        hr{
+            color: #EBEBEB;
+            width: 30%;
+            position: relative;
+            left: 640px;
+            margin-top: 15px;
+        }
+
+        p{
+            font-size: medium;
+            font-weight: 300;
+            color: #868889;
+            margin-left: 620px;
+        }
+    }
+}
+
+.run{
+    margin-right: 35px;
+}
+
+.move{
+    margin-right: 690px;
+}
+
+.surv{
+    margin-right: 683px;
+}
+
+
+
