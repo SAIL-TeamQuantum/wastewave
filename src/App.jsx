@@ -6,7 +6,7 @@ import NavBarDMX from './static/NavBarDMX'
 import Profile from './pages/Home'
 import AboutDMX from './pages/AboutDMX'
 import AddressDMX from './pages/AddressDMX'
-import HomeDMX from './pages/HomeDMX'
+import HomeDMX from './components/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react'
 import UserSelectMenu from './components/UserselectMenu';
@@ -14,6 +14,7 @@ import LoginPage from './components/LoginPage';
 import SignUpProps from './Reusables/SignupProps';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './components/Landing';
+import LandingPage from './pages/LandingPageDAMI'
 
 const app = () => {
   return ( 
@@ -28,9 +29,12 @@ const app = () => {
       <Route path='/profile' element={<Profile />}/>
       <Route path='/about' element={<AboutDMX/>}/>
       <Route path='/address' element={<AddressDMX/>}/>
+      <Route path='/' element={<LandingPage/>}/>
     </Routes>
     </Router>
     </div> 
    );
-}
+  }
+
+
 export default app;
