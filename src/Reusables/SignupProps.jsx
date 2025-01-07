@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import GoogleIconImg from "../assets/google.png";
-import eye from '../assets/eye.png'
-import lockkey from '../assets/Lockkey.png'
-import Eyeslash from '../assets/Eyeslash.png'
-import { TiTick } from "react-icons/ti";
+import eye from '../assets/eye.png';
+import lockkey from '../assets/Lockkey.png';
+import Eyeslash from '../assets/Eyeslash.png';
+import {TiTick} from "react-icons/ti";
 import Biohazard from '../assets/Biohazard.png';
 import Calenda from '../assets/Calenda.png';
 import Calendar from '../assets/Calendar.png';
