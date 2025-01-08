@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css"; // Importing CSS file
-import styled from "styled-components";
+// import styled from "styled-components";
 import image  from "../assets/images/StartImg.png"
 import image1 from "../assets/images/HandHeart.png"
 import image2 from "../assets/images/Radioactive.png"

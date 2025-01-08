@@ -105,7 +105,7 @@
     @media (max-width: 450px) {
       /* display: none; */
       position: relative;
-      left: 0px;
+      left: 0px,
     }
   }
   
@@ -125,16 +125,22 @@
   }
   #third {
     position: absolute;
-    top: 253px;
+    top: 435px;
     left: 36px;
+
+    @media (max-width: 450px) {
+      left: 20px;
+      top: 375px;
+    }
   }
   #fourth {
     position: absolute;
-    top: 295px;
-    left: 343px;
+    top: 475px;
+    left: 650px;
 
     @media (max-width: 450px) {
       left: 300px;
+      top: 400px;
       
     }
   }

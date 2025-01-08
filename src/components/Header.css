@@ -196,3 +196,41 @@
       color: #fff;
     }
   }
+
+  /* Hamburger Menu Styling */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  /* margin-right: 15px; */
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #73b42d;
+  transition: all 0.3s ease;
+}
+
+.hamburger.close .line:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+
+.hamburger.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.close .line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+  
