@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css"; 
-import logo from "../assets/images/W2 STAND ALONE LOGO 3.png"; 
-
-
-
-
+import logo from "../assets/images/google.png"; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,3 +40,24 @@ const Header = () => {
 
 
 export default Header; 
+// import './Header.css'
+// import arrow from '../assets/images/arrow.svg'
+
+// const Header = () => {
+//     return ( 
+//         <div className='header'>
+
+//             <div className='arrow'>
+//                 <img src={arrow} alt="" />
+//             </div>
+            
+//             <div className='words'>
+//                 <p>Add Debit Card</p>
+//             </div>
+       
+
+//         </div>
+//     )
+// }
+
+// export default Header

@@ -234,3 +234,19 @@
 
 
   
+img{
+    width: 50px;
+}
+
+.header{
+    height: 10vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p{
+    margin-right: 700px;
+    font-size: 20px;
+}
