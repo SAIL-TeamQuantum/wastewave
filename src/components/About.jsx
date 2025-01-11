@@ -70,7 +70,7 @@ const About = () => {
         
       </section>
       <div classname='bottonButton'>
-  <button classname='startbutton'>start</button>
+  {/* <button classname='startbutton'>start</button> */}
 </div>
     </div>
   );

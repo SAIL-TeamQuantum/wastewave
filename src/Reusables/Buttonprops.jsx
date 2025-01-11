@@ -7,7 +7,7 @@ const ButtonProps = () => {
   return(
 
     <Buttondiv>
-      <ResidentButton onClick={()=>navigate("/SignupProps")}>Resident</ResidentButton>
+      <ResidentButton onClick={()=>navigate("/signup")}>Resident</ResidentButton>
       <CompanyButton onClick={()=>navigate("/SignupProps")}>Waste Management Company</CompanyButton>
       <AgencyButton onClick={()=>navigate("/SignupProps")}>Waste Management Agency</AgencyButton>
     </Buttondiv>

@@ -135,7 +135,4 @@ span{
     justify-content:center;
     display: flex;
 }
-
-
-
 `

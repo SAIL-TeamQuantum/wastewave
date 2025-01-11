@@ -10,7 +10,6 @@ import wasteR from '../assets/images/wasteR.jpg';
 import biohazard from '../assets/images/biohazard.svg';
 import shieldplus from '../assets/images/shieldplus.svg';
 import MapLocator from '../assets/images/MapLocator.png';
-
 import DashboardHeaderAST from '../components/DashboardHeaderAST';
 import DashboardInfo from '../components/DashboardMoreInfoAST';
 import DashboardFooter from '../components/DashboardFooterAST';
@@ -19,7 +18,6 @@ import DashboardFooter from '../components/DashboardFooterAST';
 const DashboardAst = () => {
     return (
         <div className='body-container'>
-        
         <div className='main-container'>
         <DashboardHeaderAST />
         <div className="Boxcontainer">

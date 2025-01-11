@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css"; 
 import logo from "../assets/images/wlogo.png"; 
+import {Link} from "react-router-dom"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
         <li><a href="#contact">CONTACT US</a></li>
       </ul>
       <div className="signup-btn">
-        <button>SIGN UP</button>
+        <Link to="/userselectmenu"><button>SIGN UP</button></Link>
       </div>
     </nav>
   );

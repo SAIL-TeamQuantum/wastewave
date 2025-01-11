@@ -163,11 +163,7 @@ const Password = styled.p`
   text-decoration-skip-ink: none;
   color: #fff;
 
-  
-
 `
-
-
 const Wrapper = styled.div`
   margin-top: 100px;
   width: 574px;
@@ -182,8 +178,6 @@ const Wrapper = styled.div`
   justify-content: center; 
   background-color:#81B622
   
-  
-
 `;
 
 const Header = styled.h1`
@@ -220,10 +214,6 @@ const GoogleButton = styled.button`
     height: 20px;
     margin-left: 1rem;
   }
-
-
-
-
 `;
 
 
