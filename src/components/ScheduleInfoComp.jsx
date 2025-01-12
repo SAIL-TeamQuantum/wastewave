@@ -26,7 +26,7 @@ const OptionsGroup = ({ options, selectedOptions, onChange, title }) => (
   </div>
 );
 
-const ScheduleInfoAST = ({ selectedDate, onBack }) => {
+const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const handleChange = (event) => {
@@ -83,8 +83,8 @@ const ScheduleInfoAST = ({ selectedDate, onBack }) => {
           selectedOptions={selectedOptions}
           onChange={handleChange}
         />
-        <button className="schedule-button">
-        SCHEDULE TRASH
+        <button className="schedule-button" onClick={onScheduleComplete}>
+          Schedule Trash
         </button>
       </div>
     </div>

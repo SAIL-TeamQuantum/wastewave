@@ -5,7 +5,9 @@
 }
 
 /* HEADER  */
-
+.header-container-mobile {
+    display: none; /* Hidden by default for desktop view */
+}
 .header-container {
     padding: 10px;
     display: flex;
@@ -38,7 +40,13 @@ color: #81B622;
         margin-right: 12%;
     }
 }
-
+.menu-toggle {
+    display: none;
+  }
+  
+  .side-menu {
+    display: none; /* Hidden by default for desktop view */
+  }
 .header-button {
     width: 10%;
     height: auto;
@@ -84,11 +92,19 @@ line-height: 36px;
 letter-spacing: 0.03em;
 text-underline-position: from-font;
 color: #fff;
+text-align: center;
 
     }
     span {
         color: #004AAD;
     }
+}
+
+
+.pending-container {
+    width: 100%;
+    margin-top: 1%;
+    justify-content: space-evenly;
 }
 
 .CALicons {
@@ -173,7 +189,7 @@ color: #A1A4B2;
     margin-bottom: 5%;
     justify-content: space-evenly;
 
-button{
+button {
 width: 10%;
 height: auto;
 background-color: #81B622;
@@ -202,6 +218,10 @@ border-radius: 9px;
     flex: 1;
     justify-content: space-between;
     margin-bottom: 2%;
+
+    img{
+        display: none;
+    }
 }
 .DailyQBody {
     background-color: #81B622;
@@ -331,6 +351,13 @@ color: #fff;
     padding: 3%;
     gap: 10%;
 }
+.MobileView {
+    display: none;
+}
+.MobileICView {
+    display: none;
+}
+
 .moreInfoBoxSect1 {
     width: 50%;
    
@@ -381,7 +408,8 @@ line-height: 20px;
     color: #fff;
 }
     img{
-        top: 0;
+        margin: auto;
+        width: 10%;
     }
 }
 .moreInfoBoxSect2 {
@@ -458,4 +486,291 @@ text-decoration-skip-ink: none;
 
     }
     
+}
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .mobile-none{
+        display: none;
+    }
+    .menu-toggle {
+        display: block; 
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+       
+      }
+      .header-container {
+        display: none;
+      }
+    
+      .header-container-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 3px 20px 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12%;
+        background-color: #fff;
+        height: max-content;
+       
+       
+      }
+      
+    
+      .header-container-mobile img {
+        width: 30%; /* Adjust logo size */
+      }
+      /* Cancel Button Styling */
+  .cancel-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #81B622;
+    margin-bottom: 20px;
+  }
+      /* Side Menu Styling for Mobile */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Off-screen by default */
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+      }
+    
+      .side-menu.open {
+        right: 0; /* Slide-in from the right when open */
+      }
+    
+      .side-menu h2 {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        color: #81B622;
+        cursor: pointer;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+    
+      .side-menu .Mobilebutton {
+        margin-top: auto;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+      }
+    
+      .side-menu .active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 8px;
+      }
+  
+    .header-container-mobile h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        line-height: 18px;
+    }
+  
+    .header-container-mobile .active {
+        text-decoration-thickness: 2px; 
+        text-underline-offset: 8px; 
+    }
+  
+    .Mobilebutton {
+        width: auto; 
+        padding: 8px 12px; 
+        font-size: 12px; 
+        width: 10%;
+        height: auto;
+        background-color: #fff;
+        color: #81B622;
+        border: 2px solid #81B622;
+        border-radius: 10px;
+        font-family: Montserrat;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 14.63px;
+    }
+  
+   .header-container h2,
+    .header-button {
+       display: none;
+     }
+     .Wlogo {
+        display: none;
+     }
+  
+
+    .main-container {
+        padding: 3%;
+    }
+
+    .Boxcontainer {
+        margin-top: 2.9%;
+        flex-direction: column;
+        height: auto;
+        padding: 5%;
+
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    .Boxcontainer-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .Box-Text {
+        text-align: center;
+    }
+    .Box-Grey {
+        text-align: center;
+    }
+    .CALicons {
+        margin-top: 0;
+    }
+
+    .pending-container {
+        flex-direction: column;
+    }
+
+    .ToDoContainer h2 {
+        font-size: 20px;
+    }
+   
+    .box-container {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+
+        img {
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
+
+    .button-container button {
+        width: auto;
+        padding: 5% 10%;
+        font-size: 12px;
+    }
+    .BUTicons {
+        width: 9%;
+    }
+
+    .DailyQBody {
+        padding: 8%;
+        
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .bg-icon {
+        width: 10%;
+        flex-direction: row;
+        gap: 50%;
+        margin-left: 25%;
+    }
+
+    .ActivityTable {
+        width: 100%;
+        padding: 5%;
+
+        p1, .no-underline {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p2 {
+            font-size: 14px;
+        }
+    }
+
+    .ActivityButton {
+        width: auto;
+        padding: 8%;
+    }
+
+    .moreInfoBox {
+        flex-direction: column;
+        gap: 5%;
+    }
+    .MobileView {
+        display: block;
+        width: 30%;
+    }
+
+    .MobileICView {
+        display: block;
+    }
+
+    .moreInfoBoxSect1 {
+        width: 100%;
+    }
+    .moreInfoBoxSect2 {
+        width: 100%;
+        flex-direction: row;
+        gap: 5%;
+    }
+
+    .newsletterButton {
+        width: 100%;
+        padding: 6%;
+        font-size: 14px;
+        flex-direction: row;
+    }
+
+    .moreInfoListSocialsLogo {
+        flex-direction: row;
+    }
+    .moreInfobutton {
+        width: auto;
+        padding: 3%;
+    }
+
+    .footer {
+        padding: 5%;
+        
+        p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    /* FOR MANAGEMENT DASHBOARD */
+    .Management-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .management-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 3% 0 3% 0%;
+    }
+   
 }

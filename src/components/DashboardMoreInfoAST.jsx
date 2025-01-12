@@ -1,4 +1,5 @@
 import Logo from '../assets/images/Wlogo.svg';
+import Flogo from '../assets/images/full_logo.png';
 import { FaLinkedin } from 'react-icons/fa'; // LinkedIn icon
 import { FaInstagram } from 'react-icons/fa'; // Instagram icon
 import { FaXTwitter } from 'react-icons/fa6'; // X (formerly Twitter)
@@ -19,8 +20,10 @@ const DashboardInfo = () => {
             <div className='flex-container moreInfoBox'>
                 <div className='moreInfoBoxSect1'>
                     <div className='moreInfoBoxLogoSect'>
-                <img className='moreInfoBoxLogo' src={Logo} alt="logo" />
-                <text className='moreInfoBoxLogoText'>ASTE WAVE</text>
+                    <img className='moreInfoBoxLogo MobileView' src={Flogo} alt="logo" />
+                <img className='moreInfoBoxLogo mobile-none' src={Logo} alt="logo" />
+                
+                <text className='moreInfoBoxLogoText mobile-none'>ASTE WAVE</text>
                 </div>
                 
                 <p className='moreInfoBoxPText'>Waste Wave is an Intellectual property and technological waste management agency for the waste management economy and digital age. </p>
