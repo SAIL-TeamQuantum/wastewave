@@ -4,11 +4,12 @@ import DashboardHeaderAST from "../components/DashboardHeaderAST";
 import DashboardInfo from "../components/DashboardMoreInfoAST";
 import DashboardFooter from "../components/DashboardFooterAST";
 import ScheduleInfoAST from "../components/ScheduleInfoComp";
-
+import { FaToggleOn } from "react-icons/fa";
 const ScheduleAST = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null); // Tracks the selected date
   const [isScheduleView, setIsScheduleView] = useState(false); // Tracks the current view
+  const [scheduledDates, setScheduledDates] = useState([]); // Tracks scheduled dates
 
   const daysInMonth = new Date(
     currentDate.getFullYear(),
@@ -42,6 +43,18 @@ const ScheduleAST = () => {
     setIsScheduleView(true); // Switch to the schedule view
   };
 
+  const handleScheduleComplete = () => {
+    setScheduledDates((prev) => [
+      ...prev,
+      new Date(
+        selectedDate.getFullYear(),
+        selectedDate.getMonth(),
+        selectedDate.getDate()
+      ).toISOString(),
+    ]);
+    setIsScheduleView(false); // Go back to the calendar view
+  };
+
   const rows = [];
   let cells = [];
 
@@ -49,14 +62,22 @@ const ScheduleAST = () => {
     cells.push(<td key={`empty-${i}`}></td>);
   }
   for (let day = 1; day <= daysInMonth; day++) {
+    const dateKey = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      day
+    ).toISOString();
+
     cells.push(
       <td
         key={day}
-        className={`calendar-day ${selectedDate?.getDate() === day ? "selected" : ""}`}
+        className={`calendar-day ${
+          selectedDate?.getDate() === day ? "selected" : ""
+        }`}
         onClick={() => handleDateClick(day)}
       >
         {day}
-        {selectedDate?.getDate() === day && <span className="toggle-icon">🔘</span>}
+        {scheduledDates.includes(dateKey) && <span className="toggle-on-icon"><FaToggleOn /></span>}
       </td>
     );
     if ((day + firstDay) % 7 === 0 || day === daysInMonth) {
@@ -73,6 +94,7 @@ const ScheduleAST = () => {
           <ScheduleInfoAST
             selectedDate={selectedDate}
             onBack={() => setIsScheduleView(false)} // Callback to return to the calendar
+            onScheduleComplete={handleScheduleComplete}
           />
         ) : (
           <div className="calendar-container">

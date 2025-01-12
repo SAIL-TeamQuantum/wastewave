@@ -48,7 +48,9 @@
     text-decoration-skip-ink: none;
  
  }
-  
+ .toggle-on-icon {
+  margin: auto;
+}
   .calendar {
     margin-top: 3%;
     width: 100%;

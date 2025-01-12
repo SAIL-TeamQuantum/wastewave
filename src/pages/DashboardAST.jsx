@@ -22,19 +22,19 @@ const DashboardAst = () => {
         
         <div className='main-container'>
         <DashboardHeaderAST />
-        <div className="Boxcontainer">
+        <div className="flex-container Boxcontainer">
             <div className="">
             <p>Good Day!</p>
             <h3>Don’t forget to <span>schedule</span> the trash</h3>
             </div>
-            <div className='icons'>
+            <div className='Boxcontainer-icons'>
             <img src={bucket} alt="bucket" /> 
             <img className='CALicons' src={calICON} alt="icon" /> 
             </div>
 
         </div>
         <div className='Starcontainer'>
-            <img src={Star} alt="star" />
+            <img className='starIMG' src={Star} alt="star" />
         </div>
 
         <div className='ToDoContainer'>
@@ -63,15 +63,15 @@ const DashboardAst = () => {
             
             </div>
             <div className='button-container flex-container'>
-            <img className='BUTicons' src={calICONGreen} alt="icon" /> 
+            <img className='BUTicons mobile-none' src={calICONGreen} alt="icon" /> 
     <button className='button'>See More</button>
-    <img className='starclass' src={Star} alt="star" />
+    <img className='BUTicons' src={Star} alt="star" />
     
      </div>
         </div>
         <div className='flex-container DailyQHeader'>
                 <h2>Daily Quotes</h2>
-                <img src={shieldplus} alt="star" />
+                <img className='BUTicons' src={shieldplus} alt="star" />
             </div>
         <div className='flex-container'>
         <div className='DailyQContainer'>
@@ -105,7 +105,7 @@ const DashboardAst = () => {
 
         <div className='flex-container ActivitySContainerHeader'>
             <h2>Activity Summary</h2>
-            <img src={biohazard} alt="star" />
+            <img className='mobile-none' src={biohazard} alt="star" />
             </div>
 
             <div className='ActivitySContainer'>
