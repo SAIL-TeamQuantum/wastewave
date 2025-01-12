@@ -1,21 +1,5 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
+
+
   .container {
     /* max-width: 800px; */
     width: 100%;
@@ -44,13 +28,6 @@
     margin-bottom: 20px;
   }
   
-  /* .circle {
-    width: 220px;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 3px solid #ddd;
-  } */
   #circle1{
     margin-right: -50px;
     z-index: 5;

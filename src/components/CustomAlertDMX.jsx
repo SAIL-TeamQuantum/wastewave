@@ -4,7 +4,7 @@ import Check from '../assets/icons/check.png'
 import styled from 'styled-components'
 import ButtonDMX from './ButtonDMX'
 
-const CustomAlertDMX = ({text}) => {
+const CustomAlertDMX = ({text,url, btnText}) => {
     const BtnStyle = {
         width: "234px",
         height: "55px",
@@ -24,8 +24,8 @@ const CustomAlertDMX = ({text}) => {
             <div>
                 <img src={Check} alt="" />
             </div>
-            <Link to="/profile">
-                <ButtonDMX text="Back to Account" style={BtnStyle}/>
+            <Link to={url}>
+                <ButtonDMX text={btnText} style={BtnStyle}/>
             </Link>
         </Container>
     </Wrapper>
@@ -66,6 +66,6 @@ const Container = styled.div`
         background-color: #81B622;
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
+        align-items: center;
+}
 `

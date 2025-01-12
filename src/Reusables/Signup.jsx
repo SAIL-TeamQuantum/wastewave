@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { useState } from "react";
 import GoogleIconImg from "../assets/google.png";
 import eye from '../assets/eye.png';
 import lockkey from '../assets/Lockkey.png';
@@ -13,13 +15,50 @@ import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
+import NavHeader from "../components/Header";
+import CustomAlertDMX from "../components/CustomAlertDMX";
 
-const SignUpProps = ({
-  GoogleIcon = GoogleIconImg,  Title = "Sign up with Google",
-}) => {
+const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
+  const toggleSave = ()=> {
+    const alertBox = document.getElementById("popUp")
+    alertBox.style.display = "flex"
+    console.log(alertBox);  
+}
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [formData, setFormData] = useState({
+    "email": "",
+      "password": ""
+  })
+  const handleEmailInput = (e)=> {
+    setEmail(e.target.value)
+    console.log(email)
+  }
+  const handlePasswordInput = (e)=> {
+    setPassword(e.target.value)
+    console.log(password)
+  }
+  
+  const [responseMessage, setResponseMessage] = useState("")
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page reload
+    toggleSave()
+    try {
+        setFormData({email, password})
+        console.log(formData)
+        const response = await axios.post('https:/wastewave-backend.onrender.com/api/register', formData);
+        setResponseMessage(`Success: ${response.data.message}`);
+    } catch (error) {
+        if (error.response) {
+            setResponseMessage(`Error: ${error.response.data.message}`); 
+        } else {
+            setResponseMessage(`Error: ${error.message}`);
+        }
+    }
+  };
   return (
-    
     <Anotherwrapa>
+      <NavHeader/>
      <img id="bio" src={Biohazard} alt="" />
      <img id="Cal" src={Calenda} alt="" />
      <img id="cld" src={Calendar} alt="" />
@@ -32,46 +71,55 @@ const SignUpProps = ({
       <SignupWrapper>
         <InputWrapper>
         <Header>Sign Up</Header>
-          <Label>email</Label>
+          <Label>Email Address</Label>
           <InputContainer>
-            <InputIcon>
-            <Input  type="email" placeholder="Enter your email address" />
-            </InputIcon>
+            <div>
+                <input id="email" type="email" placeholder="Enter your email address" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
+
+                <p>You typed: {email}</p>
+            </div>
           </InputContainer>
-       <Password>Password </Password>
-          <InputContainer>
-            <InputIcon>
-            <img id="lockkey" src={lockkey} alt=" Icon" />
-            <Input type="password" placeholder="Enter your password" />
-              <img src={eye} alt=" Icon" />
-            </InputIcon>
-          </InputContainer>
-         <Confirmation>Password Confirmation</Confirmation>
-          <InputContainer>
-            <InputIcon>
-            <img src={lockkey} alt=" Icon" />
-            <Input type="confirm password" placeholder="Confirm your password" />
-              <img src={Eyeslash} alt="Password Icon" />
-            </InputIcon>
-          </InputContainer>
+       <  Password>Password </Password>
+          <PasswordContainer>
+            <div>
+                <img id="lockkey" src={lockkey} alt=" Icon" />
+                <input type="password" placeholder="Enter your password" onInput={handlePasswordInput} onChange={handlePasswordInput} />
+                <img src={eye} alt=" Icon" id="Eyecon" />
+                <p>You typed: {password}</p>
+            </div>
+          </PasswordContainer>
+          <Confirmation>Password Confirmation</Confirmation>
+          <PasswordContainer>
+            <div>
+                <img id="lockkey" src={lockkey} alt=" Icon" />
+                <input type="password" placeholder="Confirm your password" />
+                <img src={eye} alt=" Icon" id="Eyecon" />
+            </div>
+          </PasswordContainer>
+         
+          
         </InputWrapper>
         <Wrapper>
-      <p>
-        I have read the  <span>privacy policy</span>.</p>
+          <p>I have read the  <span>privacy policy</span>.</p>
        <h4><TiTick/></h4>
       </Wrapper>
         <SignupBtn>
+          <Buttons type="submit" onClick={handleSubmit}>
+            Sign Up
+          </Buttons>
+          <h3>OR</h3>
           <Buttons>
             <Icon>
               <img src={GoogleIcon} alt="Google Icon" />
             </Icon>
-            <InsideText>{Title}</InsideText>
+            <InsideText>{Title = "Sign up with Google"}</InsideText>
           </Buttons>
         </SignupBtn>
         <Already>Already have an account? <span>Log In</span></Already>
         <Bysign>By signing up, you agree to our <br />
         <span >Terms of Service</span> and <span>Privacy Policy</span> </Bysign>
       </SignupWrapper>
+      <CustomAlertDMX text="Sign Up Success" url="/login" btnText="Login"/>
     </Anotherwrapa>
   );
 };
@@ -79,26 +127,26 @@ const SignUpProps = ({
 export default SignUpProps;
     
 const SignupWrapper = styled.div`
-    width: 574px;
-    height: 715px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    border-radius: 30px;
-    background-color: #81B622;
-    opacity: 0px;
-    margin: auto;
-    margin-top: 100px;
-`;
+  width: 574px;
+  height: 715px;
+  border-radius: 30px;
+  background-color: #81B622;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #81B622;
+  opacity: 0px;
+  margin: auto;
+  margin-top: 50px;
+`
 
 const Anotherwrapa = styled.div`
-  background-color: #ffff;
-  position: relative;
+  background-color: white;
+  /* position: relative; */
 
   #bio{
     position: absolute;
-    /* background-color: aqua;  */
     top: 30px;
     left: 340px;
     
@@ -106,48 +154,41 @@ const Anotherwrapa = styled.div`
   }
   #Cal{
     position: absolute;
-    /* background-color: yellow; */
     top: 450px;
     left: 340px;
  
   }
   #cld{
     position: absolute;
-    /* background-color: red; */
     top: 790px;
     left: 343px;
   
   }
   #Han{
     position: absolute;
-    /* background-color: purple; */
     left:630px ;
     top: 800px;
   }
   #Heart{
     position: absolute;
-    /* background-color: #008022; */
     top: -30px;
     left: 650px;
   
   }
   #Rad{
     position: absolute;
-    /* background-color: #800000; */
     top: -20px;
     left: 940px;
   
   }
   #shield{
     position: absolute;
-    /* background-color: #9169ff; */
     top: 426px;
     left: 955px;
 
   }
   #shlpls{
     position: absolute;
-    /* background-color: hotpink; */
     top: 772px;
     left: 955px;
   
@@ -171,11 +212,16 @@ const SignupBtn = styled.div`
   gap: 0.5rem;
   margin-top:10px;
 
+  h3 {
+    color: white;
+  }
+
 `;
 
 const Buttons = styled.button`
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   width: 374px;
   height: 63px;
@@ -183,10 +229,10 @@ const Buttons = styled.button`
   border-radius: 35px ;
   border: 2px solid white ;
   opacity: 0px;
-    cursor: pointer;
-
-
-
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
 `;
 
 const Icon = styled.div`
@@ -201,20 +247,19 @@ const Icon = styled.div`
 `;
 
 const InsideText = styled.div`
-/* background-color: #81B622; */
     color: #004AAD;
     width: 200px;
-  
-    gap: 0px;
-    border-radius: 38px ;
-    opacity: 0px;
-    border: 2px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
     line-height: 17.3px;
     letter-spacing: 5%;
     text-align: center;
+
+    #signup {
+      color: white;
+      font-weight: 600;
+    }
 `;
 
 
@@ -223,15 +268,6 @@ const InputWrapper = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-top: 50px;
-`;
-
-const InputContainer = styled.div`
-  align-items: center;
-  border: 2px solid #FFFFFF;
-  border-radius: 15px;
-  width: 374px;
-  height: 63px;
-
 `;
 
 const Label = styled.p`
@@ -293,12 +329,12 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      /* justify-content: space-between;  */
+      justify-content: center; 
       margin-right: 30px;
       width: 355px;
  
   p {
-   
+      text-align: center;
       color: #FFFF;
 
 
@@ -357,4 +393,64 @@ const Bysign = styled.h5`
   color: blue;
   }
 
+`
+const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    
+    div {
+        position: relative;
+        margin: auto;
+
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
+    }
+    input {
+        width: 478px;
+        height: 63px;
+        background-color: transparent;
+        padding: 0 10px 0 20px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+    }
+`
+const PasswordContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    div {
+        position: relative;
+        margin: auto;
+
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
+        #Eyecon {
+            left: 425px;
+            /* right: 125px; */
+        }
+    }
+    input {
+        width: 478px;
+        height: 62.4px;
+        padding: 0 10px 0 50px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        background-color: transparent;
+}
 `

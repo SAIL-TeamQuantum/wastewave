@@ -233,11 +233,6 @@
 }
 
 
-  
-img{
-    width: 50px;
-}
-
 .header{
     height: 10vh;
     background-color: #FFFFFF;
@@ -246,7 +241,4 @@ img{
     align-items: center;
 }
 
-p{
-    margin-right: 700px;
-    font-size: 20px;
-}
+

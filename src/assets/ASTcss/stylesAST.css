@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
 .flex-container {
     display: flex;
     gap: 10px;   
@@ -128,13 +125,13 @@ text-decoration-skip-ink: none;
 .box-container {
     flex: 1;
     display: flex;
-gap: 20px; 
-width: 30%;
-height: auto !important;
-border: solid #81B622 3px;
-border-radius: 20px;
-padding: 15px 29px;
-gap: 20px !important;
+    gap: 20px; 
+    width: 30%;
+    height: auto !important;
+    border: solid #81B622 3px;
+    border-radius: 20px;
+    padding: 15px 29px;
+    gap: 20px !important;
 
 img {
 width: 15%;
@@ -195,17 +192,11 @@ border-radius: 9px;
     }
 }
 
-/* .starclass {
-    position: absolute;
-    margin-left: 0%;
-    margin-bottom: 12%;
-} */
+
 .BUTicons {
     margin-left: 9%;
 }
-.DailyQContainer {
-  
-}
+
 .DailyQHeader {
     
     flex: 1;

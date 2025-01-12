@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import styled from "styled-components";
 import GoogleIcon from "../assets/google.png"; 
 import Remem from '../assets/remem.png'
@@ -10,31 +11,82 @@ import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
+import NavHeader from "../components/Header";
+import lockkey from '../assets/Lockkey.png';
+import eye from '../assets/eye.png';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [formData, setFormData] = useState({"email": "", "password": ""})
+  const navigate = useNavigate();
+
+    const handleEmailInput = (e)=> {
+      setEmail(e.target.value)
+      console.log(email)
+    }
+    const handlePasswordInput = (e)=> {
+      setPassword(e.target.value)
+      console.log(password)
+    }
+
+  const [responseMessage, setResponseMessage] = useState("")
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page reload
+    // toggleSave()
+    try {
+        setFormData({email, password})
+        console.log(formData)
+        const response = await axios.post('https:/wastewave-backend.onrender.com/api/signin', formData);
+        const userId = response.data.data._id;
+        console.log(userId)
+        navigate(`/home/${userId}`);
+        setResponseMessage(`Success: ${response.data.message}`);
+    } catch (error) {
+        if (error.response) {
+            setResponseMessage(`Error: ${error.response.data.message}`); 
+        } else {
+            setResponseMessage(`Error: ${error.message}`);
+        }
+    }
+  };
   return (
     <Anowrap>
+      <NavHeader/>
       <img id="bio" src={Biohazard} alt="" />
-     <img id="Cal" src={Calenda} alt="" />
-     <img id="cld" src={Calendar} alt="" />
-     <img id="Han" src={HandHear} alt="" />
-     <img id="Heart" src={HandHeart} alt="" />
-     <img id="Rad" src={Radioactive} alt="" />
-     <img id="shield" src={Shieldplu} alt="" />
-     <img id="shlpls" src={Shieldplus} alt="" />
+      <img id="Cal" src={Calenda} alt="" />
+      <img id="cld" src={Calendar} alt="" />
+      <img id="Han" src={HandHear} alt="" />
+      <img id="Heart" src={HandHeart} alt="" />
+      <img id="Rad" src={Radioactive} alt="" />
+      <img id="shield" src={Shieldplu} alt="" />
+      <img id="shlpls" src={Shieldplus} alt="" />
       <Wrapper>
         
-      <InputWrapper>
-      <Header>Log In</Header>
-          <Label>email address</Label>
-          <InputField  type="email" placeholder="Enter Your Email Address" />
-          <Password>Password </Password>
-          <InputField  type="password" placeholder=" Enter Your Password" />
-        </InputWrapper>
+          <Header>Log In</Header>
+          <Label>Email address</Label>
+          <InputContainer>
+            <div>
+                <input id="email" type="email" placeholder="Enter your email address" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email" required/>
+
+                {/* <p>You typed: {email}</p> */}
+            </div>
+          </InputContainer>
+          <Label>Password</Label>
+          <PasswordContainer>
+            <div>
+                <img id="lockkey" src={lockkey} alt=" Icon" />
+                <input type="password" placeholder="Enter your password" onInput={handlePasswordInput} onChange={handlePasswordInput} required/>
+                <img src={eye} alt=" Icon" id="Eyecon" />
+            </div>
+          </PasswordContainer>
         <Remember>
           <p>Remember me</p>
           <img src={Remem} alt="" />
         </Remember>
+          <Buttons to="" type="submit" onClick={handleSubmit}>Log In</Buttons>
         <GoogleButton>
           <img src={GoogleIcon} alt="Google Icon" />
           <span>Log in with Google</span>
@@ -116,7 +168,6 @@ const Anowrap = styled.div`
   }
 `
 
-
 const Remember = styled.div`
   display: flex;
   align-items: center;
@@ -137,48 +188,31 @@ p{
 `
 
 const Label = styled.p`
-  /* border: 2px solid red; */
   margin-bottom: -10px;
-  margin-left: 10px;
   font-family: Inter;
   font-size: 14px;
   font-weight: 800;
   line-height: 25px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #fff;
-
-`
-const Password = styled.p`
-  /* border: 2px solid yellow; */
-  margin-bottom: -15px;
-  margin-left: 10px;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 25px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #fff;
-
 `
+
 const Wrapper = styled.div`
-  margin-top: 100px;
   width: 574px;
   height: 715px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
   gap: 1.5rem;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: center; 
-  background-color:#81B622
-  
-`;
+  background-color:#81B622;
+  padding: 50px;
+
+`
 
 const Header = styled.h1`
   font-family: Inter;
@@ -191,7 +225,22 @@ const Header = styled.h1`
   /* border: 2px solid blue; */
   
 `;
-
+const Buttons = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 374px;
+  height: 63px;
+  gap: 0px;
+  border-radius: 35px ;
+  border: 2px solid white ;
+  opacity: 0px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+`;
 const GoogleButton = styled.button`
   display: flex;
   align-items: center;
@@ -215,34 +264,6 @@ const GoogleButton = styled.button`
     margin-left: 1rem;
   }
 `;
-
-
-const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
- 
-`;
-
-const InputField = styled.input`
-width: 374px;
-height: 63px;
-gap: 0px;
-border: none;
-border-radius: 35px;
-opacity: 0px;
-background-color: transparent;
-border: 2px solid white;
-align-items: center;
-font-family: Montserrat;
-border-radius: 35px;
-font-size: 14px;
-font-weight: 400;
-line-height: 15.13px;
-letter-spacing: 0.05em;
-padding-left: 20px;
-`;
-
 
 const ForgotPasswordText = styled.p`
   /* width: 280px;
@@ -301,4 +322,63 @@ font-family: Montserrat;
   color: blue;
   }
 
+`
+const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    
+    div {
+        position: relative;
+        margin: auto;
+
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
+    }
+    input {
+        width: 478px;
+        height: 63px;
+        background-color: transparent;
+        padding: 0 10px 0 20px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+    }
+`
+const PasswordContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    div {
+        position: relative;
+        margin: auto;
+
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
+        #Eyecon {
+            left: 425px;
+            /* right: 125px; */
+        }
+    }
+    input {
+        width: 478px;
+        height: 62.4px;
+        padding: 0 10px 0 50px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        background-color: transparent;}
 `

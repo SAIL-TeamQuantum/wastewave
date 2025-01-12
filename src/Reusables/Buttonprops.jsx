@@ -22,9 +22,7 @@ const Buttondiv = styled.div`
   gap: 25px;
 `;
 
-
 ;
-
 const ResidentButton = styled.button`
     background-color: #004AAD;
     color: white;
@@ -39,11 +37,9 @@ const ResidentButton = styled.button`
     font-weight: 700;
     line-height: 24.38px;
     text-align: center;
-    
 `;
 
 const CompanyButton = styled.button`
-
     color:#FFFFFF;
     background-color: #81B622;
     width: 388px;

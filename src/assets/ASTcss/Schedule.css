@@ -1,3 +1,4 @@
+
 .main-container{
     padding-left: 5.1%;
     padding-right: 5.1%;
@@ -27,8 +28,6 @@
     margin: 0;
   }
 
-
-  
   .calendar-header button {
     background: none;
     border: none;
@@ -58,8 +57,6 @@
     margin-bottom: 1%;
   }
 
-  
-  
   .calendar th {
     font-size: 0.9rem;
     text-align: center;
@@ -68,7 +65,6 @@
   }
   
   .calendar td {
-    
     background-color: white;
     color: #72c025;
     font-weight: bold;

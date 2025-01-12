@@ -17,11 +17,11 @@
     gap: 30px;
     span {
         font-family: Inter;
-font-size: 32px;
-font-weight: 600;
-line-height: 30px;
-letter-spacing: -0.04em;
-text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.04em;
+        text-align: center;
 
 
     }
@@ -80,10 +80,10 @@ text-align: center;
     justify-content: space-between;
     label {
         font-family: Montserrat;
-font-size: 24px;
-font-weight: 900;
-line-height: 25px;
-text-align: left;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 25px;
+        text-align: left;
 
     }
 }
