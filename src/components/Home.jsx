@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css"; // Importing CSS file
-// import styled from "styled-components";
+import styled from "styled-components";
 import image  from "../assets/images/StartImg.png"
 import image1 from "../assets/images/HandHeart.png"
 import image2 from "../assets/images/Radioactive.png"
@@ -10,12 +10,12 @@ import image5 from "../assets/images/ShieldPlus.png"
 
 const Home = () => {
   return (
-    <div className="container">
-      {/* <img id="first" src={image1} alt="icon" />
+    <div className="maincontainer">
+      <img id="first" src={image1} alt="icon" />
             <img id="second" src={image2} alt="icon" />
             <img id="third" src={image4} alt="" />
             <img id="fourth" src={image5} alt="" />
-            <img id="fifth" src={image3} alt="" /> */}
+            <img id="fifth" src={image3} alt="" />
       <div className="content">
         <h1>
           <span className="highlight-green">Fostering a cleaner environment<br /></span>{" "}

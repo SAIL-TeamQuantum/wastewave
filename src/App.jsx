@@ -26,11 +26,9 @@ const app = () => {
   <div>
     <Router>
     <Routes>
-      {/* <Route path='/' element={ <Landing/>}/>  */}
       <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
       <Route path='/signup' element={ <Signup/>}/>
       <Route path='login' element={ <LoginPage/>}/>
-      {/* <Route path='/' element={<HomeDMX />}/> */}
       <Route path='/profile' element={<Profile />}/>
       <Route path='/about' element={<AboutDMX/>}/>
       <Route path='/address' element={<AddressDMX/>}/>
@@ -38,10 +36,10 @@ const app = () => {
       <Route path='/home/:id' element={<DashboardAST />}/>
       <Route path='/ScheduleAST' element={<ScheduleAST />}/>
       <Route path='/DashboardAST' element={<DashboardAST />}/>
-      <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>
-                  
+      <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>          
     </Routes>
     </Router>
+    {/* <h1>boy</h1> */}
     </div> 
    );
   }
