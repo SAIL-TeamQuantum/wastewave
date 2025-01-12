@@ -2,14 +2,13 @@
 .container {
     display: flex;
     max-width: 1440px;
-    max-height: calc(100vh - 56px);
+    height: calc(100vh - 56px);
     margin: auto;
     /* justify-content: center; */
     align-items: center;
     background-color: #fff;
     font-family: Arial, sans-serif;
-    height: auto;
-    /* border: 1px solid red; */
+    /* height: auto; */
     position: relative;
 
     @media (max-width: 450px) {
@@ -21,15 +20,20 @@
   
   /* Left Content Section */
   .content {
-    margin-left: 57px;
-    /* border: 1px solid red; */
+
+   
     @media (max-width: 450px) {
       margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      width: 400px;
     }
   }
   h1 {
     font: inter;
-    font-size: 64px;
+    font-size: 58px;
     margin-top: 90px;
     margin-bottom: 32px;
     font-weight: 900;
@@ -100,7 +104,11 @@
     @media (max-width: 450px) {
       /* display: none; */
       position: relative;
-      left: 0px,
+      left: 0px;
+      display: none;
+      
+
+      
     }
   }
   

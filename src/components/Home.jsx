@@ -11,11 +11,11 @@ import image5 from "../assets/images/ShieldPlus.png"
 const Home = () => {
   return (
     <div className="container">
-      <img id="first" src={image1} alt="icon" />
+      {/* <img id="first" src={image1} alt="icon" />
             <img id="second" src={image2} alt="icon" />
             <img id="third" src={image4} alt="" />
             <img id="fourth" src={image5} alt="" />
-            <img id="fifth" src={image3} alt="" />
+            <img id="fifth" src={image3} alt="" /> */}
       <div className="content">
         <h1>
           <span className="highlight-green">Fostering a cleaner environment<br /></span>{" "}

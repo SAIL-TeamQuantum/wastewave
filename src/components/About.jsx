@@ -61,9 +61,9 @@ const About = () => {
         
         <div>
             <ul className="faq-list">
-            <li>What is In2macy, and how does it work?</li>
-            <li>Can In2macy replace traditional therapy?</li>
-            <li>Is my data safe with In2macy?</li>
+            <li>What is Wastewave, and how does it work?</li>
+            <li>Can Wastewave replace traditional therapy?</li>
+            <li>Is my data safe with Wastewave?</li>
             <li>Who can use wastewave?</li>
             </ul>
         </div>
@@ -75,8 +75,5 @@ const About = () => {
     </div>
   );
 };
-
-
-
 
 export default About;

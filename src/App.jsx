@@ -18,22 +18,7 @@ import Signup from './Reusables/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPageDAMI'
 
-  return (
-    <>
-      {/* <NavBarDMX /> */}
-      <BrowserRouter>
-                <Routes>
-                    <Route path='/DashboardAST' element={<DashboardAST />}/>
-                    <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>
-                    <Route path='/profile' element={<Profile />}/>
-                    <Route path='/about' element={<AboutDMX/>}/>
-                    <Route path='/address' element={<AddressDMX/>}/>
-                    <Route path='/ScheduleAST' element={<ScheduleAST/>}/>
-                </Routes>
-            
-      </BrowserRouter>
-    </>
-  )
+
 
 
 const app = () => {
@@ -50,8 +35,11 @@ const app = () => {
       <Route path='/about' element={<AboutDMX/>}/>
       <Route path='/address' element={<AddressDMX/>}/>
       <Route path='/' element={<LandingPage/>}/>
-      <Route path='/home' element={<DashboardAST />}/>
+      <Route path='/home/:id' element={<DashboardAST />}/>
       <Route path='/ScheduleAST' element={<ScheduleAST />}/>
+      <Route path='/DashboardAST' element={<DashboardAST />}/>
+      <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>
+                  
     </Routes>
     </Router>
     </div> 

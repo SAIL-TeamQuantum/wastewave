@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import GoogleIconImg from "../assets/google.png";
 import eye from '../assets/eye.png';
 import lockkey from '../assets/Lockkey.png';
@@ -24,12 +25,13 @@ const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
     alertBox.style.display = "flex"
     console.log(alertBox);  
 }
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [formData, setFormData] = useState({
-    "email": "",
-      "password": ""
-  })
+const [email, setEmail] = useState("")
+const [password, setPassword] = useState("")
+const [confirmPassword, setConfirmPassword] = useState("");
+const [isAlertVisible, setIsAlertVisible] = useState(false);
+const [responseMessage, setResponseMessage] = useState("");
+const [showPassword, setShowPassword] = useState(false);  
+
   const handleEmailInput = (e)=> {
     setEmail(e.target.value)
     console.log(email)
@@ -38,24 +40,33 @@ const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
     setPassword(e.target.value)
     console.log(password)
   }
+  const handleConfirmPasswordInput = (e)=> {
+    setConfirmPassword(e.target.value)
+    console.log(confirmPassword)
+  }
   
-  const [responseMessage, setResponseMessage] = useState("")
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
-    toggleSave()
-    try {
-        setFormData({email, password})
-        console.log(formData)
-        const response = await axios.post('https:/wastewave-backend.onrender.com/api/register', formData);
-        setResponseMessage(`Success: ${response.data.message}`);
-    } catch (error) {
-        if (error.response) {
-            setResponseMessage(`Error: ${error.response.data.message}`); 
-        } else {
-            setResponseMessage(`Error: ${error.message}`);
-        }
-    }
-  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (password !== confirmPassword) {
+    setResponseMessage("Passwords do not match");
+    return;
+  }
+  // setIsAlertVisible(true);
+  toggleSave()
+  try {
+    const response = await axios.post("https://wastewave-backend.onrender.com/api/register", {
+      email,
+      password,
+    });
+    console.log(email, password);
+    
+    setResponseMessage(`Success: ${response.data.message}`);
+  } catch (error) {
+    const errorMessage = error.response?.data.message || error.message;
+    setResponseMessage(`Error: ${errorMessage}`);
+  }
+};
   return (
     <Anotherwrapa>
       <NavHeader/>
@@ -76,7 +87,7 @@ const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
             <div>
                 <input id="email" type="email" placeholder="Enter your email address" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
 
-                <p>You typed: {email}</p>
+                {/* <p>You typed: {email}</p> */}
             </div>
           </InputContainer>
        <  Password>Password </Password>
@@ -85,16 +96,17 @@ const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
                 <img id="lockkey" src={lockkey} alt=" Icon" />
                 <input type="password" placeholder="Enter your password" onInput={handlePasswordInput} onChange={handlePasswordInput} />
                 <img src={eye} alt=" Icon" id="Eyecon" />
-                <p>You typed: {password}</p>
             </div>
+            {/* <p>You typed: {password}</p> */}
           </PasswordContainer>
           <Confirmation>Password Confirmation</Confirmation>
           <PasswordContainer>
             <div>
                 <img id="lockkey" src={lockkey} alt=" Icon" />
-                <input type="password" placeholder="Confirm your password" />
-                <img src={eye} alt=" Icon" id="Eyecon" />
+                <input type="password" placeholder="Confirm your password" onInput={handleConfirmPasswordInput} onChange={handleConfirmPasswordInput}/>
+                <img src={eye} alt=" Icon" id="Eyecon"  />
             </div>
+            {/* <p>You typed: {confirmPassword}</p> */}
           </PasswordContainer>
          
           
@@ -115,7 +127,8 @@ const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
             <InsideText>{Title = "Sign up with Google"}</InsideText>
           </Buttons>
         </SignupBtn>
-        <Already>Already have an account? <span>Log In</span></Already>
+        {responseMessage && <p>{responseMessage}</p>}
+        <Already>Already have an account? <Link to="/login" style={{textDecoration: "none"}}><span>Log In</span></Link ></Already>
         <Bysign>By signing up, you agree to our <br />
         <span >Terms of Service</span> and <span>Privacy Policy</span> </Bysign>
       </SignupWrapper>
@@ -345,7 +358,11 @@ const Wrapper = styled.div`
   }
 
   h4{
-    border: 1px solid blue;
+    border: 2px solid blue;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     color: blue;
 
   
@@ -361,6 +378,7 @@ line-height: 15.13px;
 letter-spacing: 0.05em;
 text-align: left;
 color: #FFFF;
+margin-top: 10px;
 
 span{
   color: blue;
@@ -382,6 +400,7 @@ const Bysign = styled.h5`
   letter-spacing: 0.05em;
   text-align: center;
   color: #fff;
+  margin-top: 10px;
 
  span{
   font-family: Montserrat;

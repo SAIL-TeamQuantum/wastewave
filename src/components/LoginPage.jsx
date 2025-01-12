@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [formData, setFormData] = useState({"email": "", "password": ""})
+  // const [formData, setFormData] = useState({"email": "", "password": ""})
   const navigate = useNavigate();
 
     const handleEmailInput = (e)=> {
@@ -34,12 +34,12 @@ const LoginPage = () => {
 
   const [responseMessage, setResponseMessage] = useState("")
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
-    // toggleSave()
+    e.preventDefault(); 
     try {
-        setFormData({email, password})
-        console.log(formData)
-        const response = await axios.post('https:/wastewave-backend.onrender.com/api/signin', formData);
+        const payload = { email, password };
+        
+        console.log(payload)
+        const response = await axios.post('https:/wastewave-backend.onrender.com/api/signin', payload);
         const userId = response.data.data._id;
         console.log(userId)
         navigate(`/home/${userId}`);
@@ -229,6 +229,7 @@ const Buttons = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
   background-color: transparent;
   width: 374px;
   height: 63px;
@@ -244,6 +245,7 @@ const Buttons = styled.button`
 const GoogleButton = styled.button`
   display: flex;
   align-items: center;
+  margin: auto;
   font-family: Montserrat;
   gap: 3rem;
   width: 374px;
@@ -272,7 +274,7 @@ const ForgotPasswordText = styled.p`
   font-size: 14px;
   font-weight: 800;
   line-height: 25px;
-  text-align: left;
+  text-align: center;
   /* border: 2px solid yellow; */
   color: #fff;
   cursor: pointer;
@@ -285,7 +287,7 @@ font-size: 14px;
 font-weight: 600;
 line-height: 15.13px;
 letter-spacing: 0.05em;
-text-align: left;
+text-align: center;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #fff;
@@ -380,5 +382,6 @@ const PasswordContainer = styled.div`
         align-items: center;
         border: 2px solid #FFFFFF;
         border-radius: 15px;
-        background-color: transparent;}
+        background-color: transparent;
+}
 `
