@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
+Link {
+    text-decoration: none;
+}
 .flex-container {
     display: flex;
     gap: 10px;   
@@ -163,6 +167,17 @@ opacity: 0px;
 }
 
 }
+.link-schdule {
+flex: 1;
+display: flex;
+gap: 20px; 
+width: 30%;
+height: auto !important;
+border-radius: 20px;
+padding: 15px 29px;
+gap: 20px !important;
+text-decoration: none;
+}
 .margin5 {
     margin-right: 5%;
 }
@@ -172,7 +187,7 @@ font-family: Poppins;
 font-size: 19px;
 font-weight: 600;
 line-height: 22.5px;
-
+text-decoration: none;
 letter-spacing: 0.03em;
 color: #004AAD;
 }
@@ -356,7 +371,7 @@ color: #fff;
     border: 3px solid #81B622;
     border-radius: 20px;
     padding: 3%;
-    gap: 10%;
+    justify-content: space-between;
 }
 .MobileView {
     display: none;
@@ -421,7 +436,7 @@ line-height: 20px;
 }
 .moreInfoBoxSect2 {
     margin-top: 2%;
-    width: 40%;
+    width: 30%;
     align-items: center;
 
     text {
@@ -674,6 +689,12 @@ text-decoration-skip-ink: none;
             width: 30%;
             margin: 0 auto;
         }
+    }
+
+    .link-schdule {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
     }
 
     .button-container button {

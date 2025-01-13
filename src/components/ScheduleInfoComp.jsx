@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "../assets/ASTcss/ScheduleInfo.css";
 import { FaAngleDown } from "react-icons/fa";
 
@@ -45,12 +46,18 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
     { value: "nylons", label: "Nylons" },
   ];
 
-  const bagOptions = [
-    { value: "1-5", label: "1 - 5" },
-    { value: "6-10", label: "6 - 10" },
-    { value: "11-15", label: "11 - 15" },
-    { value: "15-20", label: "15 - 20" },
-  ];
+
+    const [name, setName] = useState('');
+  
+    const handleNameChange = (event) => {
+      setName(event.target.value);
+    };
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      // Perform form submission logic here
+      console.log(`Name: ${name}`);
+    };
 
   return (
     <div>
@@ -77,15 +84,22 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
           selectedOptions={selectedOptions}
           onChange={handleChange}
         />
-        <OptionsGroup
-          title="How many bags are you disposing?"
-          options={bagOptions}
-          selectedOptions={selectedOptions}
-          onChange={handleChange}
+       <form onSubmit={handleSubmit}>
+       <div className="calendar-text">
+        <p className="BagTittle">How many bags are you disposing?</p>
+       
+        <input
+          type="tel"
+          className="BagInput"
+          id="name"
+          value={name}
+          onChange={handleNameChange}
         />
-        <button className="schedule-button" onClick={onScheduleComplete}>
+      </div>
+        <button className="schedule-button" type="submit" onClick={onScheduleComplete}>
           Schedule Trash
         </button>
+        </form>
       </div>
     </div>
   );

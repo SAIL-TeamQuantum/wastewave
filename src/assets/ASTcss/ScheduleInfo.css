@@ -73,6 +73,14 @@ text-align: center;
     text-decoration-skip-ink: none;
  
  }
+ .BagInput {
+    margin-top: 3%;
+    width: 29%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+ }
+
   
 .options-container {
     width: 90%;

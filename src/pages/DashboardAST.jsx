@@ -10,7 +10,8 @@ import wasteR from '../assets/images/wasteR.jpg';
 import biohazard from '../assets/images/biohazard.svg';
 import shieldplus from '../assets/images/shieldplus.svg';
 import MapLocator from '../assets/images/MapLocator.png';
-
+import { Link } from 'react-router-dom';
+import ScheduleAST from './ScheduleAST';
 import DashboardHeaderAST from '../components/DashboardHeaderAST';
 import DashboardInfo from '../components/DashboardMoreInfoAST';
 import DashboardFooter from '../components/DashboardFooterAST';
@@ -39,23 +40,27 @@ const DashboardAst = () => {
 
         <div className='ToDoContainer'>
             <h2>Today’s To-Do-List</h2>
-            <div className='flex-container'>
-                <div className='box-container margin5'>
+            <div className='flex-container' >
+         
+                <div className='box-container margin5' >
+                     <Link to="/ScheduleAST" className='link-schdule'>  
                     <img src={phoneIMG} alt="phone" />
+                    
                     <div className='BoxcontainerText'>
-                        <p className='Box-Text'>Offset your dues</p>
+                        <p className='Box-Text'>Schedule your waste</p>
                         <p className='Box-Grey'>Keep a clean record with LAWMA</p>
 
-                    </div>
+                    </div> </Link>
 </div>
                     {/* second box */}
                     <div className='box-container flex-container'>
+                    <Link to="/ScheduleAST" className='link-schdule'>  
                     <img src={MapLocator} alt="phone" />
                     <div className='BoxcontainerText'>
                         <p className='Box-Text'>Offset your dues</p>
                         <p className='Box-Grey'>Keep a clean record with LAWMA</p>
 
-                    </div>
+                    </div></Link>
 </div>
 
 
@@ -64,7 +69,7 @@ const DashboardAst = () => {
             </div>
             <div className='button-container flex-container'>
             <img className='BUTicons mobile-none' src={calICONGreen} alt="icon" /> 
-    <button className='button'>See More</button>
+            <img className='mobile-none' src={biohazard} alt="star" />
     <img className='BUTicons' src={Star} alt="star" />
     
      </div>
