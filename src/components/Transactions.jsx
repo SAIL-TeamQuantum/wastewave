@@ -13,7 +13,7 @@ const Transactions = () => {
                 <p>Transactions</p>
             </div>
        
-
+            
         </div>
     )
 }

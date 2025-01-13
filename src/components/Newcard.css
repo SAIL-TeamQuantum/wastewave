@@ -1,5 +1,5 @@
 .body{
-    height: 90vh;
+    height: 100vh;
     background-color: #F4F5F9;
     text-align: center;
 }
@@ -45,7 +45,7 @@
 
         .inumber{
             position: absolute;
-            top: 95px;
+            top: 93px;
             right: 910px;
             width: 30px;
         }
@@ -57,13 +57,13 @@
             border: none;
             margin-top: 10px;
             position: absolute;
-            left: 555px;
+            left: 565px;
             
         }
 
         .icalender{
             position: absolute;
-            top: 165px;
+            top: 160px;
             right: 910px;
             width: 30px;
         }
@@ -92,7 +92,7 @@
     span{
         position: absolute;
         top: 5px;
-        left: 610px;
+        left: 630px;
     }
 
     img{

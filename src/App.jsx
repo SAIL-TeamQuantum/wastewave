@@ -18,28 +18,20 @@ function App() {
 
   return (
     <>
-      {/* <NavBarDMX /> */}
       <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<HomeDMX />}/>
+        <Routes>
+        <Route path='/' element={<HomeDMX />}/>
                     <Route path='/profile' element={<Profile />}/>
                     <Route path='/about' element={<AboutDMX/>}/>
                     <Route path='/address' element={<AddressDMX/>}/>
-                </Routes>
-            
+            <Route path='/card' element={<Newcard />}></Route>
+            <Route path='/payment' element={<Payment />}></Route>
+            <Route path='/history' element={<History />}></Route>
+            <Route path='/body' element={<Body />}></Route>
+        </Routes>
       </BrowserRouter>
-      <Header />
-      <Body />
-      <Header />
-      <Address />
-      <Header />
-      <Newcard />
-      <Transactions />
-      <Payment />
-      <NavBarDMX />
-      <Trash />
-      <History />
-      <NavBarDMX />
+    
+     
     </>
   )
 }

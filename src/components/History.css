@@ -1,7 +1,27 @@
+
+
 .list{
-    height: 80vh;
+    height: 90vh;
     background-color: #F4F5F9;
     text-align: center;
+
+    img{
+        width: 50px;
+    }
+    
+    .header{
+        height: 10vh;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    p{
+        margin-right: 700px;
+        font-size: 20px;
+    }
+    
 
     .detail{
 
@@ -44,6 +64,10 @@
 
 .surv{
     margin-right: 683px;
+}
+
+.navbar{
+    margin-top: 200px;
 }
 
 

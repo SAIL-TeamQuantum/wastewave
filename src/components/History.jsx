@@ -1,10 +1,21 @@
 import './History.css'
 import Ride from '../assets/images/ride.svg'
 import File from '../assets/images/file.svg'
+import arrow from '../assets/images/arrow.svg'
+import NavBarDMX from '../static/NavBarDMX'
 
 const History = () => {
     return (
         <div className='list'>
+            <div className='header'>
+            <div className='arrow'>
+                <img src={arrow} alt="" />
+            </div>
+            
+            <div className='words'>
+                <p>Trash History</p>
+            </div>
+            </div>
             <div className='detail'>
                 <img src={Ride} alt="" />
                 <h3>Your trash was disposed</h3>
@@ -34,7 +45,10 @@ const History = () => {
                 <hr />
             </div>
 
-           
+
+          <div className='navbar'>
+          <NavBarDMX />
+          </div>
         
         </div>
     )

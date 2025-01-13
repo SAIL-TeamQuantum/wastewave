@@ -5,10 +5,25 @@ import Fix from '../assets/images/Fix.svg'
 import Calender from '../assets/images/calender.svg'
 import Cvv from '../assets/images/cvv.svg'
 import Rader from '../assets/images/rader.svg'
+import CustomAlertDMX from './CustomAlertDMX'
+import arrow from '../assets/images/arrow.svg'
 
 const Body = () => {
     return(
         <div className='body'>
+             <div className='header'>
+            
+                        <div className='arrow'>
+                            <img src={arrow} alt="" />
+                        </div>
+                        
+                        <div className='words'>
+                            <p>Add Debit Card</p>
+                        </div>
+                   
+            
+                    </div>
+            
             <img src={Card} alt="" className='card'/>
             <div className='fittings'>
                 <input type="text" placeholder='Name on the card' className='text'/> 
@@ -30,7 +45,7 @@ const Body = () => {
                 <button>Add credit card</button>
             </div>
            
-            
+          
 
         </div>
     )
