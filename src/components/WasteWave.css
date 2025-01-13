@@ -1,23 +1,29 @@
-
-  .container {
-    /* max-width: 800px; */
+* {
+  font-family:"Inter", serif;
+}
+  .sec-container {
     width: 100%;
     background: #fff;
     border-radius: 10px;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     padding: 20px;
     text-align: center;
   }
   
-  .header h1 {
-    font-size: 24px;
+  .header-val h1 {
+    margin-top: 60px;
+    font-size: 46px;
     margin-bottom: 20px;
     color: #81B622;
+    font-weight: 900;
+    margin-top: -90px;
+
+    @media(max-width:450px){
+      font-size: 24px;
+    }
   }
   
-  .header .highlight {
+  .header-val .highlight {
     color: #0056b3;
-    font-weight: bold;
   }
   
   .images-section {
@@ -25,26 +31,66 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    position: relative;
+    height: 400px;
+
+    img {
+      width: 400px;
+
+    @media (max-width: 450px){
+      width: 150px;
+    }
+  }
+    
+    @media (max-width: 450px) {
+      flex-direction: column;
+    
+    }
   }
   
   #circle1{
-    margin-right: -50px;
+    position: absolute;
+    left: 100px;
+    z-index: 100;
+
+    @media (max-width: 450px){
+      top: 0px;
+      left: 50px;
+    }
+  }
+  #circle2{
+    position: absolute;
     z-index: 5;
+    
+    @media (max-width: 450px){
+      top: 80px;
+      left: 150px;
+    }
+  }
+  #circle3{
+    position: absolute;
+    right: 100px;
+    
+    @media (max-width: 450px){
+      top: 130px;
+      left: 50px;
+    }
+  }
+ 
+  
+  .description-val p {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 38.29px;
+    color: #333;
+    margin-bottom: 80px;
+    color: #004aad;
+
+  @media(max-width: 450px){
+    font-size: 20px;
+    line-height: 28px ;
+    margin-bottom: 50px;
   }
 
-  #circle3{
-    margin-left: -50px;
-    z-index: 5;
-  }
-  .circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .description p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #004AAD80;
   }
   

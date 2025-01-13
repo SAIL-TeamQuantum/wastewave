@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css"; // Importing CSS file
+import "./Hero.css"; // Importing CSS file
 import styled from "styled-components";
 import image  from "../assets/images/StartImg.png"
 import image1 from "../assets/images/HandHeart.png"
@@ -18,7 +18,7 @@ const Home = () => {
             <img id="fifth" src={image3} alt="" />
       <div className="content">
         <h1>
-          <span className="highlight-green">Fostering a cleaner environment<br /></span>{" "}
+          <span className="highlight-green">Fostering a cleaner<br /> environment</span>{" "}
           through <span className="highlight-blue">waste scheduling</span>
         </h1>
         <p className="description">
@@ -26,10 +26,7 @@ const Home = () => {
           you to professionals who handle waste removal, ensuring a clean and
           healthy environment.
         </p>
-        {/* <div className="icons">
-            <img src={image4} alt="" />
-            <img src={image5} alt="" />
-        </div> */}
+    
         <button className="action-button">SEE HOW IT WORKS</button>
       </div>
       <div className="image-container">

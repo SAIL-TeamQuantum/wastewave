@@ -23,7 +23,7 @@ const DashboardInfo = () => {
                     <img className='moreInfoBoxLogo MobileView' src={Flogo} alt="logo" />
                 <img className='moreInfoBoxLogo mobile-none' src={Logo} alt="logo" />
                 
-                <text className='moreInfoBoxLogoText mobile-none'>ASTE WAVE</text>
+                <text className='moreInfoBoxLogoText mobile-none'>WASTE WAVE</text>
                 </div>
                 
                 <p className='moreInfoBoxPText'>Waste Wave is an Intellectual property and technological waste management agency for the waste management economy and digital age. </p>

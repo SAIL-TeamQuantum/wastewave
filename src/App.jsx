@@ -14,7 +14,7 @@ import ScheduleAST from './pages/ScheduleAST' ;
 import React from 'react'
 import UserSelectMenu from './components/UserselectMenu';
 import LoginPage from './components/LoginPage';
-import Signup from './Reusables/Signup';
+import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPageDAMI'
 
@@ -36,7 +36,7 @@ const app = () => {
       <Route path='/home/:id' element={<DashboardAST />}/>
       <Route path='/ScheduleAST' element={<ScheduleAST />}/>
       <Route path='/DashboardAST' element={<DashboardAST />}/>
-      <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>          
+      <Route path='/company' element={<ManDashboardAST />}/>          
     </Routes>
     </Router>
     {/* <h1>boy</h1> */}

@@ -54,7 +54,7 @@ const LoginPage = () => {
   };
   return (
     <Anowrap>
-      <NavHeader/>
+      {/* <NavHeader/> */}
       <img id="bio" src={Biohazard} alt="" />
       <img id="Cal" src={Calenda} alt="" />
       <img id="cld" src={Calendar} alt="" />
