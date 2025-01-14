@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import GoogleIconImg from "../assets/google.png";
 import eye from '../assets/eye.png';
-import lockkey from '../assets/Lockkey.png';
+import lockkey from '../assets/LockKey.png';
 import Eyeslash from '../assets/Eyeslash.png';
 import {TiTick} from "react-icons/ti";
 import Biohazard from '../assets/Biohazard.png';
