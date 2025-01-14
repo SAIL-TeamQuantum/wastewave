@@ -14,8 +14,13 @@ import Shieldplu from '../assets/Shieldplu.png';
 import lockkey from '../assets/Lockkey.png';
 import eye from '../assets/eye.png';
 import NavHeader from "../components/Header";
+import Logo from "../assets/logo.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+
+
+
+
 
 
 const LoginPage = () => {
@@ -55,7 +60,10 @@ const LoginPage = () => {
   };
   return (
     <Anowrap>
-      <NavHeader/>
+    <LogoSec>
+            <img  src={Logo} alt="logo" />
+            <h1>ASTE WAVE</h1>
+           </LogoSec> 
       <img id="bio" src={Biohazard} alt="" />
       <img id="Cal" src={Calenda} alt="" />
       <img id="cld" src={Calendar} alt="" />
@@ -65,7 +73,8 @@ const LoginPage = () => {
       <img id="shield" src={Shieldplu} alt="" />
       <img id="shlpls" src={Shieldplus} alt="" />
       <Wrapper>
-        
+
+  
           <Header>Log In</Header>
           <Label>Email address</Label>
           <InputContainer>
@@ -106,6 +115,26 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+const LogoSec = styled.div`
+  
+    position: relative;
+    width: 300px;
+    margin: auto;
+    margin-top: 60px;
+
+    img {
+        width: 100px;
+    }
+
+    h1 {
+    
+        position: absolute;
+        top: 30px;
+        left: 80px;
+        color: #81B622;
+}
+`
 
 const Anowrap = styled.div`
   background-color: white;
@@ -211,6 +240,13 @@ const Wrapper = styled.div`
   justify-content: center; 
   background-color:#81B622;
   padding: 40px;
+
+  @media(max-width: 450px){
+       width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
+  }
 
 `
 
@@ -339,6 +375,15 @@ font-family: Montserrat;
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media(max-width: 450px){
+   
+   width: 100%;
+   margin-top: 20px;
+   padding: 10px;
+   border-radius: 25px;
+}
+
     
     div {
         position: relative;

@@ -17,6 +17,7 @@ import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
 import NavHeader from "../components/Header";
+import Logo from "../assets/logo.png"
 import CustomAlertDMX from "../components/CustomAlertDMX";
 
 const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
@@ -30,7 +31,8 @@ const [password, setPassword] = useState("")
 const [confirmPassword, setConfirmPassword] = useState("");
 const [isAlertVisible, setIsAlertVisible] = useState(false);
 const [responseMessage, setResponseMessage] = useState("");
-const [showPassword, setShowPassword] = useState(false);  
+const toggleShowPassword = () => setShowPassword(!showPassword);
+
 
   const handleEmailInput = (e)=> {
     setEmail(e.target.value)
@@ -69,7 +71,11 @@ const handleSubmit = async (e) => {
 };
   return (
     <Anotherwrapa>
-      <NavHeader/>
+        <LogoSec>
+                  <img  src={Logo} alt="logo" />
+                  <h1>ASTE WAVE</h1>
+                 </LogoSec> 
+
      <img id="bio" src={Biohazard} alt="" />
      <img id="Cal" src={Calenda} alt="" />
      <img id="cld" src={Calendar} alt="" />
@@ -80,6 +86,7 @@ const handleSubmit = async (e) => {
      <img id="shlpls" src={Shieldplus} alt="" />
 
       <SignupWrapper>
+
   
         <InputWrapper>
         <Header>Sign Up</Header>
@@ -139,6 +146,26 @@ const handleSubmit = async (e) => {
 };
 
 export default SignUpProps;
+
+const LogoSec = styled.div`
+  
+    position: relative;
+    width: 300px;
+    margin: auto;
+    margin-top: 60px;
+
+    img {
+        width: 100px;
+    }
+
+    h1 {
+    
+        position: absolute;
+        top: 30px;
+        left: 80px;
+        color: #81B622;
+}
+`
     
 const SignupWrapper = styled.div`
   width: 574px;
@@ -153,6 +180,13 @@ const SignupWrapper = styled.div`
   opacity: 0px;
   margin: auto;
   margin-top: 50px;
+
+  @media(max-width: 450px){
+       width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
+  }
 `
 
 const Anotherwrapa = styled.div`
@@ -290,6 +324,15 @@ const InputWrapper = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-top: 50px;
+
+  @media(max-width: 450px){
+   
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
+  }
+
 `;
 
 const Label = styled.p`

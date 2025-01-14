@@ -31,7 +31,7 @@ const DashboardInfo = () => {
                     
                 </div>
 
-                {/* section 2 of more info box */}
+             
                 <div className='moreInfoBoxSect2'>
                 <text className=''>COMPANY</text>
                 <div className='moreInfolist'>
@@ -39,8 +39,7 @@ const DashboardInfo = () => {
                 <p>Schedule Water</p>
                 <p>Pay Bills</p>
                 <p>Contact Us</p>
-                
-
+            
                 </div>
                 <div className='flex-container moreInfoListSocialsLogo'>
                 <FaLinkedin style={{ color: '#81B622', fontSize: '34px' }} />

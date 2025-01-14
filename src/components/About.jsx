@@ -3,9 +3,9 @@ import './About.css';
 import FaqProps from '../Reusables/FaqProps';
 
 const About = () => {
+  
   return (
     <div>
-      {/* Services Section */}
       <section className="services-section">
         <h1>
           Get the most out of Waste Wave
@@ -45,8 +45,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* FAQs Section */}
       <section className="faqs-section-val">
         <div>
                 <h2>FAQs about Waste Wave</h2>
@@ -64,19 +62,13 @@ const About = () => {
         </div>
         
         <div>
-            {/* <ul className="faq-list"> */}
-
             <FaqProps head="What is Waste Wave, and how does it work?" content="It is a waste management platform that enables easy scheduling and tracking of waste collection" />
             <FaqProps head="Can I track my payments with Waste Wave?" content=" Yes, you can track all your payments in the “Payment History” section of the app. It provides details such as payment dates, amounts, and services paid for." />
             <FaqProps head="Is my data safe with Waste Wave?" content="Yes, we prioritize your privacy and use industry-standard encryption to secure your data." />
             <FaqProps head="Who can use Waste Wave?" content=" The app is designed for anyone interested in managing waste responsibly, including households, businesses, and community organizations." />
-
-            {/* </ul> */}
         </div>
-        
       </section>
       <div classname='bottonButton'>
-  {/* <button classname='startbutton'>start</button> */}
 </div>
     </div>
   );

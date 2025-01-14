@@ -372,6 +372,9 @@ color: #fff;
     border-radius: 20px;
     padding: 3%;
     justify-content: space-between;
+    /* background-color: red; */
+
+
 }
 .MobileView {
     display: none;
@@ -382,12 +385,20 @@ color: #fff;
 
 .moreInfoBoxSect1 {
     width: 50%;
+
    
 }
 .moreInfoBoxLogoSect {
     margin: 0%;
     display: flex;
     align-items: center;
+    /* background-color: red; */
+
+    @media(max-width:450px){
+        flex-direction: column;
+  
+
+    }
    
 }
 .moreInfoBoxLogo {
@@ -406,6 +417,7 @@ color: #fff;
     color: #81B622;
     margin-top: 1em;
     margin-left: -2%;
+   
 
 }
 .moreInfoBoxPText {
@@ -424,6 +436,7 @@ line-height: 20px;
     padding: 3% 0% 3% 4%;
     border-radius: 49px;
     gap: 10px;
+   
 
     p1{
     text-align: center;
@@ -432,6 +445,7 @@ line-height: 20px;
     img{
         margin: auto;
         width: 10%;
+    
     }
 }
 .moreInfoBoxSect2 {
@@ -441,14 +455,19 @@ line-height: 20px;
 
     text {
         font-family: Montserrat;
-font-size: 26px;
-font-weight: 900;
-line-height: 30px;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #81B622;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 30px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #81B622;
+
     }
+
+    /* @media(max-width:450px){
+     margin-left: 60px;
+    } */
 }
 
 .moreInfolist {
@@ -462,12 +481,14 @@ line-height: 20px;
 color: #004AAD;
 margin-bottom: 2%;
 
+
     }
 }
 
 .moreInfoListSocialsLogo {
     margin-top: 6%;
     gap: 5%;
+ 
 }
 
 .moreInfobuttonContainer {

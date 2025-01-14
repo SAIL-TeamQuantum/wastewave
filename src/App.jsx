@@ -1,6 +1,5 @@
 import About from "./components/About";
 import Wastewave from "./components/WasteWave"
-
 import { useState } from 'react'
 import './App.css'
 import Profile from './pages/Home'
@@ -21,9 +20,11 @@ import LandingPage from './pages/LandingPageDAMI'
 
 
 
+
 const app = () => {
   return ( 
   <div>
+  
     <Router>
     <Routes>
       <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
@@ -36,7 +37,7 @@ const app = () => {
       <Route path='/home/:id' element={<DashboardAST />}/>
       <Route path='/ScheduleAST' element={<ScheduleAST />}/>
       <Route path='/DashboardAST' element={<DashboardAST />}/>
-      <Route path='/company' element={<ManDashboardAST />}/>          
+      <Route path='/company' element={<ManDashboardAST />}/>   
     </Routes>
     </Router>
     {/* <h1>boy</h1> */}
