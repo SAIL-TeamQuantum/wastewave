@@ -1,20 +1,20 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
-import GoogleIcon from "../assets/google.png"; 
-import Remem from '../assets/remem.png'
-import Biohazard from '../assets/biohazard.png';
-import Calenda from '../assets/calenda.png';
-import Calendar from '../assets/calendar.png';
-import HandHear from '../assets/handhear.png';
-import HandHeart from '../assets/handheart.png';
-import Radioactive from '../assets/Radioactive.png';
-import Shieldplus from '../assets/shieldplus.png';
-import Shieldplu from '../assets/shieldplu.png';
-import lockkey from '../assets/lockkey.png';
-import eye from '../assets/eye.png';
+// import GoogleIcon from "../assets/google.png"; 
+// import Remem from '../assets/remem.png'
+// import Biohazard from '../assets/biohazard.png';
+// import Calenda from '../assets/calenda.png';
+// import Calendar from '../assets/calendar.png';
+// import HandHear from '../assets/handhear.png';
+// import HandHeart from '../assets/handheart.png';
+// import Radioactive from '../assets/Radioactive.png';
+// import Shieldplus from '../assets/shieldplus.png';
+// import Shieldplu from '../assets/shieldplu.png';
+// import lockkey from '../assets/lockkey.png';
+// import eye from '../assets/eye.png';
 import NavHeader from "../components/Header";
-import Logo from "../assets/logo.png"
+// import Logo from "../assets/logo.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 
@@ -64,14 +64,14 @@ const LoginPage = () => {
             <img  src={Logo} alt="logo" />
             <h1>ASTE WAVE</h1>
            </LogoSec> 
-      <img id="bio" src={Biohazard} alt="" />
+      {/* <img id="bio" src={Biohazard} alt="" />
       <img id="Cal" src={Calenda} alt="" />
       <img id="cld" src={Calendar} alt="" />
       <img id="Han" src={HandHear} alt="" />
       <img id="Heart" src={HandHeart} alt="" />
       <img id="Rad" src={Radioactive} alt="" />
       <img id="shield" src={Shieldplu} alt="" />
-      <img id="shlpls" src={Shieldplus} alt="" />
+      <img id="shlpls" src={Shieldplus} alt="" /> */}
       <Wrapper>
 
   
