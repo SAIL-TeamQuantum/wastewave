@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 import GoogleIcon from "../assets/google.png"; 
-import Remem from '../assets/remem.png'
+import Remem from '../assets/Remem.png'
 import Biohazard from '../assets/Biohazard.png';
 import Calenda from '../assets/Calenda.png';
 import Calendar from '../assets/Calendar.png';
