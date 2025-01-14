@@ -52,6 +52,10 @@ text-align: center;
     margin: 0;
   }
 
+.fee-details {
+    text-align: left;
+    margin-top: 2%;
+}
 
   
   .calendar-header button {

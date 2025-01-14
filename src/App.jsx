@@ -16,7 +16,8 @@ import LoginPage from './components/LoginPage';
 import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPageDAMI'
-
+import PaymentDMX from '../src/pages/PaymentDMX'
+import Success from "./pages/Success";
 
 
 
@@ -38,6 +39,8 @@ const app = () => {
       <Route path='/ScheduleAST' element={<ScheduleAST />}/>
       <Route path='/DashboardAST' element={<DashboardAST />}/>
       <Route path='/company' element={<ManDashboardAST />}/>   
+      <Route path='/payment' element={<PaymentDMX />}/>   
+      <Route path='payment-success' element={<Success />}/>   
     </Routes>
     </Router>
     {/* <h1>boy</h1> */}

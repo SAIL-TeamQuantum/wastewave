@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "../assets/ASTcss/ScheduleInfo.css";
 import { FaAngleDown } from "react-icons/fa";
-
 const OptionsGroup = ({ options, selectedOptions, onChange, title }) => (
   <div>
     <div className="calendar-text">
@@ -29,6 +28,9 @@ const OptionsGroup = ({ options, selectedOptions, onChange, title }) => (
 
 const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [bagCount, setBagCount] = useState(""); // Store bag input
+  const [transportFee] = useState(500); // Fixed transportation fee
+
 
   const handleChange = (event) => {
     const value = event.target.value;
@@ -46,18 +48,23 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
     { value: "nylons", label: "Nylons" },
   ];
 
-
-    const [name, setName] = useState('');
-  
-    const handleNameChange = (event) => {
-      setName(event.target.value);
-    };
-  
-    const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
       event.preventDefault();
       // Perform form submission logic here
       console.log(`Name: ${name}`);
     };
+
+  // Calculate the fees
+  const bagFee = bagCount ? parseInt(bagCount, 10) * 2 : 0;
+  const totalFee = bagFee + transportFee;
+
+  const handleBagCountChange = (event) => {
+    const value = event.target.value;
+    // Only allow numeric input
+    if (/^\d*$/.test(value)) {
+      setBagCount(value);
+    }
+  };
 
   return (
     <div>
@@ -92,13 +99,20 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
           type="tel"
           className="BagInput"
           id="name"
-          value={name}
-          onChange={handleNameChange}
+          
+          onChange={handleBagCountChange}
+         
         />
       </div>
+      <div className="fee-details">
+          <p>Bag Fee: #{bagFee.toLocaleString()}</p>
+          <p>Transportation Fee: #{transportFee.toLocaleString()}</p>
+          <p>Total Balance: #{totalFee.toLocaleString()}</p>
+        </div>
         <button className="schedule-button" type="submit" onClick={onScheduleComplete}>
           Schedule Trash
         </button>
+        
         </form>
       </div>
     </div>

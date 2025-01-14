@@ -4,6 +4,7 @@ import DashboardHeaderAST from "../components/DashboardHeaderAST";
 import DashboardInfo from "../components/DashboardMoreInfoAST";
 import DashboardFooter from "../components/DashboardFooterAST";
 import ScheduleInfoAST from "../components/ScheduleInfoComp";
+import { Link } from "react-router-dom"
 import { FaToggleOn } from "react-icons/fa";
 const ScheduleAST = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -123,6 +124,11 @@ const ScheduleAST = () => {
               </thead>
               <tbody>{rows}</tbody>
             </table>
+            <Link to="/payment">
+            <button className="schedule-button" type="submit" >
+          Make Payment
+        </button>
+        </Link>
           </div>
         )}
         <DashboardInfo />
