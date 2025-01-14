@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonProps from "../Reusables/Buttonprops";
-// import Biohazard from '../assets/biohazard.png';
-// import Calenda from '../assets/calenda.png';
-// import Calendar from '../assets/calendar.png';
-// import HandHear from '../assets/handhear.png';
-// import HandHeart from '../assets/handheart.png';
-// import Radioactive from '../assets/radioactive.png';
-// import Shieldplus from '../assets/shieldplus.png';
-// import Shieldplu from '../assets/shieldplu.png';
-// import NavHeader from "../components/Header";
+import Biohazard from '../assets/biohazard.png';
+import Calenda from '../assets/calenda.png';
+import Calendar from '../assets/calendar.png';
+import HandHear from '../assets/handhear.png';
+import HandHeart from '../assets/handheart.png';
+import Radioactive from '../assets/radioactive.png';
+import Shieldplus from '../assets/shieldplus.png';
+import Shieldplu from '../assets/shieldplu.png';
+import NavHeader from "../components/Header";
 
 
 
@@ -17,14 +17,14 @@ const UserSelectMenu = () => {
     return (
     <Cover>
       <NavHeader/>
-    {/* <img id="bio" src={Biohazard} alt="" />
+    <img id="bio" src={Biohazard} alt="" />
      <img id="Cal" src={Calenda} alt="" />
      <img id="cld" src={Calendar} alt="" />
      <img id="Han" src={HandHear} alt="" />
      <img id="Heart" src={HandHeart} alt="" />
      <img id="Rad" src={Radioactive} alt="" />
      <img id="shield" src={Shieldplu} alt="" />
-     <img id="shlpls" src={Shieldplus} alt="" /> */}
+     <img id="shlpls" src={Shieldplus} alt="" />
 
         <MenuDiv>
             <h2>Which option best describes your position in the <span> waste management
