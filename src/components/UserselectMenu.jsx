@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonProps from "../Reusables/Buttonprops";
-import Biohazard from '../assets/biohazard.png';
+// import Biohazard from '../assets/biohazard.png';
 import Calenda from '../assets/calenda.png';
 import Calendar from '../assets/calendar.png';
 import HandHear from '../assets/handhear.png';
