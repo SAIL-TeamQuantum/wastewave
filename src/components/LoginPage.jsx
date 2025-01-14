@@ -6,7 +6,7 @@ import Remem from '../assets/remem.png'
 import Biohazard from '../assets/biohazard.png';
 import Calenda from '../assets/calenda.png';
 import Calendar from '../assets/calendar.png';
-import HandHear from '../assets/handhear.png';
+import HandHear from '../assets/handear.png';
 import HandHeart from '../assets/handheart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/shieldplus.png';
