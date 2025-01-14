@@ -1,0 +1,129 @@
+
+  .services-section {
+    text-align: center;
+    padding: 30px;
+    background-color: #6ba843;
+    border-radius: 30px;
+    margin-bottom: 100px;
+  }
+  
+  .services-section h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 60px;
+    @media (max-width:450px){
+      font-size: 18px;
+    }
+
+
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+
+    @media (max-width:450px){
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+  
+  .service-box {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 60px 15px 40px 15px;
+    max-width: 300px;
+    
+  }
+  
+  .service-box h3 {
+    font-size: 20px;
+    color: white;
+    text-align: left;
+ 
+
+  }
+  #underline {
+      width: 60px;
+      height: 1px;
+      border: 1px solid white;
+      margin-top: 10px;
+  }
+  .service-box h2 {
+    font-size: 24px;
+    line-height: 35px;
+    color: white;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .service-box p {
+    font-size: 16px;
+    line-height: 30px;
+    color: white;
+    text-align: left;
+  }
+  
+
+  .faqs-section-val {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:768px){
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    @media (max-width:450px){
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+  
+  .faqs-section-val h2 {
+    font-size: 40px;
+    color: #6ba843;
+    text-align: left;
+  }
+  
+  .faqs-section-val p {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 10px 0px;
+    color: #004aad;
+    max-width: 550px;
+  }
+  
+  .faq-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media(max-width:450px){
+     padding: 10px;
+
+    }
+  }
+
+  .bottonButton {
+    width: 100%;
+    border: 2px solid red;
+    align-content: center;
+
+  }
+
+  .startbutton {
+    padding: 10%;
+    background-color: #6ba843;
+    width: 6%;
+  }

@@ -1,101 +1,98 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
-const ButtonProps = ({ h3 }) => (
+const ButtonProps = () => {
+  const navigate = useNavigate() 
+  return(
+
     <Buttondiv>
-      <StyledHeading>{h3 || "Please Select an Option"}</StyledHeading>
-      <ResidentButton>Resident</ResidentButton>
-      <CompanyButton>Waste Management Company</CompanyButton>
-      <AgencyButton>Waste Management Agency</AgencyButton>
+      <ResidentButton onClick={()=>navigate("/signup")}>Resident</ResidentButton>
+      <CompanyButton onClick={()=>navigate("/SignupProps")}>Waste Management Company</CompanyButton>
+      <AgencyButton onClick={()=>navigate("/SignupProps")}>Waste Management Agency</AgencyButton>
     </Buttondiv>
-  );
+      )
+    };
   
 const Buttondiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  background-color: white;
-
-
+  gap: 25px;
 `;
 
-const StyledHeading = styled.h3`
-
-font-size: 16px;
-font-weight: 400;
-line-height: 21.6px;
-text-align: left;
-/* margin-bottom: 20px; */
-color: #A1A4B2;
-
-
-`;
-
+;
 const ResidentButton = styled.button`
     background-color: #81B622;
     color: white;
-    width: 374px;
-    height: 63px;
+    width: 388px;
+    height: 70px;
     gap: 0px;
-    border-radius: 38px ;
+    border-radius: 20px ;
     opacity: 0px;
-    border: none;
+    border: 2px solid white;
+    border-color: #FFFFFF;
     cursor: pointer;
     font-size: 20px;
     font-weight: 700;
-    line-height: 21.62px;
-    letter-spacing: 0.05em;
+    line-height: 24.38px;
     text-align: center;
-    
-  &:hover {
-    background-color: #0056b3;
+
+    &:hover {
+    background-color: blue; 
+
   }
+
+
 `;
 
 const CompanyButton = styled.button`
-  background-color: white;
-  color: #81B622;
-   width: 374px;
-    height: 63px;
+    color:#FFFFFF;
+    background-color: #81B622;
+    width: 388px;
+    height: 70px;
     gap: 0px;
-    border-radius: 38px ;
+    border-radius: 20px ;
     opacity: 0px;
-    border: 3px solid #81B622;
+    border: 2px solid white;
+    border-color: #FFFFFF;
     cursor: pointer;
     font-family: Montserrat;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 21.62px;
     letter-spacing: 0.05em;
     text-align: center;
 
-  &:hover {
-    background-color: #1e7e34;
+    &:hover {
+    background-color: blue; 
+
   }
 `;
 
 const AgencyButton = styled.button`
-    background-color: white;
-    color: #81B622;
-    width: 374px;
-    height: 63px;
-    gap: 0px;
-    border-radius: 38px ;
-    opacity: 0px;
-     border: 3px solid #81B622;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 21.62px;
-    letter-spacing: 0.05em;
-    text-align: center;
+     color:#FFFFFF;
+      background-color: #81B622;
+      width: 388px;
+      height: 70px;
+      gap: 0px;
+      border-radius: 20px ;
+      opacity: 0px;
+      border: 2px solid white;
+      border-color: #FFFFFF;
+      cursor: pointer;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 21.62px;
+      letter-spacing: 0.05em;
+      text-align: center;
 
-
-  &:hover {
-    background-color: #e0a800;
+      &:hover {
+    background-color: blue;
   }
+
 `;
 
 

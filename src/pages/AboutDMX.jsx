@@ -22,7 +22,7 @@ const AboutDMX = () => {
         borderRadius: "5px",
         margin: "auto",
         marginTop: "146.92px",
-        boxShadow: "#6CC51D40 0px 3px 8px"    
+        boxShadow: "#6CC51D40 0px 3px 8px"   
     }
     const toggleSave = ()=> {
         const alertBox = document.getElementById("popUp")
