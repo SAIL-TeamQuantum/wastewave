@@ -7,7 +7,7 @@ import Calendar from '../assets/Calendar.png';
 import HandHear from '../assets/HandHear.png';
 import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
-import Shieldplus from '../assets/Shieldplus.png';
+// import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
 import NavHeader from "../components/Header";
 
