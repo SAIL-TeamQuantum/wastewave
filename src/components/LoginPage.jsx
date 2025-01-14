@@ -10,8 +10,8 @@ import HandHear from '../assets/HandHear.png';
 import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
-import Shieldplu from '../assets/Shieldplu.png';
-import lockkey from '../assets/Lockkey.png';
+import Shieldplu from '../assets/ShieldPlu.png';
+import lockkey from '../assets/LockKey.png';
 import eye from '../assets/eye.png';
 import NavHeader from "../components/Header";
 import Logo from "../assets/logo.png"
