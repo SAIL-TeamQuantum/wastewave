@@ -1,4 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+Link {
+    text-decoration: none;
+}
 .flex-container {
     display: flex;
     gap: 10px;   
@@ -364,7 +371,9 @@ color: #fff;
     border: 3px solid #81B622;
     border-radius: 20px;
     padding: 3%;
-    gap: 10%;
+    justify-content: space-between;
+
+
 }
 .MobileView {
     display: none;
