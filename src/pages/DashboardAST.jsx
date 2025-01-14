@@ -20,6 +20,7 @@ import DashboardFooter from '../components/DashboardFooterAST';
 const DashboardAst = () => {
     return (
         <div className='body-container'>
+        
         <div className='main-container'>
         <DashboardHeaderAST />
         <div className="flex-container Boxcontainer">
