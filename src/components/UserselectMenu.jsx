@@ -9,16 +9,14 @@ import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
-
-
-
-
+import NavHeader from "../components/Header";
 
 
 
 const UserSelectMenu = () => {
     return (
     <Cover>
+      <NavHeader/>
     <img id="bio" src={Biohazard} alt="" />
      <img id="Cal" src={Calenda} alt="" />
      <img id="cld" src={Calendar} alt="" />

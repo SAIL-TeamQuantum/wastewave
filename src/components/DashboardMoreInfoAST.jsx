@@ -22,7 +22,6 @@ const DashboardInfo = () => {
                     <div className='moreInfoBoxLogoSect'>
                     <img className='moreInfoBoxLogo MobileView' src={Flogo} alt="logo" />
                 <img className='moreInfoBoxLogo mobile-none' src={Logo} alt="logo" />
-                
                 <text className='moreInfoBoxLogoText mobile-none'>WASTE WAVE</text>
                 </div>
                 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import FaqProps from '../Reusables/FaqProps';
 
 const About = () => {
   return (
@@ -50,29 +51,27 @@ const About = () => {
         <div>
                 <h2>FAQs about Waste Wave</h2>
                 <p>
-                Here, you'll find answers to common questions <br /> about how to use the
-                app, schedule waste <br />pickups, make payments, and more. Our goal <br /> is to
-                ensure a smooth experience for residents,<br /> waste companies, and LAWMA.
-                </p>
+                Here, you'll find answers to common questions  about how to use the
+                app, schedule waste pickups, make payments, and more. Our goal  is to
+                ensure a smooth experience for residents, waste companies, and LAWMA.
+                </p> 
                 <p>
-                    if you don't find the information you need,feel <br /> 
-                    free to reach out to our support team for <br />
+                    If you don't find the information you need,feel  
+                    free to reach out to our support team for 
                     assitance.
 
                 </p>
         </div>
         
         <div>
-            <ul className="faq-list">
-            <li id="diff">What is Waste Wave, and how does it work?</li>
-            <div id="underline-list"></div>
-            <li>Can I track my payments with Waste Wave?</li>
-            <div id="underline-list"></div>
-            <li>Is my data safe with Waste Wave?</li>
-            <div id="underline-list"></div>
-            <li>Who can use Waste Wave?</li>
-            <div id="underline-list"></div>
-            </ul>
+            {/* <ul className="faq-list"> */}
+
+            <FaqProps head="What is Waste Wave, and how does it work?" content="It is a waste management platform that enables easy scheduling and tracking of waste collection" />
+            <FaqProps head="Can I track my payments with Waste Wave?" content=" Yes, you can track all your payments in the “Payment History” section of the app. It provides details such as payment dates, amounts, and services paid for." />
+            <FaqProps head="Is my data safe with Waste Wave?" content="Yes, we prioritize your privacy and use industry-standard encryption to secure your data." />
+            <FaqProps head="Who can use Waste Wave?" content=" The app is designed for anyone interested in managing waste responsibly, including households, businesses, and community organizations." />
+
+            {/* </ul> */}
         </div>
         
       </section>

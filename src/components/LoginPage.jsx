@@ -11,11 +11,12 @@ import HandHeart from '../assets/HandHeart.png';
 import Radioactive from '../assets/Radioactive.png';
 import Shieldplus from '../assets/Shieldplus.png';
 import Shieldplu from '../assets/Shieldplu.png';
-import NavHeader from "../components/Header";
 import lockkey from '../assets/Lockkey.png';
 import eye from '../assets/eye.png';
+import NavHeader from "../components/Header";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState("")
@@ -54,7 +55,7 @@ const LoginPage = () => {
   };
   return (
     <Anowrap>
-      {/* <NavHeader/> */}
+      <NavHeader/>
       <img id="bio" src={Biohazard} alt="" />
       <img id="Cal" src={Calenda} alt="" />
       <img id="cld" src={Calendar} alt="" />
@@ -72,7 +73,7 @@ const LoginPage = () => {
                 <input id="email" type="email" placeholder="Enter your email address" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email" required/>
 
                 {/* <p>You typed: {email}</p> */}
-            </div>
+            </div> 
           </InputContainer>
           <Label>Password</Label>
           <PasswordContainer>
@@ -204,13 +205,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   gap: 1.5rem;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   justify-content: center; 
   background-color:#81B622;
-  padding: 50px;
+  padding: 40px;
 
 `
 
@@ -241,6 +241,11 @@ const Buttons = styled.button`
   color: white;
   font-weight: 700;
   font-size: 16px;
+
+  &:hover {
+    background-color: blue; 
+ 
+  }
 `;
 const GoogleButton = styled.button`
   display: flex;
@@ -259,6 +264,12 @@ const GoogleButton = styled.button`
   border: 2px solid white;
   color: #fff;
   background-color: transparent;
+
+  &:hover {
+    background-color: blue; 
+    color: #f5f5f5; 
+    border-color: #e0e0e0; 
+  }
 
   img {
     width: 20px;

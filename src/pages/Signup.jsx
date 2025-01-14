@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
     setResponseMessage("Passwords do not match");
     return;
   }
-  // setIsAlertVisible(true);
+
   toggleSave()
   try {
     const response = await axios.post("https://wastewave-backend.onrender.com/api/register", {
@@ -80,6 +80,7 @@ const handleSubmit = async (e) => {
      <img id="shlpls" src={Shieldplus} alt="" />
 
       <SignupWrapper>
+  
         <InputWrapper>
         <Header>Sign Up</Header>
           <Label>Email Address</Label>
@@ -156,7 +157,6 @@ const SignupWrapper = styled.div`
 
 const Anotherwrapa = styled.div`
   background-color: white;
-  /* position: relative; */
 
   #bio{
     position: absolute;
@@ -225,6 +225,8 @@ const SignupBtn = styled.div`
   gap: 0.5rem;
   margin-top:10px;
 
+  
+
   h3 {
     color: white;
   }
@@ -246,11 +248,16 @@ const Buttons = styled.button`
   color: white;
   font-weight: 700;
   font-size: 16px;
+
+  &:hover {
+    background-color: blue; 
+    color: white; 
+    border-color: #e0e0e0; 
+  }
 `;
 
 const Icon = styled.div`
   margin-right: 0.5rem;
-
 
   img {
     width: 20px;
@@ -260,7 +267,7 @@ const Icon = styled.div`
 `;
 
 const InsideText = styled.div`
-    color: #004AAD;
+    color: white;
     width: 200px;
     cursor: pointer;
     font-size: 16px;
@@ -272,6 +279,8 @@ const InsideText = styled.div`
     #signup {
       color: white;
       font-weight: 600;
+
+ 
     }
 `;
 
@@ -323,13 +332,6 @@ align-items: center;
 height: 63px;
 padding-right: 2px;
 display: flex;
-  
-  /* img {
-    width: 20px;
-    height: 20px;
-  } */
-
-
 `;
 
 const Input = styled.input`

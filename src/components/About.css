@@ -70,9 +70,15 @@
   
   /* FAQs Section */
   .faqs-section-val {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     justify-content: space-between;
+
+    @media (max-width:768px){
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
 
     @media (max-width:450px){
       flex-direction: column;
@@ -90,9 +96,10 @@
   .faqs-section-val p {
     font-size: 20px;
     line-height: 25px;
-    margin: 20px auto;
+    margin: 10px 0px;
     color: #004aad;
-    text-align: left;
+    max-width: 550px;
+    /* text-align: left; */
   }
   
   .faq-list {
@@ -103,23 +110,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media(max-width:450px){
+      /* border: 2px solid red; */
+     padding: 10px;
+
+    }
   }
-  #underline-list {
+  /* #underline-list {
     width: 400px;
     height: 1px;
     border: 1px solid #6ba843;
     /* margin-top: 20px; */
-}
-  .faq-list li {
+ */
+  /* .faq-list li {
     font-size: 20px;
     color: #6ba843;
     margin: 8px 0;
     font-weight: bolder;
     padding: 15px 0px;
-  }
-  #diff {
+  } */
+  /* #diff {
     padding-top: 0;
-  }
+  } */
   .bottonButton {
     width: 100%;
     border: 2px solid red;

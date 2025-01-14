@@ -9,6 +9,6 @@ body{
   padding: 0 50px;
 
   @media (max-width: 450px){
-    padding: 0 5px;
+    padding: 0 10px;
   }
 }

@@ -49,6 +49,7 @@
  }
  .toggle-on-icon {
   margin: auto;
+  display: block;
 }
   .calendar {
     margin-top: 3%;

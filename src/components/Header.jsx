@@ -15,7 +15,7 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="Company Logo" />
       </div>
-      {/* Hamburger Menu */}
+   
       <div 
         className={`hamburger ${isMenuOpen ? "close" : ""}`} 
         onClick={toggleMenu}
@@ -32,7 +32,9 @@ const Header = () => {
         <li><a href="#faqs">FAQ's</a></li>
         <li><a href="#contact">CONTACT US</a></li>
       </ul>
+     
       <div className="signup-btn">
+      <Link id="logiin" to="/login"><button>LOG IN</button></Link>
         <Link to="/userselectmenu"><button>SIGN UP</button></Link>
       </div>
     </nav>

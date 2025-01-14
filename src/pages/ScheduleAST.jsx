@@ -77,7 +77,7 @@ const ScheduleAST = () => {
         onClick={() => handleDateClick(day)}
       >
         {day}
-        {scheduledDates.includes(dateKey) && <span className="toggle-on-icon"><FaToggleOn /></span>}
+        {scheduledDates.includes(dateKey) &&  <span className="toggle-on-icon">scheduled</span>}
       </td>
     );
     if ((day + firstDay) % 7 === 0 || day === daysInMonth) {

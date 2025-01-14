@@ -1,6 +1,5 @@
 import React from "react";
-import "./Hero.css"; // Importing CSS file
-import styled from "styled-components";
+import "./Hero.css"; 
 import image  from "../assets/images/StartImg.png"
 import image1 from "../assets/images/HandHeart.png"
 import image2 from "../assets/images/Radioactive.png"
