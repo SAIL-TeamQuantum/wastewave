@@ -26,12 +26,12 @@ const NavIcons = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* position: relative; */
     background-color: white;
     color: #868889;
     font-size: 30px;
     width: 100vw;
     height: 70px;
+    /* border: 1px solid red; */
 `
 const MainIcon = styled.div`
     border: 5px solid white;
