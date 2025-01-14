@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonProps from "../Reusables/Buttonprops";
-import Biohazard from '../assets/Biohazard.png';
-import Calenda from '../assets/Calenda.png';
-import Calendar from '../assets/Calendar.png';
-import HandHear from '../assets/HandHear.png';
-import HandHeart from '../assets/HandHeart.png';
-import Radioactive from '../assets/Radioactive.png';
-import Shieldplus from '../assets/ShieldPlus.png';
-import Shieldplu from '../assets/ShieldPlu.png';
+import Biohazard from '../assets/biohazard.png';
+import Calenda from '../assets/calenda.png';
+import Calendar from '../assets/calendar.png';
+import HandHear from '../assets/handhear.png';
+import HandHeart from '../assets/handheart.png';
+import Radioactive from '../assets/radioactive.png';
+import Shieldplus from '../assets/shieldplus.png';
+import Shieldplu from '../assets/shieldplu.png';
 import NavHeader from "../components/Header";
 
 
