@@ -17,7 +17,7 @@ const Home = () => {
             <img id="fifth" src={image3} alt="" />
       <div className="content">
         <h1>
-          <span className="highlight-green">Fostering a cleaner<br /> environment</span>{" "}
+          <span className="highlight-green">Fostering a cleaner environment<br /> </span>{" "}
           through <span className="highlight-blue">waste scheduling</span>
         </h1>
         <p className="description">
@@ -36,20 +36,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// const PageIcon = styled.div`
-//   position: relative;
-  
-//   #first {
-//     position: relative;
-//     top: 10px;
-//     border: 1px solid red;
-
-//   }
-//  #second {
-//     position: relative;
-//     top: 50px;
-//     border: 1px solid red;
-//   }
-
-// `

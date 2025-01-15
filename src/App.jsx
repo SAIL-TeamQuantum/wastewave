@@ -1,12 +1,8 @@
-import About from "./components/About";
-import Wastewave from "./components/WasteWave"
 import { useState } from 'react'
 import './App.css'
-import Profile from './pages/Home'
+import Profile from '../src/pages/LandingPageDAMI'
 import AboutDMX from './pages/AboutDMX'
 import AddressDMX from './pages/AddressDMX'
-// import HomeDMX from './components/Home'
-// import DashboardAST from './pages/DashboardAST';
 import DashboardAST from './pages/DashboardAST'; //This one na user dashboard
 import ManDashboardAST from './pages/ManDashboardAST'; //This is management dashboard
 import ScheduleAST from './pages/ScheduleAST' ;
