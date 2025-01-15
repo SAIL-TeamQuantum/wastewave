@@ -11,8 +11,6 @@ import Shieldplus from '../assets/shieldplus.png';
 import Shieldplu from '../assets/shieldplu.png';
 import NavHeader from "../components/Header";
 
-
-
 const UserSelectMenu = () => {
     return (
     <Cover>
