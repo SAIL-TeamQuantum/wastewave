@@ -3,8 +3,7 @@
 }
   .sec-container {
     width: 100%;
-    background: #fff;
-    border-radius: 10px;
+    margin-top: 50px;
     padding: 20px;
     text-align: center;
   }
