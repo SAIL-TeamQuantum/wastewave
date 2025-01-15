@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+Link {
+    text-decoration: none;
+}
+.flex-container {
+    display: flex;
+    gap: 10px;   
+}
+
+/* HEADER  */
+.header-container-mobile {
+    display: none; 
+}
+.header-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.7%;
+
+    h2 {
+        font-family: Inter;
+font-size: 19px;
+font-weight: 500;
+line-height: 14.52px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #81B622;
+    }
+
+    .active {
+        text-decoration: underline;
+        text-decoration-thickness: 3px; 
+        
+        text-underline-offset: 12px; 
+        text-decoration-line: underline; 
+    }
+
+    img {
+        width: 6%;
+        height: auto;
+        margin-right: 12%;
+    }
+}
+.menu-toggle {
+    display: none;
+  }
+  
+  .side-menu {
+    display: none; 
+  }
+.header-button {
+    width: 10%;
+    height: auto;
+    background-color: #fff;
+    color: #81B622;
+    border: 2px solid #81B622;
+    border-radius: 10px;
+    padding: 1.2% 3% 1.2% 2.5%;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 14.63px;
+}
+
+.main-container{
+    padding-left: 5.1%;
+    padding-right: 5.1%;
+}
+.Boxcontainer {
+    border-radius: 20px;
+    height: 115px;
+    background-color: #81B622;
+    padding: 0.9%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+p {
+font-family: Poppins;
+font-size: 14px;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0.03em;
+text-align: left;
+text-underline-position: from-font;
+margin-bottom: 1%;
+color: #fff;
+    }
+    h3 {
+        font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0.03em;
+text-underline-position: from-font;
+color: #fff;
+text-align: center;
+
+    }
+    span {
+        color: #004AAD;
+    }
+}
+
+
+.pending-container {
+    width: 100%;
+    margin-top: 1%;
+    justify-content: space-evenly;
+}
+
+.CALicons {
+top: 1.5px;
+left: 3.5px;
+margin-top: 23%;
+
+}
+
+.Starcontainer {
+    margin-left: 2%;
+}
+.ToDoContainer {
+    margin-top: 3%;
+    
+
+    h2 {
+        font-family: Poppins;
+        margin-bottom: 2%;
+font-size: 24px;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0.03em;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+    }
+
+}
+.BoxcontainerText {
+    margin-top: 4%;
+}
+
+.box-container {
+    flex: 1;
+    display: flex;
+gap: 20px; 
+width: 30%;
+height: auto !important;
+border: solid #81B622 3px;
+border-radius: 20px;
+padding: 15px 29px;
+gap: 20px !important;
+
+img {
+width: 15%;
+height: auto !important;
+gap: 0px;
+border-radius: 50%;
+border: solid #004AAD 6px;
+opacity: 0px;
+
+}
+
+}
+.link-schdule {
+flex: 1;
+display: flex;
+gap: 20px; 
+width: 30%;
+height: auto !important;
+border-radius: 20px;
+padding: 15px 29px;
+gap: 20px !important;
+text-decoration: none;
+}
+.margin5 {
+    margin-right: 5%;
+}
+
+.Box-Text {
+font-family: Poppins;
+font-size: 19px;
+font-weight: 600;
+line-height: 22.5px;
+text-decoration: none;
+letter-spacing: 0.03em;
+color: #004AAD;
+}
+.Box-Grey {
+font-family: Poppins;
+font-size: 10px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0.03em;
+color: #A1A4B2;
+
+}
+
+.button-container {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: space-evenly;
+
+button {
+width: 10%;
+height: auto;
+background-color: #81B622;
+font-family: Montserrat;
+font-size: 13px;
+font-weight: 700;
+line-height: 14.63px;
+color: #fff;
+border: none;
+border-radius: 9px;
+
+    }
+    img {
+        height: auto;
+        margin-left: 19%;
+    }
+}
+
+/* .starclass {
+    position: absolute;
+    margin-left: 0%;
+    margin-bottom: 12%;
+} */
+.BUTicons {
+    margin-left: 9%;
+}
+
+.DailyQHeader {
+    
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 2%;
+
+    img{
+        display: none;
+    }
+}
+.DailyQBody {
+    background-color: #81B622;
+    padding: 4%;
+    border-radius: 0px 20px 20px 20px;
+    margin-bottom: 2%;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 0px 20px 20px 20px;
+    }
+    p {
+        font-family: Poppins;
+font-size: 19px;
+font-style: italic;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 0.03em;
+text-align: left;
+margin-bottom: 3%;
+color: #fff;
+    }
+}
+
+.bg-icon {
+    margin-left: 3%;
+    margin-bottom: 2%;
+    justify-content: space-between;
+}
+.ActivitySContainerHeader {
+   
+    margin-bottom: 2%;
+    gap: 17%;
+}
+.ActivitySContainer {
+  
+    background-color: #004AAD;
+    padding: 3% 1.7%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+
+    h2 {
+ font-family: Inter;
+font-size: 28px;
+font-weight: 900;
+line-height: 40px;
+letter-spacing: -0.04em;
+color: #fff;
+text-decoration: solid;
+    }
+   
+}
+
+.ActivitySBody {
+    width: 100%;
+    margin-top: 6%;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.ActivityTable {
+    width: 33%;
+    height: auto !important;
+    border: 2px solid #fff;
+    padding: 3% 1%;
+    
+    p1{
+        text-decoration: underline;
+        text-decoration-thickness: 3px; 
+        
+        text-underline-offset: 12px; 
+        text-decoration-line: underline; 
+        color: #fff;
+        font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 30px;
+    }
+    .no-underline {
+        text-decoration: none; 
+        color: #fff;
+        font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 30px;
+      }
+
+      h2 {
+        margin: 7% 0;
+        font-family: Montserrat;
+font-size: 23px;
+font-weight: 700;
+line-height: 25px;
+color: #fff;
+
+      }
+
+      p2 {
+        font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+line-height: 25px;
+color: #fff;
+
+      }
+
+}
+
+.Activitybutton-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.ActivityButton {
+    width: 12%;
+    height: auto;
+    padding: 1.1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    color: #004AAD;
+   
+}
+.moreInfoBox {
+    border: 3px solid #81B622;
+    border-radius: 20px;
+    padding: 3%;
+    justify-content: space-between;
+
+
+}
+.MobileView {
+    display: none;
+}
+.MobileICView {
+    display: none;
+}
+
+.moreInfoBoxSect1 {
+    width: 50%;
+
+   
+}
+.moreInfoBoxLogoSect {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+
+    @media(max-width:450px){
+        flex-direction: column;
+  
+
+    }
+   
+}
+.moreInfoBoxLogo {
+    margin-bottom: 3%;
+    width: 15%; 
+    align-items: baseline;
+}
+.moreInfoBoxLogoText {
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 30px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    margin: 0;
+    color: #81B622;
+    margin-top: 1em;
+    margin-left: -2%;
+   
+
+}
+.moreInfoBoxPText {
+    color: #004AAD;
+    font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+
+}
+.newsletterButton {
+    width: 50%;
+    height: auto;
+    margin-top: 6%;
+    background-color: #004AADCC;
+    padding: 3% 0% 3% 4%;
+    border-radius: 49px;
+    gap: 10px;
+   
+
+    p1{
+    text-align: center;
+    color: #fff;
+}
+    img{
+        margin: auto;
+        width: 10%;
+    
+    }
+}
+.moreInfoBoxSect2 {
+    margin-top: 2%;
+    width: 30%;
+    align-items: center;
+
+    text {
+        font-family: Montserrat;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 30px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #81B622;
+
+    }
+
+    /* @media(max-width:450px){
+     margin-left: 60px;
+    } */
+}
+
+.moreInfolist {
+    margin-top: 5.8%;
+
+    p {
+font-family: Inter;
+font-size: 19px;
+font-weight: 600;
+line-height: 20px;
+color: #004AAD;
+margin-bottom: 2%;
+
+
+    }
+}
+
+.moreInfoListSocialsLogo {
+    margin-top: 6%;
+    gap: 5%;
+ 
+}
+
+.moreInfobuttonContainer {
+
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.moreInfobutton {
+    margin-top: 5%;
+    background-color: #81B622;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 1.2% 3%;
+
+}
+
+.footer {
+    width: 100%;
+    background-color: #81B622;
+    padding: 2% 5%;
+    margin-top: 5%;
+    height: max-content;
+    justify-content: center;
+    color: #fff;
+    
+    bottom: 0;
+
+    p{
+        font-family: Inter;
+font-size: 19px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+    }
+    
+}
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .mobile-none{
+        display: none;
+    }
+    .menu-toggle {
+        display: block; 
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+       
+      }
+      .header-container {
+        display: none;
+      }
+    
+      .header-container-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 3px 20px 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12%;
+        background-color: #fff;
+        height: max-content;
+       
+       
+      }
+      
+    
+      .header-container-mobile img {
+        width: 30%; /* Adjust logo size */
+      }
+   
+  .cancel-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #81B622;
+    margin-bottom: 20px;
+  }
+      /* Side Menu Styling for Mobile */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Off-screen by default */
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+      }
+    
+      .side-menu.open {
+        right: 0; /* Slide-in from the right when open */
+      }
+    
+      .side-menu h2 {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        color: #81B622;
+        cursor: pointer;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+    
+      .side-menu .Mobilebutton {
+        margin-top: auto;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+      }
+    
+      .side-menu .active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 8px;
+      }
+  
+    .header-container-mobile h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        line-height: 18px;
+    }
+  
+    .header-container-mobile .active {
+        text-decoration-thickness: 2px; 
+        text-underline-offset: 8px; 
+    }
+  
+    .Mobilebutton {
+        width: auto; 
+        padding: 8px 12px; 
+        font-size: 12px; 
+        width: 10%;
+        height: auto;
+        background-color: #fff;
+        color: #81B622;
+        border: 2px solid #81B622;
+        border-radius: 10px;
+        font-family: Montserrat;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 14.63px;
+    }
+  
+   .header-container h2,
+    .header-button {
+       display: none;
+     }
+     .Wlogo {
+        display: none;
+     }
+  
+
+    .main-container {
+        padding: 3%;
+    }
+
+    .Boxcontainer {
+        margin-top: 2.9%;
+        flex-direction: column;
+        height: auto;
+        padding: 5%;
+
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+    .Boxcontainer-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .Box-Text {
+        text-align: center;
+    }
+    .Box-Grey {
+        text-align: center;
+    }
+    .CALicons {
+        margin-top: 0;
+    }
+
+    .pending-container {
+        flex-direction: column;
+    }
+
+    .ToDoContainer h2 {
+        font-size: 20px;
+    }
+   
+    .box-container {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+
+        img {
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
+
+    .link-schdule {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .button-container button {
+        width: auto;
+        padding: 5% 10%;
+        font-size: 12px;
+    }
+    .BUTicons {
+        width: 9%;
+    }
+
+    .DailyQBody {
+        padding: 8%;
+        
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .bg-icon {
+        width: 10%;
+        flex-direction: row;
+        gap: 50%;
+        margin-left: 25%;
+    }
+
+    .ActivityTable {
+        width: 100%;
+        padding: 5%;
+
+        p1, .no-underline {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p2 {
+            font-size: 14px;
+        }
+    }
+
+    .ActivityButton {
+        width: auto;
+        padding: 8%;
+    }
+
+    .moreInfoBox {
+        flex-direction: column;
+        gap: 5%;
+    }
+    .MobileView {
+        display: block;
+        width: 30%;
+    }
+
+    .MobileICView {
+        display: block;
+    }
+
+    .moreInfoBoxSect1 {
+        width: 100%;
+    }
+    .moreInfoBoxSect2 {
+        width: 100%;
+        flex-direction: row;
+        gap: 5%;
+    }
+
+    .newsletterButton {
+        width: 100%;
+        padding: 6%;
+        font-size: 14px;
+        flex-direction: row;
+    }
+
+    .moreInfoListSocialsLogo {
+        flex-direction: row;
+    }
+    .moreInfobutton {
+        width: auto;
+        padding: 3%;
+    }
+
+    .footer {
+        padding: 5%;
+        
+        p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    /* FOR MANAGEMENT DASHBOARD */
+    .Management-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .management-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 3% 0 3% 0%;
+    }
+   
+}
