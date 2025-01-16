@@ -16,29 +16,27 @@ import PaymentDMX from '../src/pages/PaymentDMX'
 import Success from "./pages/Success";
 import VerificationDMX from "./pages/VerificationDMX"
 
-
-
 const app = () => {
   return ( 
   <div>
   
     <Router>
-    <Routes>
-      <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
-      <Route path='/signup' element={ <Signup/>}/>
-      <Route path='/verification' element={ <VerificationDMX/>}/>
-      <Route path='login' element={ <LoginPage/>}/>
-      <Route path='/profile' element={<Profile />}/>
-      <Route path='/about' element={<AboutDMX/>}/>
-      <Route path='/address' element={<AddressDMX/>}/>
-      <Route path='/' element={<LandingPage/>}/>
-      <Route path='/home/:id' element={<DashboardAST />}/>
-      <Route path='/ScheduleAST' element={<ScheduleAST />}/>
-      <Route path='/DashboardAST' element={<DashboardAST />}/>
-      <Route path='/company' element={<ManDashboardAST />}/>   
-      <Route path='/payment' element={<PaymentDMX />}/>   
-      <Route path='payment-success' element={<Success />}/>   
-    </Routes>
+      <Routes>
+        <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
+        <Route path='/signup' element={ <Signup/>}/>
+        <Route path='/verification' element={ <VerificationDMX/>}/>
+        <Route path='login' element={ <LoginPage/>}/>
+        <Route path='/profile' element={<Profile />}/>
+        <Route path='/about' element={<AboutDMX/>}/>
+        <Route path='/address' element={<AddressDMX/>}/>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/home/:id' element={<DashboardAST />}/>
+        <Route path='/ScheduleAST' element={<ScheduleAST />}/>
+        <Route path='/DashboardAST' element={<DashboardAST />}/>
+        <Route path='/company' element={<ManDashboardAST />}/>   
+        <Route path='/payment' element={<PaymentDMX />}/>   
+        <Route path='payment-success' element={<Success />}/>   
+      </Routes>
     </Router>
     {/* <h1>boy</h1> */}
     </div> 
