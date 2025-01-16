@@ -10,10 +10,12 @@ import Radioactive from '../assets/radioactive.png';
 import Shieldplus from '../assets/shieldplus.png';
 import Shieldplu from '../assets/shieldplu.png';
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"; 
 
 
 const VerificationDMX = ({ length = 6 }) => {
   const [otp, setOtp] = useState(Array(length).fill(''));
+  const navigate = useNavigate();
   const inputs = useRef([]);
   const handleChange = (e, index) => {
     const { value } = e.target;
@@ -80,7 +82,7 @@ const VerificationDMX = ({ length = 6 }) => {
 
         if (response.data.status === "VERIFIED") {
             alert("OTP Verified Successfully");
-            window.location.href = "/login"; // Redirect after success
+            navigate("/login"); // Redirect after success
         } else {
             alert(response.data.message);
         }
