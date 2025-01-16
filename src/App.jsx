@@ -8,13 +8,13 @@ import ManDashboardAST from './pages/ManDashboardAST'; //This is management dash
 import ScheduleAST from './pages/ScheduleAST' ;
 import React from 'react'
 import UserSelectMenu from './components/UserselectMenu';
-import LoginPage from './components/LoginPage';
+import LoginPage from './pages/LoginPage';
 import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPageDAMI'
 import PaymentDMX from '../src/pages/PaymentDMX'
 import Success from "./pages/Success";
-
+import VerificationDMX from "./pages/VerificationDMX"
 
 
 
@@ -26,6 +26,7 @@ const app = () => {
     <Routes>
       <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
       <Route path='/signup' element={ <Signup/>}/>
+      <Route path='/verification' element={ <VerificationDMX/>}/>
       <Route path='login' element={ <LoginPage/>}/>
       <Route path='/profile' element={<Profile />}/>
       <Route path='/about' element={<AboutDMX/>}/>

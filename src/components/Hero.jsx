@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import "./Hero.css"; 
 import image  from "../assets/images/StartImg.png"
 import image1 from "../assets/images/HandHeart.png"
@@ -26,7 +27,7 @@ const Home = () => {
           healthy environment.
         </p>
     
-        <button className="action-button">SEE HOW IT WORKS</button>
+        <Link to="/signup"><button className="action-button">SEE HOW IT WORKS</button></Link>
       </div>
       <div className="image-container">
         <img src={image} alt="Waste Scheduling Illustration" />
