@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import AsyncStorage from "@react-native-async-storage/async-storage"; // Ensure correct import
 import GoogleIconImg from "../assets/google.png";
 import eye from '../assets/eye.png';
 import lockkey from '../assets/lockkey.png';
@@ -15,105 +15,124 @@ import HandHeart from '../assets/handheart.png';
 import Radioactive from '../assets/radioactive.png';
 import Shieldplus from '../assets/shieldplus.png';
 import Shieldplu from '../assets/shieldplu.png';
-import NavHeader from "../components/Header";
 import Logo from "../assets/logo.png"
 import CustomAlertDMX from "../components/CustomAlertDMX";
-
-const SignUpProps = ({GoogleIcon = GoogleIconImg,  Title}) => {
-  const toggleSave = ()=> {
-    const alertBox = document.getElementById("popUp")
-    alertBox.style.display = "flex"
-    console.log(alertBox);  
-}
-const [email, setEmail] = useState("")
-const [password, setPassword] = useState("")
-const [confirmPassword, setConfirmPassword] = useState("");
-const [isAlertVisible, setIsAlertVisible] = useState(false);
-const [responseMessage, setResponseMessage] = useState("");
-const toggleShowPassword = () => setShowPassword(!showPassword);
+import { Link, useNavigate } from "react-router-dom";
 
 
-  const handleEmailInput = (e)=> {
-    setEmail(e.target.value)
-    console.log(email)
-  }
-  const handlePasswordInput = (e)=> {
-    setPassword(e.target.value)
-    console.log(password)
-  }
-  const handleConfirmPasswordInput = (e)=> {
-    setConfirmPassword(e.target.value)
-    console.log(confirmPassword)
-  }
-  
+const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleEmailInput = (e) => setEmail(e.target.value);
+  const handlePasswordInput = (e) => setPassword(e.target.value);
+  const handleConfirmPasswordInput = (e) => setConfirmPassword(e.target.value);
+
 
 const handleSubmit = async (e) => {
-  e.preventDefault();
-  if (password !== confirmPassword) {
-    setResponseMessage("Passwords do not match");
-    return;
-  }
+    e.preventDefault();
 
-  toggleSave()
-  try {
-    const response = await axios.post("https://wastewave-backend.onrender.com/api/register", {
-      email,
-      password,
-    });
-    console.log(email, password);
-    
-    setResponseMessage(`Success: ${response.data.message}`);
-  } catch (error) {
-    const errorMessage = error.response?.data.message || error.message;
-    setResponseMessage(`Error: ${errorMessage}`);
-  }
+    // Validate passwords
+    if (password !== confirmPassword) {
+        setResponseMessage("Passwords do not match");
+        return;
+    }
+
+    try {
+        // Make registration API call
+        const response = await axios.post("https://wastewave-backend.onrender.com/api/register", {
+            email,
+            password,
+        });
+
+        const { message, status, data } = response.data; // Extract API response data
+        const saveUserId = sessionStorage.setItem('user_id', JSON.stringify(data))
+        if (status !== "PENDING") {
+            handleMessage(message, status); // Handle non-pending statuses (e.g., error messages)
+        } else {
+            // Persist temporary user data
+            await temporaryUserPersist({ email, password });
+
+            // Navigate to verification page, passing necessary data
+            navigate("/verification", { email, userId: data.userId });
+        }
+    } catch (error) {
+        const errorMessage = error.response?.data?.message || error.message;
+        setResponseMessage(`Error: ${errorMessage}`);
+    }
 };
+
+const temporaryUserPersist = async (credentials) => {
+    try {
+        await AsyncStorage.setItem("tempuser", JSON.stringify(credentials)); // Store credentials securely
+    } catch (error) {
+        console.error("Error with initial data handling:", error);
+        setResponseMessage("Error saving user data. Please try again.");
+    }
+};
+
+
   return (
     <Anotherwrapa>
-        <LogoSec>
-                  <img  src={Logo} alt="logo" />
-                  <h1>ASTE WAVE</h1>
-                 </LogoSec> 
+      <LogoSec>
+        <img src={Logo} alt="logo" />
+        <h1>ASTE WAVE</h1>
+      </LogoSec>
 
-     <img id="bio" src={Biohazard} alt="" />
-     <img id="Cal" src={Calenda} alt="" />
-     <img id="cld" src={Calendar} alt="" />
-     <img id="Han" src={HandHear} alt="" />
-     <img id="Heart" src={HandHeart} alt="" />
-     <img id="Rad" src={Radioactive} alt="" />
-     <img id="shield" src={Shieldplu} alt="" />
-     <img id="shlpls" src={Shieldplus} alt="" />
+      <img id="bio" src={Biohazard} alt="" />
+      <img id="Cal" src={Calenda} alt="" />
+      <img id="cld" src={Calendar} alt="" />
+      <img id="Han" src={HandHear} alt="" />
+      <img id="Heart" src={HandHeart} alt="" />
+      <img id="Rad" src={Radioactive} alt="" />
+      <img id="shield" src={Shieldplu} alt="" />
+      <img id="shlpls" src={Shieldplus} alt="" />
 
       <SignupWrapper>
-
-  
         <InputWrapper>
-        <Header>Sign Up</Header>
+          <Header>Sign Up</Header>
           <Label>Email Address</Label>
           <InputContainer>
             <div>
-                <input id="email" type="email" placeholder="Enter your email address" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
-
-                {/* <p>You typed: {email}</p> */}
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email address"
+                onInput={handleEmailInput}
+                onChange={handleEmailInput}
+                autoComplete="email"
+              />
             </div>
           </InputContainer>
-       <  Password>Password </Password>
+          <Password>Password</Password>
           <PasswordContainer>
             <div>
-                <img id="lockkey" src={lockkey} alt=" Icon" />
-                <input type="password" placeholder="Enter your password" onInput={handlePasswordInput} onChange={handlePasswordInput} />
-                <img src={eye} alt=" Icon" id="Eyecon" />
+              <img id="lockkey" src={lockkey} alt=" Icon" />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                onInput={handlePasswordInput}
+                onChange={handlePasswordInput}
+              />
+              <img src={eye} alt=" Icon" id="Eyecon" />
             </div>
-            {/* <p>You typed: {password}</p> */}
           </PasswordContainer>
           <Confirmation>Password Confirmation</Confirmation>
           <PasswordContainer>
             <div>
-                <img id="lockkey" src={lockkey} alt=" Icon" />
-                <input type="password" placeholder="Confirm your password" onInput={handleConfirmPasswordInput} onChange={handleConfirmPasswordInput}/>
-                <img src={eye} alt=" Icon" id="Eyecon"  />
+              <img id="lockkey" src={lockkey} alt=" Icon" />
+              <input
+                type="password"
+                placeholder="Confirm your password"
+                onInput={handleConfirmPasswordInput}
+                onChange={handleConfirmPasswordInput}
+              />
+              <img src={eye} alt=" Icon" id="Eyecon" />
             </div>
-            {/* <p>You typed: {confirmPassword}</p> */}
           </PasswordContainer>
 
           <Label>FirstName</Label>
@@ -136,13 +155,15 @@ const handleSubmit = async (e) => {
           
         </InputWrapper>
         <Wrapper>
-          <p>I have read the  <span>privacy policy</span>.</p>
-       <h4><TiTick/></h4>
-      </Wrapper>
+          <p>
+            I have read the <span>privacy policy</span>.
+          </p>
+          <h4>
+            <TiTick />
+          </h4>
+        </Wrapper>
         <SignupBtn>
-          <Buttons type="submit" onClick={handleSubmit}>
-            Sign Up
-          </Buttons>
+          <Buttons type="submit" onClick={handleSubmit}>Sign Up</Buttons>
           <h3>OR</h3>
           <Buttons>
             <Icon>
@@ -152,11 +173,18 @@ const handleSubmit = async (e) => {
           </Buttons>
         </SignupBtn>
         {responseMessage && <p>{responseMessage}</p>}
-        <Already>Already have an account? <Link to="/login" style={{textDecoration: "none"}}><span>Log In</span></Link ></Already>
-        <Bysign>By signing up, you agree to our <br />
-        <span >Terms of Service</span> and <span>Privacy Policy</span> </Bysign>
+        <Already>
+          Already have an account?{" "}
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <span>Log In</span>
+          </Link>
+        </Already>
+        <Bysign>
+          By signing up, you agree to our <br />
+          <span>Terms of Service</span> and <span>Privacy Policy</span>
+        </Bysign>
       </SignupWrapper>
-      <CustomAlertDMX text="Sign Up Success" url="/login" btnText="Login"/>
+      <CustomAlertDMX text="Sign Up Success" url="/login" btnText="Login" />
     </Anotherwrapa>
   );
 };
@@ -308,7 +336,7 @@ const Buttons = styled.button`
   color: white;
   font-weight: 700;
   font-size: 16px;
-
+  
   &:hover {
     background-color: #228822; 
     color: white; 

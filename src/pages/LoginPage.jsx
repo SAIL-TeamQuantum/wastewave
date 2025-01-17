@@ -13,15 +13,9 @@ import Shieldplus from '../assets/shieldplus.png';
 import Shieldplu from '../assets/shieldplu.png';
 import lockkey from '../assets/lockkey.png';
 import eye from '../assets/eye.png';
-import NavHeader from "../components/Header";
 import Logo from "../assets/logo.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
-
-
-
-
-
 
 const LoginPage = () => {
   const [email, setEmail] = useState("")
