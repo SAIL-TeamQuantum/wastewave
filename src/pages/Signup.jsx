@@ -95,6 +95,23 @@ const temporaryUserPersist = async (credentials) => {
       <SignupWrapper>
         <InputWrapper>
           <Header>Sign Up</Header>
+
+          <Label>FirstName</Label>
+          <InputContainer>
+            <div>
+                <input id="email" type="email" placeholder="Enter FirstName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
+
+                {/* <p>You typed: {email}</p> */}
+            </div>
+          </InputContainer>
+          <Label>LastName</Label>
+          <InputContainer>
+            <div>
+                <input id="email" type="email" placeholder="Enter LastName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
+
+                {/* <p>You typed: {email}</p> */}
+            </div>
+
           <Label>Email Address</Label>
           <InputContainer>
             <div>
@@ -134,25 +151,7 @@ const temporaryUserPersist = async (credentials) => {
               <img src={eye} alt=" Icon" id="Eyecon" />
             </div>
           </PasswordContainer>
-
-          <Label>FirstName</Label>
-          <InputContainer>
-            <div>
-                <input id="email" type="email" placeholder="Enter FirstName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
-
-                {/* <p>You typed: {email}</p> */}
-            </div>
           </InputContainer>
-          <Label>LastName</Label>
-          <InputContainer>
-            <div>
-                <input id="email" type="email" placeholder="Enter LastName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
-
-                {/* <p>You typed: {email}</p> */}
-            </div>
-          </InputContainer>
-         
-          
         </InputWrapper>
         <Wrapper>
           <p>
@@ -199,13 +198,17 @@ const LogoSec = styled.div`
     margin-left: 300px;
     margin-bottom: 30px;
 
+    @media(max-width: 450px){
+      position: relative;
+      right:250px
+    }
+
+  
     img {
         width: 100px;
-  
     }
 
     h1 {
-    
         position: absolute;
         top: 30px;
         left: 85px;
@@ -214,7 +217,7 @@ const LogoSec = styled.div`
 `
 const SignupWrapper = styled.div`
   width: 574px;
-  height: 950px;
+  height: 920px;
   border-radius: 30px;
   background-color: #000000;
   display: flex;
@@ -223,7 +226,6 @@ const SignupWrapper = styled.div`
   border-radius: 30px;
   opacity: 0px;
   margin: auto;
-  
   margin-top: -30px;
 
   @media(max-width: 450px){
@@ -310,9 +312,6 @@ const SignupBtn = styled.div`
   align-items: center;
   gap: 0.5rem;
   margin-top:10px;
-
-  
-
   h3 {
     color: white;
   }
@@ -366,7 +365,6 @@ const InsideText = styled.div`
       color: white;
       font-weight: 600;
 
- 
     }
 `;
 
@@ -375,7 +373,10 @@ const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 50px;
+  /* border: 2px solid red; */
+  margin-top: 60px;
+
+
 
   @media(max-width: 450px){
    
@@ -388,7 +389,7 @@ const InputWrapper = styled.div`
 `;
 
 const Label = styled.p`
-margin-bottom: -10px;
+/* margin-bottom: -10px; */
 /* border: 2px solid blue; */
 font-family: Inter;
 font-size: 14px;
@@ -396,12 +397,13 @@ font-weight: 800;
 line-height: 25px;
 text-align: left;
 color: white;
+/* border: 2px solid yellow; */
 
 
   
 `
 const Password = styled.p`
-  margin-bottom: -10px;
+  /* margin-bottom: -10px; */
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;
@@ -411,7 +413,7 @@ const Password = styled.p`
   color: white;
 `
 const Confirmation = styled.p`
-  margin-bottom: -10px;
+  /* margin-bottom: -10px; */
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;
