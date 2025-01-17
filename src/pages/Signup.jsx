@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage"; // Ensure correct import
+// import AsyncStorage from "@react-native-async-storage/async-storage"; // Ensure correct import
 import GoogleIconImg from "../assets/google.png";
 import eye from '../assets/eye.png';
 import lockkey from '../assets/lockkey.png';
@@ -209,11 +209,9 @@ const LogoSec = styled.div`
         position: absolute;
         top: 30px;
         left: 85px;
-        color: #000000;
-    
+        color: #000000;   
 }
 `
-    
 const SignupWrapper = styled.div`
   width: 574px;
   height: 950px;
