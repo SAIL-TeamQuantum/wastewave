@@ -1,4 +1,5 @@
 /* General Navbar Styling */
+
 .navbar {
     display: flex;
     max-width: 1440px;
@@ -6,11 +7,12 @@
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0px;
+    padding: 15px 30px;
     background-color: #fff;
     font-family: Arial, sans-serif;
     position: relative;
     z-index: 1000;
+    background-color: black ;
     /* border: 1px solid red; */
   }
   
@@ -35,7 +37,7 @@
   .hamburger .line {
     width: 25px;
     height: 3px;
-    background-color: #73b42d;
+    color: #fff;
     transition: all 0.3s ease;
   }
   /* Navigation Links */
@@ -48,7 +50,7 @@
   
   .nav-links a {
     text-decoration: none;
-    color: #73b42d;
+    color: #fff;
     font-weight: 500;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -69,9 +71,9 @@
   
   .signup-btn button {
     padding: 8px 16px;
-    border: 1px solid #73b42d;
+    border: 1px solid #fff;
     background-color: transparent;
-    color: #73b42d;
+    color: #fff;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;

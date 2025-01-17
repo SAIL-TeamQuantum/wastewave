@@ -101,7 +101,7 @@ const LoginPage = () => {
           <img src={GoogleIcon} alt="Google Icon" />
           <span>Log in with Google</span>
         </GoogleButton>
-        <ForgotPasswordText>Forgot your password?</ForgotPasswordText>
+        <ForgotPasswordText>Forgot your password? <a href="">click here</a></ForgotPasswordText>
       
         <SignUpText>
           Don’t have an account? <a href="/signup">Sign up</a>
@@ -121,18 +121,27 @@ const LogoSec = styled.div`
     position: relative;
     width: 300px;
     margin: auto;
-    margin-top: 60px;
+    margin-left: 300px;
+    margin-bottom: 30px;
+
+    @media(max-width:450px){
+    margin-left: -00px;
+
+    }
+
 
     img {
         width: 100px;
+  
     }
 
     h1 {
     
         position: absolute;
         top: 30px;
-        left: 80px;
-        color: #81B622;
+        left: 85px;
+        color: #000000;
+    
 }
 `
 
@@ -205,6 +214,7 @@ const Remember = styled.div`
   width:  385px;
   height: 14px;
 
+
 p{
   font-family: Inter;
   font-size: 15px;
@@ -236,14 +246,14 @@ const Wrapper = styled.div`
   justify-content: center;
   gap: 1.5rem;
   margin: auto;
-  margin-top: 20px;
+  margin-top: -30px;
   justify-content: center; 
-  background-color:#81B622;
+  background-color:#000000;
   padding: 40px;
 
   @media(max-width: 450px){
        width: 100%;
-      margin-top: 20px;
+      margin-top: -20px;
       padding: 10px;
       border-radius: 25px;
   }
@@ -279,7 +289,7 @@ const Buttons = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: blue; 
+    background-color: #228822; 
  
   }
 `;
@@ -302,7 +312,7 @@ const GoogleButton = styled.button`
   background-color: transparent;
 
   &:hover {
-    background-color: blue; 
+    background-color: #228822; 
     color: #f5f5f5; 
     border-color: #e0e0e0; 
   }
@@ -322,9 +332,13 @@ const ForgotPasswordText = styled.p`
   font-weight: 800;
   line-height: 25px;
   text-align: center;
-  /* border: 2px solid yellow; */
   color: #fff;
   cursor: pointer;
+
+  a{
+    color: #228822;
+    text-decoration: none;
+  }
 
 `;
 
@@ -342,18 +356,18 @@ color: #fff;
 
 
   a {
-    color: #0056b3;
+    color: #228822;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
-      color: #0056b3;
+      color: blue;
     }
   }
 `;
 
 const Bysign = styled.h5`
-font-family: Montserrat;
+font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.13px;
@@ -362,15 +376,18 @@ font-family: Montserrat;
   color: #fff;
 
  span{
-  font-family: Montserrat;
+  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.13px;
   letter-spacing: 0.05em;
   text-align: center;
-  color: blue;
-  }
+  color: #228822;
 
+  &:hover {
+    color: blue;
+  }
+ }
 `
 const InputContainer = styled.div`
     display: flex;

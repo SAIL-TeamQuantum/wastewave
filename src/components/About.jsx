@@ -8,7 +8,7 @@ const About = () => {
     <div>
       <section className="services-section">
         <h1>
-          Get the most out of Waste Wave
+          Get the most out of <span>Waste Wave</span >
           <br />
           with these unique services
         </h1>

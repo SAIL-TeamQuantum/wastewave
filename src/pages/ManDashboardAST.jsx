@@ -74,9 +74,6 @@ const ManDashboardAst = () => {
 
                     </div>
 </div>
-
-
-                    
             
             </div>
              <div className='button-container flex-container'>

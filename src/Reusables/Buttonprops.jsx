@@ -19,12 +19,11 @@ const Buttondiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 25px;
 `;
 
 ;
 const ResidentButton = styled.button`
-    background-color: #81B622;
+    background-color: #000;
     color: white;
     width: 388px;
     height: 70px;
@@ -38,9 +37,10 @@ const ResidentButton = styled.button`
     font-weight: 700;
     line-height: 24.38px;
     text-align: center;
+    margin-bottom: 2rem;
 
     &:hover {
-    background-color: blue; 
+    background-color: #228822; 
 
   }
 
@@ -49,7 +49,7 @@ const ResidentButton = styled.button`
 
 const CompanyButton = styled.button`
     color:#FFFFFF;
-    background-color: #81B622;
+    background-color: #000;
     width: 388px;
     height: 70px;
     gap: 0px;
@@ -64,9 +64,10 @@ const CompanyButton = styled.button`
     line-height: 21.62px;
     letter-spacing: 0.05em;
     text-align: center;
+    /* margin-bottom: 50px; */
 
     &:hover {
-    background-color: blue; 
+    background-color: #228822; 
 
   }
 `;

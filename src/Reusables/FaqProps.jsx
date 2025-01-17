@@ -41,10 +41,14 @@ const FaqPropsDiv = styled.div`
     width: 550px;
     padding: 5px ;
     margin: 5px 0px;
-    border-bottom: 2px solid #6ba843;
-    color: #6ba843;
+    border-bottom: 2px solid #228822;
+    color: #000000;
+
+    &:hover {
+        color: #228822;
+      }
+
     @media (max-width:500px){
-       
         font-size: 16px;
     }
     
@@ -59,7 +63,6 @@ const FaqPropsDiv = styled.div`
         align-items: center;
         font-size: 20px;
         cursor: pointer;
-        /* border: 1px solid; */
     }
     @media (max-width:768px){
         width: 500px;

@@ -17,8 +17,8 @@ const Home = () => {
             <img id="fifth" src={image3} alt="" />
       <div className="content">
         <h1>
-          <span className="highlight-green">Fostering a cleaner environment<br /> </span>{" "}
-          through <span className="highlight-blue">waste scheduling</span>
+          <span className="highlight-green">Fostering a cleaner environment through </span>{" "}
+           <span className="highlight-blue">waste scheduling</span>
         </h1>
         <p className="description">
           We specialize in empowering businesses and individuals by connecting

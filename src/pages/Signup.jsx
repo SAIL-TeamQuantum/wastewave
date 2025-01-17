@@ -115,6 +115,23 @@ const handleSubmit = async (e) => {
             </div>
             {/* <p>You typed: {confirmPassword}</p> */}
           </PasswordContainer>
+
+          <Label>FirstName</Label>
+          <InputContainer>
+            <div>
+                <input id="email" type="email" placeholder="Enter FirstName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
+
+                {/* <p>You typed: {email}</p> */}
+            </div>
+          </InputContainer>
+          <Label>LastName</Label>
+          <InputContainer>
+            <div>
+                <input id="email" type="email" placeholder="Enter LastName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
+
+                {/* <p>You typed: {email}</p> */}
+            </div>
+          </InputContainer>
          
           
         </InputWrapper>
@@ -151,34 +168,37 @@ const LogoSec = styled.div`
     position: relative;
     width: 300px;
     margin: auto;
-    margin-top: 60px;
+    margin-left: 300px;
+    margin-bottom: 30px;
 
     img {
         width: 100px;
+  
     }
 
     h1 {
     
         position: absolute;
         top: 30px;
-        left: 80px;
-        color: #81B622;
+        left: 85px;
+        color: #000000;
+    
 }
 `
     
 const SignupWrapper = styled.div`
   width: 574px;
-  height: 715px;
+  height: 950px;
   border-radius: 30px;
-  background-color: #81B622;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 30px;
-  background-color: #81B622;
   opacity: 0px;
   margin: auto;
-  margin-top: 50px;
+  
+  margin-top: -30px;
 
   @media(max-width: 450px){
        width: 100%;
@@ -193,8 +213,9 @@ const Anotherwrapa = styled.div`
 
   #bio{
     position: absolute;
-    top: 30px;
+    top: 80px;
     left: 340px;
+    /* background-color: red; */
     
    
   }
@@ -202,41 +223,47 @@ const Anotherwrapa = styled.div`
     position: absolute;
     top: 450px;
     left: 340px;
+    /* background-color: green; */
  
   }
   #cld{
     position: absolute;
     top: 790px;
     left: 343px;
+    /* background-color: yellow; */
   
   }
   #Han{
     position: absolute;
     left:630px ;
     top: 800px;
+    /* background-color: blue; */
   }
   #Heart{
     position: absolute;
     top: -30px;
     left: 650px;
-  
+    /* background-color: purple; */
   }
   #Rad{
     position: absolute;
-    top: -20px;
+    top: 30px;
     left: 940px;
+    /* background-color: orange; */
   
   }
   #shield{
     position: absolute;
     top: 426px;
-    left: 955px;
+    left: 960px;
+    /* background-color: hotpink; */
 
   }
   #shlpls{
     position: absolute;
     top: 772px;
-    left: 955px;
+    left: 960px;
+    /* background-color: brown; */
   
   }
 `
@@ -283,7 +310,7 @@ const Buttons = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: blue; 
+    background-color: #228822; 
     color: white; 
     border-color: #e0e0e0; 
   }
@@ -378,7 +405,7 @@ display: flex;
 
 const Input = styled.input`
   font-size: 16px;
-  color: #FFFFFF80;
+  /* color: #FFFFFF80; */
   background-color: transparent;
   border: none;
 `;
@@ -398,16 +425,16 @@ const Wrapper = styled.div`
   }
   span{
 
-    color: blue;
+    color: #228822;
   }
 
   h4{
-    border: 2px solid blue;
+    border: 2px solid white;
     text-align: center;
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    color: blue;
+    color: #228822;
 
   
   }
@@ -425,19 +452,19 @@ color: #FFFF;
 margin-top: 10px;
 
 span{
-  color: blue;
+  color: #228822;
   font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.13px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05em;                                                   
   text-align: left;
 }
 
 `
 
 const Bysign = styled.h5`
-  font-family: Montserrat;
+  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.13px;
@@ -447,13 +474,13 @@ const Bysign = styled.h5`
   margin-top: 10px;
 
  span{
-  font-family: Montserrat;
+  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.13px;
   letter-spacing: 0.05em;
   text-align: center;
-  color: blue;
+  color: #228822;
   }
 
 `

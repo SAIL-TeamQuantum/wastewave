@@ -11,6 +11,8 @@ const Header = () => {
   };
 
   return (
+    
+    
     <nav className="navbar">
       <div className="logo">
         <img src={logo} alt="Company Logo" />
@@ -38,6 +40,7 @@ const Header = () => {
         <Link to="/userselectmenu"><button>SIGN UP</button></Link>
       </div>
     </nav>
+    
   );
 };
 

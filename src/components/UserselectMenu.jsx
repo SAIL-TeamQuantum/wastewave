@@ -9,12 +9,18 @@ import HandHeart from '../assets/handheart.png';
 import Radioactive from '../assets/radioactive.png';
 import Shieldplus from '../assets/shieldplus.png';
 import Shieldplu from '../assets/shieldplu.png';
+import Logo from "../assets/logo.png"
 import NavHeader from "../components/Header";
 
 const UserSelectMenu = () => {
     return (
     <Cover>
-      <NavHeader/>
+
+        <LogoSec>
+            <img  src={Logo} alt="logo" />
+            <h1> ASTE WAVE</h1>
+        </LogoSec> 
+    
     <img id="bio" src={Biohazard} alt="" />
      <img id="Cal" src={Calenda} alt="" />
      <img id="cld" src={Calendar} alt="" />
@@ -37,8 +43,34 @@ const UserSelectMenu = () => {
  
 export default UserSelectMenu;
 
+const LogoSec = styled.div`
+  
+    position: relative;
+    width: 300px;
+    margin: auto;
+    margin-left: 300px;
+    /* margin-top: 30px; */
+
+
+    img {
+        width: 100px;
+
+    }
+
+    h1 {
+    
+        position: absolute;
+        top: 30px;
+        left: 85px;
+        color: #000000;
+        gap: 2rem;
+
+}
+`
+
 const Cover = styled.div`
     background-color: white;
+    margin-top: 40px;
     
     #bio{
     position: absolute;
@@ -108,10 +140,10 @@ const MenuDiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: -10px; */
     border: none;
     position: relative;
-    background-color: #81B622;
+    background-color: #000;
     border-radius: 30px;
     /* border: 2px solid red; */
 
@@ -123,7 +155,14 @@ h2{
     font-weight: 700;
     font-size: 15px;
     line-height: 25px;
-    color: #FFFFFF 
+    color: #FFFFFF;
+    padding: 0px 10px;
+    margin-bottom: 5rem;
+    
+    /* margin-bottom: 200px; */
+
+    
+    
 }
 
 span{

@@ -56,16 +56,12 @@ const DashboardAst = () => {
                     <div className='box-container flex-container'>
                     <Link to="/ScheduleAST" className='link-schdule'>  
                     <img src={MapLocator} alt="phone" />
-                    <div className='BoxcontainerText'>
-                        <p className='Box-Text'>Offset your dues</p>
-                        <p className='Box-Grey'>Keep a clean record with LAWMA</p>
+                <div className='BoxcontainerText'>
+                    <p className='Box-Text'>Offset your dues</p>
+                    <p className='Box-Grey'>Keep a clean record with LAWMA</p>
 
                     </div></Link>
-</div>
-
-
-                    
-            
+</div>      
             </div>
             <div className='button-container flex-container'>
             <img className='BUTicons mobile-none' src={calICONGreen} alt="icon" /> 
@@ -75,29 +71,28 @@ const DashboardAst = () => {
      </div>
         </div>
         <div className='flex-container DailyQHeader'>
-                <h2>Daily Quotes</h2>
-                <img className='BUTicons' src={shieldplus} alt="star" />
+        {/* <h2>Daily Quotes</h2> */}
+        <img className='BUTicons' src={shieldplus} alt="star" />
             </div>
         <div className='flex-container'>
         <div className='DailyQContainer'>
-           
-
             <div className='DailyQBody'>
-                <p>“A clean environment is a reflection of a mindful community. 
+            <h2>Daily Quotes</h2>
+
+                <p>“A clean environment is a reflection of a mindful community. <br /> 
                 Start today—waste wisely”</p>
                 <img src={wasteR} alt="image" />
                 
             </div>
-
         </div>
         {/* second daily container */}
         <div className='DailyQContainer'>
          
 
             <div className='DailyQBody'>
-                <p>“A clean environment is a reflection of a mindful community. 
+                {/* <p>“A clean environment is a reflection of a mindful community. 
                 Start today—waste wisely”</p>
-                <img src={Plastic} alt="image" />
+                <img src={Plastic} alt="image" /> */}
                 
             </div>
 
@@ -121,25 +116,25 @@ const DashboardAst = () => {
                     <p1>Activit</p1><span class="no-underline">y 1</span>
                     
                     <h2>Waste Scheduling</h2>
-                    <p2>You scheduled your waste to picked up this week
+                    <p2>You scheduled your waste to be picked up this week
                     </p2>
 
                 </div>
 
                 <div className='ActivityTable'>
-                    <p1>Activit</p1><span class="no-underline">y 1</span>
+                    <p1>Activit</p1><span class="no-underline">y 2</span>
                     
-                    <h2>Waste Scheduling</h2>
-                    <p2>You scheduled your waste to picked up this week
+                    <h2>Wast Bill Payment</h2>
+                    <p2>  You made a payment to LAWMA for disposing your waste
                     </p2>
 
                 </div>
 
                 <div className='ActivityTable'>
-                    <p1>Activit</p1><span class="no-underline">y 1</span>
+                    <p1>Activit</p1><span class="no-underline">y 3</span>
                     
-                    <h2>Waste Scheduling</h2>
-                    <p2>You scheduled your waste to picked up this week
+                    <h2>Profile Update</h2>
+                    <p2>Recently updated your profile
                     </p2>
 
                 </div>
