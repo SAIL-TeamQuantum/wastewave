@@ -23,6 +23,7 @@
   /* Left Content Section */
   .content {
     width: 60%;
+    
     @media (max-width: 450px) {
       margin-left: 0px;
       display: flex;
