@@ -23,7 +23,7 @@
   /* Left Content Section */
   .content {
     width: 60%;
-    
+
     @media (max-width: 450px) {
       margin-left: 0px;
       display: flex;
@@ -38,7 +38,6 @@
       margin-top: 60px;
       margin-bottom: 32px;
       font-weight: 900;
-      /* line-height: 30px; */
       color: #73b42d;
       
       @media (max-width: 450px) {
@@ -64,8 +63,8 @@
     color: #ffffff;
     
     @media (max-width: 450px) {
-      font-size: 18px;
-      max-width: 330px;
+      font-size: 16px;
+      max-width: 350px;
     }
   }
   
