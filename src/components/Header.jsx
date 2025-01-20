@@ -37,7 +37,7 @@ const Header = () => {
       </ul>
      
       <div className="signup-btn">
-      {/* <Link id="logiin" to="/login"><button>LOG IN</button></Link> */}
+      <Link id="logiin" to="/login"><button>LOG IN</button></Link>
         <Link to="/userselectmenu"><button>SIGN UP</button></Link>
       </div>
     </nav>
