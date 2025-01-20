@@ -47,7 +47,7 @@ const LoginPage = () => {
       const userId = response.data.data._id;
       console.log(userId);
       
-      navigate(`/home/${userId}`);
+      navigate(`/home`);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {
