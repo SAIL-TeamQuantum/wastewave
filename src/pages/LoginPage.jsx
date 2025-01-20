@@ -15,7 +15,7 @@ import lockkey from "../assets/lockkey.png";
 import eye from "../assets/eye.png";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -47,7 +47,7 @@ const LoginPage = () => {
       const userId = response.data.data._id;
       console.log(userId);
       
-      // navigate(`/home/${userId}`);
+      navigate(`/home/${userId}`);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {
@@ -107,11 +107,9 @@ const LoginPage = () => {
           <p>Remember me</p>
           <img src={Remem} alt="" />
         </Remember>
-        <Link to='/home/${userId}'>
-          <Buttons to="" type="submit" onClick={handleSubmit}>
-            Log In
-          </Buttons>
-        </Link>
+        <Buttons to="" type="submit" onClick={handleSubmit}>
+          Log In
+        </Buttons>
         <GoogleButton>
           <img src={GoogleIcon} alt="Google Icon" />
           <span>Log in with Google</span>
