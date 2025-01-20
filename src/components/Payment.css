@@ -1,0 +1,131 @@
+.payment{
+    height: 80vh;
+    background-color: #F4F5F9;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    .say{
+        margin-top: -120px;
+        transform: translateY(30px);
+        width: 380px;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        p{
+            display: inline;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 300;
+            position: relative;
+            top: -2px;
+            left: 100px;
+        }
+
+        img{
+            border: 1px solid blue;
+            border-radius: 50%;
+            margin-right: 280px;
+            margin-top: 13px;
+        }
+
+        h3{
+            margin-top: -50px;
+            margin-right: 130px;
+        }
+
+        .currency{
+            width: 105px;
+            height: 26px;
+            border: none;
+            position: relative;
+            top: -58px;
+            left: 250px;
+        }
+    
+    }
+
+    .says{
+        
+        margin-top: -320px;
+        transform: translateY(30px);
+        width: 380px;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        p{
+            display: inline;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 300;
+            position: relative;
+            top: -5px;
+            left: 97px;
+        }
+
+        img{
+            border: 1px solid blue;
+            border-radius: 50%;
+            margin-right: 280px;
+            margin-top: 13px;
+        }
+
+        h3{
+            margin-top: -50px;
+            margin-right: 100px;
+        }
+
+        .currency{
+            width: 105px;
+            height: 26px;
+            border: none;
+            position: relative;
+            top: -58px;
+            left: 250px;
+        }        
+    }
+
+    .sayss{
+        
+        margin-top: -520px;
+        transform: translateY(30px);
+        width: 380px;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        p{
+            display: inline;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 300;
+            position: relative;
+            top: -5px;
+            left: 95px;
+        }
+
+        img{
+            border: 1px solid blue;
+            border-radius: 50%;
+            margin-right: 280px;
+            margin-top: 13px;
+        }
+
+        h3{
+            margin-top: -50px;
+            margin-right: 70px;
+        }
+
+        .currency{
+            width: 105px;
+            height: 26px;
+            border: none;
+            position: relative;
+            top: -58px;
+            left: 250px;
+        }
+    }
+}

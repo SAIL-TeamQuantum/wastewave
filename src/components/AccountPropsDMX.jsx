@@ -22,19 +22,16 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    /* gap: 29px; */
     /* border: 1px solid red; */
     margin-bottom: 29px;
     p {
-        /* border: 1px solid blue; */
         font-family: Poppins;
         font-size: 12px;
         font-weight: 600;
         line-height: 18px;
         letter-spacing: 0.03em;
         text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
+        text-decoration: none;
 
     }
     #icon {

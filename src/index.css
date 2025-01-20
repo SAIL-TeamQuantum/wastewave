@@ -1,6 +1,17 @@
-* {
+
+
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size:"Inter", serif;
+  /* background-color: black; */
+}
+
+body{
+  /* padding: 0 50px; */
+
+  @media (max-width: 450px){
+    padding: 0 10px;
+  }
 }

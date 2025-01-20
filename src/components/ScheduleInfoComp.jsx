@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "../assets/ASTcss/ScheduleInfo.css";
 import { FaAngleDown } from "react-icons/fa";
-
 const OptionsGroup = ({ options, selectedOptions, onChange, title }) => (
   <div>
     <div className="calendar-text">
@@ -64,7 +63,7 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
     // Only allow numeric input
     if (/^\d*$/.test(value)) {
       setBagCount(value);
-    }
+    } 
   };
 
   return (
@@ -110,11 +109,10 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
           <p>Transportation Fee: #{transportFee.toLocaleString()}</p>
           <p>Total Balance: #{totalFee.toLocaleString()}</p>
         </div>
-        <Link to="/payment">
         <button className="schedule-button" type="submit" onClick={onScheduleComplete}>
           Schedule Trash
         </button>
-        </Link>
+        
         </form>
       </div>
     </div>

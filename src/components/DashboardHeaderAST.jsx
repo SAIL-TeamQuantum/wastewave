@@ -24,7 +24,13 @@ const DashboardHeaderAST = () => {
   return (
     <div>
     <div className='flex-container header-container'>
-      <img className='Wlogo' src={Logo} alt="logo" />
+            {/* <img  src={Logo} alt="logo" />
+            <h1>ASTE WAVE</h1> */}
+             
+
+      <img className='Wlogo' src={Logo} alt="logo"  />
+
+
       {menuItems.map((item) => (
         <h2 
           key={item.path}

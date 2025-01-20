@@ -1,5 +1,5 @@
 import react from 'react';
-import '../assets/ASTcss/styles.css';
+import '../assets/ASTcss/stylesAST.css';
 import bucket from '../assets/images/bucket.svg';
 import calICON from '../assets/images/calICON.svg';
 import Star from '../assets/images/star.svg';
@@ -74,9 +74,6 @@ const ManDashboardAst = () => {
 
                     </div>
 </div>
-
-
-                    
             
             </div>
              <div className='button-container flex-container'>

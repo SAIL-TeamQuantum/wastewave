@@ -4,17 +4,19 @@ import { MdRecycling } from "react-icons/md";
 import { SlSettings } from "react-icons/sl";
 import { VscAccount } from "react-icons/vsc";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const NavBarDMX = ()=> {
     return (
         <NavIcons>
-            <HiOutlineHome/>
+            <Link to="/"><HiOutlineHome/></Link>
             <LiaClipboardListSolid />
             <MainIcon> 
                 <MdRecycling/>           
             </MainIcon>
             <SlSettings />
-            <VscAccount />
+            <Link to="/profile">
+                <VscAccount />
+            </Link>
 
         </NavIcons>
 

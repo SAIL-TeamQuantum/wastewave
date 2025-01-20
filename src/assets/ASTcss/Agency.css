@@ -25,10 +25,11 @@
   overflow-x: hidden;
 }
 
-header {
+.header {
   height: 70px;
   width: 100vw;
   padding: 0 30px;
+  margin: 0;
   background-color: var(--background-color1);
   position: fixed;
   z-index: 100;

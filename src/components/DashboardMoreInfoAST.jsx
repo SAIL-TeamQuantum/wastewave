@@ -22,7 +22,6 @@ const DashboardInfo = () => {
                     <div className='moreInfoBoxLogoSect'>
                     <img className='moreInfoBoxLogo MobileView' src={Flogo} alt="logo" />
                 <img className='moreInfoBoxLogo mobile-none' src={Logo} alt="logo" />
-                
                 <text className='moreInfoBoxLogoText mobile-none'>ASTE WAVE</text>
                 </div>
                 
@@ -32,7 +31,7 @@ const DashboardInfo = () => {
                     
                 </div>
 
-                {/* section 2 of more info box */}
+             
                 <div className='moreInfoBoxSect2'>
                 <text className=''>COMPANY</text>
                 <div className='moreInfolist'>
@@ -40,8 +39,7 @@ const DashboardInfo = () => {
                 <p>Schedule Water</p>
                 <p>Pay Bills</p>
                 <p>Contact Us</p>
-                
-
+            
                 </div>
                 <div className='flex-container moreInfoListSocialsLogo'>
                 <FaLinkedin style={{ color: '#81B622', fontSize: '34px' }} />

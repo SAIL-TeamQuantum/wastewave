@@ -46,8 +46,8 @@ const AgencyAst = () => {
       };
 
     return (
-        <div>
-            <header>
+        <div className="container">
+            <div className="header">
                 <div className="logosec">
                     <div className="logo">
                         <img src={full_logoagt} alt="logo" />
@@ -104,7 +104,7 @@ const AgencyAst = () => {
        
       </div>
                 </div>
-            </header>
+            </div>
 
             <div className="sidenav mobile-none">
                 <div className="sidebar-content" onClick={handleDashboardClick}>

@@ -3,7 +3,7 @@
     padding-right: 5.1%;
 }
 .calendar-container {
-    background-color: #72c025;
+    background-color: #228822;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -73,7 +73,7 @@
   .calendar td {
     
     background-color: white;
-    color: #72c025;
+    color: #000;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 5px;
@@ -85,8 +85,8 @@
   }
   
   .calendar td.selected {
-    background-color: #c9f5b3;
-    color: #72c025;
+    background-color: #228822;
+    color: #228822;
     position: relative;
   }
   
@@ -99,7 +99,7 @@
   }
   
   .calendar td:hover {
-    background-color: #dfffd7;
+    background-color: #228822;
   }
   
   .calendar td:empty {
@@ -108,5 +108,5 @@
   }
   
   .calendar td.selected:hover {
-    background-color: #c9f5b3;
+    background-color: #228822;
   }

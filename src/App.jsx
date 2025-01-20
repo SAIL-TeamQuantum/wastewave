@@ -1,35 +1,47 @@
 import { useState } from 'react'
 import './App.css'
-import Profile from './pages/Home'
+import Profile from '../src/pages/LandingPageDAMI'
 import AboutDMX from './pages/AboutDMX'
 import AddressDMX from './pages/AddressDMX'
 import DashboardAST from './pages/DashboardAST'; //This one na user dashboard
-import ManDashboardAST from './pages/ManDashboardAST'; //This is management dashboard
+import AgencyAst from './pages/AgencyAST'; //This is management dashboard
 import ScheduleAST from './pages/ScheduleAST' ;
-import AgencyAST from './pages/AgencyAST';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from 'react'
+import UserSelectMenu from './components/UserselectMenu';
+import LoginPage from './pages/LoginPage';
+import Signup from './pages/Signup';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPageDAMI'
+import PaymentDMX from '../src/pages/PaymentDMX'
+import Success from "./pages/Success";
+import VerificationDMX from "./pages/VerificationDMX"
 
-function App() {
-  const [count, setCount] = useState(0)
+const app = () => {
+  return ( 
+  <div>
+  
+    <Router>
+      <Routes>
+        <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
+        <Route path='/signup' element={ <Signup/>}/>
+        <Route path='/verification' element={ <VerificationDMX/>}/>
+        <Route path='login' element={ <LoginPage/>}/>
+        <Route path='/profile' element={<Profile />}/>
+        <Route path='/about' element={<AboutDMX/>}/>
+        <Route path='/address' element={<AddressDMX/>}/>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/home/:id' element={<DashboardAST />}/>
+        <Route path='/ScheduleAST' element={<ScheduleAST />}/>
+        <Route path='/DashboardAST' element={<DashboardAST />}/>
+        <Route path='/AgencyAst' element={<AgencyAst />}/>   
+        <Route path='/payment' element={<PaymentDMX />}/>   
+        <Route path='payment-success' element={<Success />}/>   
+      </Routes>
+    </Router>
+    {/* <h1>boy</h1> */}
+    </div> 
+   );
+  }
 
-  return (
-    <>
-      {/* <NavBarDMX /> */}
-      <BrowserRouter>
-                <Routes>
-                    <Route path='/DashboardAST' element={<DashboardAST />}/>
-                    <Route path='/ManDashboardAST' element={<ManDashboardAST />}/>
-                    <Route path='/profile' element={<Profile />}/>
-                    <Route path='/about' element={<AboutDMX/>}/>
-                    <Route path='/address' element={<AddressDMX/>}/>
-                    <Route path='/ScheduleAST' element={<ScheduleAST/>}/>
-                    <Route path='/AgencyAST' element={<AgencyAST/>}/>
-                    
-                </Routes>
-            
-      </BrowserRouter>
-    </>
-  )
-}
 
-export default App
+export default app;
