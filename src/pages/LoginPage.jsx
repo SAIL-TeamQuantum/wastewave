@@ -39,13 +39,15 @@ const LoginPage = () => {
       const payload = { email, password };
 
       console.log(payload);
+
       const response = await axios.post(
         "https:/wastewave-backend.onrender.com/api/signin",
         payload
       );
       const userId = response.data.data._id;
       console.log(userId);
-      navigate(`/home/${userId}`);
+      
+      // navigate(`/home/${userId}`);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {
@@ -105,9 +107,11 @@ const LoginPage = () => {
           <p>Remember me</p>
           <img src={Remem} alt="" />
         </Remember>
-        <Buttons to="" type="submit" onClick={handleSubmit}>
-          Log In
-        </Buttons>
+        <Link to='/home/${userId}'>
+          <Buttons to="" type="submit" onClick={handleSubmit}>
+            Log In
+          </Buttons>
+        </Link>
         <GoogleButton>
           <img src={GoogleIcon} alt="Google Icon" />
           <span>Log in with Google</span>
