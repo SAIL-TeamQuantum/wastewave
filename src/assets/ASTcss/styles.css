@@ -696,6 +696,7 @@ text-decoration-skip-ink: none;
         flex-direction: column;
         padding: 10px;
     }
+    
 
     .button-container button {
         width: auto;
@@ -765,12 +766,7 @@ text-decoration-skip-ink: none;
         gap: 5%;
     }
 
-    .newsletterButton {
-        width: 100%;
-        padding: 6%;
-        font-size: 14px;
-        flex-direction: row;
-    }
+
 
     .moreInfoListSocialsLogo {
         flex-direction: row;

@@ -80,6 +80,10 @@ text-align: center;
     border-radius: 10px;
     border: none;
  }
+ .fee-details {
+    text-align: left;
+    margin-top: 2%;
+ }
 
   
 .options-container {
