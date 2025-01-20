@@ -230,11 +230,13 @@ const Container = styled.div`
     background-color:#000;
     padding: 40px;
     color: white;
+    text-align: center;
 
     @media(max-width: 450px){
         width: 100%;
         margin-top: 20px;
-        padding: 10px;
+        padding-top: 50px;
+        /* padding: 10px; */
         border-radius: 25px;
     }
 `
@@ -255,8 +257,12 @@ const Buttons = styled.button`
   margin-top: 60px;
 
   &:hover {
-    background-color: blue; 
+    background-color: #228b22; 
  
+  }
+
+  @media (max-width: 760px) {
+    width: 70vw;
   }
 `;
 const Input = styled.input`

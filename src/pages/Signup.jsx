@@ -159,10 +159,9 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
           <InputContainer>
             <div>
               <input
-                id="email"
-                type="email"
+                type="text"
                 placeholder="Enter First Name"
-                value={firstName}
+                // value={firstName}
                 onInput={handleFirstNameInput}
                 onChange={handleFirstNameInput}
                 autoComplete="email"
@@ -176,8 +175,7 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
           <InputContainer>
             <div>
               <input
-                id="email"
-                type="email"
+                type="text"
                 placeholder="Enter Last Name"
                 onInput={handleLastNameInput}
                 onChange={handleLastNameInput}
@@ -192,7 +190,6 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
           <InputContainer>
             <div>
               <input
-                id="email"
                 type="email"
                 placeholder="Enter your email address"
                 onInput={handleEmailInput}
@@ -214,7 +211,7 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
               />
               {/* <img src={eye} alt=" Icon" id="Eyecon" /> */}
               <img src={eye} alt="toggle visibility"  id="Eyecon" onClick={togglePasswordVisibility} />
-              {errors.password && <ErrorText>{errors.password}</ErrorText>}
+              {/* {errors.password && <ErrorText>{errors.password}</ErrorText>} */}
             </div>
           </PasswordContainer>
           <Confirmation>Password Confirmation</Confirmation>
@@ -484,7 +481,7 @@ const Label = styled.p`
   color: white;
 `;
 const Password = styled.p`
-  /* margin-bottom: -10px; */
+  margin-bottom: -10px;
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;
@@ -494,7 +491,7 @@ const Password = styled.p`
   color: white;
 `;
 const Confirmation = styled.p`
-  /* margin-bottom: -10px; */
+  margin-bottom: -10px;
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;
