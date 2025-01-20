@@ -4,7 +4,7 @@ import Profile from '../src/pages/LandingPageDAMI'
 import AboutDMX from './pages/AboutDMX'
 import AddressDMX from './pages/AddressDMX'
 import DashboardAST from './pages/DashboardAST'; //This one na user dashboard
-import ManDashboardAST from './pages/ManDashboardAST'; //This is management dashboard
+import AgencyAst from './pages/AgencyAST'; //This is management dashboard
 import ScheduleAST from './pages/ScheduleAST' ;
 import React from 'react'
 import UserSelectMenu from './pages/UserselectMenu';
@@ -33,7 +33,7 @@ const app = () => {
         <Route path='/home' element={<DashboardAST />}/>
         <Route path='/ScheduleAST' element={<ScheduleAST />}/>
         <Route path='/DashboardAST' element={<DashboardAST />}/>
-        <Route path='/company' element={<ManDashboardAST />}/>   
+        <Route path='/AgencyAst' element={<AgencyAst />}/>   
         <Route path='/payment' element={<PaymentDMX />}/>   
         <Route path='payment-success' element={<Success />}/>   
       </Routes>
