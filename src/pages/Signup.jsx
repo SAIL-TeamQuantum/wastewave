@@ -21,22 +21,77 @@ import { Link, useNavigate } from "react-router-dom";
 
 const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
   const navigate = useNavigate();
-
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
-  const handleEmailInput = (e) => setEmail(e.target.value);
-  const handlePasswordInput = (e) => setPassword(e.target.value);
-  const handleConfirmPasswordInput = (e) => setConfirmPassword(e.target.value);
+  const handleFirstNameInput = (e) => {
+    setFirstName(e.target.value);
+    if (!e.target.value) {
+      setErrors((prev) => ({ ...prev, firstName: "First Name is required" }));
+    } else {
+      setErrors((prev) => ({ ...prev, firstName: "" }));
+    }
+  };
+
+  const handleLastNameInput = (e) => {
+    setLastName(e.target.value);
+    if (!e.target.value) {
+      setErrors((prev) => ({ ...prev, lastName: "Last Name is required" }));
+    } else {
+      setErrors((prev) => ({ ...prev, lastName: "" }));
+    }
+  };
+  const handleEmailInput = (e) => {
+    setEmail(e.target.value);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!e.target.value) {
+      setErrors((prev) => ({ ...prev, email: "Email is required" }));
+    } else if (!emailRegex.test(e.target.value)) {
+      setErrors((prev) => ({ ...prev, email: "Invalid email format" }));
+    } else {
+      setErrors((prev) => ({ ...prev, email: "" }));
+    }
+  };
+
+  const handlePasswordInput = (e) => {
+    setPassword(e.target.value);
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    if (!e.target.value) {
+      setErrors((prev) => ({ ...prev, password: "Password is required" }));
+    } else if (!strongPasswordRegex.test(e.target.value)) {
+      setErrors((prev) => ({
+        ...prev,
+        password: "Password must be at least 8 characters, include an uppercase letter, a number, and a special character.",
+      }));
+    } else {
+      setErrors((prev) => ({ ...prev, password: "" }));
+    }
+  };
+
+  const handleConfirmPasswordInput = (e) => {
+    setConfirmPassword(e.target.value);
+    if (!e.target.value) {
+      setErrors((prev) => ({ ...prev, confirmPassword: "Confirm Password is required" }));
+    } else if (e.target.value !== password) {
+      setErrors((prev) => ({ ...prev, confirmPassword: "Passwords do not match" }));
+    } else {
+      setErrors((prev) => ({ ...prev, confirmPassword: "" }));
+    }
+  };
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validate passwords
-    if (password !== confirmPassword) {
-      setResponseMessage("Passwords do not match");
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+      setResponseMessage("Please fill in all fields correctly");
       return;
     }
 
@@ -45,6 +100,8 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
       const response = await axios.post(
         "https://wastewave-backend.onrender.com/api/register",
         {
+          firstName,
+          lastName,
           email,
           password,
         }
@@ -105,13 +162,15 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
                 id="email"
                 type="email"
                 placeholder="Enter First Name"
-                onInput={handleEmailInput}
-                onChange={handleEmailInput}
+                value={firstName}
+                onInput={handleFirstNameInput}
+                onChange={handleFirstNameInput}
                 autoComplete="email"
               />
 
               {/* <p>You typed: {email}</p> */}
             </div>
+            {errors.firstName && <ErrorText>{errors.firstName}</ErrorText>}
           </InputContainer>
           <Label>Last Name</Label>
           <InputContainer>
@@ -120,12 +179,13 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
                 id="email"
                 type="email"
                 placeholder="Enter Last Name"
-                onInput={handleEmailInput}
-                onChange={handleEmailInput}
+                onInput={handleLastNameInput}
+                onChange={handleLastNameInput}
                 autoComplete="email"
               />
 
               {/* <p>You typed: {email}</p> */}
+              {errors.lastName && <ErrorText>{errors.lastName}</ErrorText>}
             </div>
           </InputContainer>
           <Label>Email Address</Label>
@@ -140,18 +200,21 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
                 autoComplete="email"
               />
             </div>
+            {errors.email && <ErrorText>{errors.email}</ErrorText>}
           </InputContainer>
           <Password>Password</Password>
           <PasswordContainer>
             <div>
               <img id="lockkey" src={lockkey} alt=" Icon" />
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Enter your password"
                 onInput={handlePasswordInput}
                 onChange={handlePasswordInput}
               />
-              <img src={eye} alt=" Icon" id="Eyecon" />
+              {/* <img src={eye} alt=" Icon" id="Eyecon" /> */}
+              <img src={eye} alt="toggle visibility"  id="Eyecon" onClick={togglePasswordVisibility} />
+              {errors.password && <ErrorText>{errors.password}</ErrorText>}
             </div>
           </PasswordContainer>
           <Confirmation>Password Confirmation</Confirmation>
@@ -159,12 +222,15 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
             <div>
               <img id="lockkey" src={lockkey} alt=" Icon" />
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Confirm your password"
                 onInput={handleConfirmPasswordInput}
                 onChange={handleConfirmPasswordInput}
               />
-              <img src={eye} alt=" Icon" id="Eyecon" />
+              {/* <img src={eye} alt=" Icon" id="Eyecon" /> */}
+              <img src={eye} alt="toggle visibility" id="Eyecon" onClick={togglePasswordVisibility} />
+              {responseMessage && <ResponseMessage>{responseMessage}</ResponseMessage>}
+
             </div>
           </PasswordContainer>
         </InputWrapper>
@@ -205,8 +271,21 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
   );
 };
 
+
 export default SignUpProps;
 
+const ErrorText = styled.p`
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+`;
+const ResponseMessage = styled.p`
+  color: green;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  margin: 30px;
+`;
 const LogoSec = styled.div`
   position: relative;
   width: 300px;
@@ -231,7 +310,7 @@ const LogoSec = styled.div`
 `;
 const SignupWrapper = styled.div`
   max-width: 574px;
-  height: 950px;
+  height: auto;
   border-radius: 30px;
   background-color: #000000;
   display: flex;
@@ -239,6 +318,7 @@ const SignupWrapper = styled.div`
   align-items: center;
   border-radius: 30px;
   margin: auto;
+  padding-bottom: 50px;
 
   @media (max-width: 450px) {
     width: 100%;

@@ -7,7 +7,7 @@ import DashboardAST from './pages/DashboardAST'; //This one na user dashboard
 import ManDashboardAST from './pages/ManDashboardAST'; //This is management dashboard
 import ScheduleAST from './pages/ScheduleAST' ;
 import React from 'react'
-import UserSelectMenu from './components/UserselectMenu';
+import UserSelectMenu from './pages/UserselectMenu';
 import LoginPage from './pages/LoginPage';
 import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
