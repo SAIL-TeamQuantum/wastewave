@@ -34,6 +34,8 @@ const Header = () => {
         <li><a href="#services">SERVICES</a></li>
         <li><Link><a href="/faqs">FAQ's</a></Link></li>
         <li><a href="#contact">CONTACT US</a></li>
+        <li className="mobadd"><Link to="/login">LOGIN</Link></li>
+        <li className="mobadd"><Link to="/signup">SIGNUP</Link></li>
       </ul>
      
       <div className="signup-btn">
