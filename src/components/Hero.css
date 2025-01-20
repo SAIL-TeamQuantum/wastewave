@@ -23,6 +23,7 @@
   /* Left Content Section */
   .content {
     width: 60%;
+
     @media (max-width: 450px) {
       margin-left: 0px;
       display: flex;
@@ -33,11 +34,10 @@
     }
     h1 {
       font: inter;
-      font-size: 44px;
+      font-size: 40px;
       margin-top: 60px;
       margin-bottom: 32px;
       font-weight: 900;
-      /* line-height: 30px; */
       color: #73b42d;
       
       @media (max-width: 450px) {
@@ -51,7 +51,7 @@
   }
   
   .highlight-blue {
-    color: #73b42d;
+    color: #228822;
   }
   
   .description {
@@ -63,8 +63,8 @@
     color: #ffffff;
     
     @media (max-width: 450px) {
-      font-size: 18px;
-      max-width: 330px;
+      font-size: 16px;
+      max-width: 350px;
     }
   }
   
@@ -87,7 +87,7 @@
   }
   
   .action-button:hover {
-    background-color: #5a8f20;
+    background-color: #228822;
   }
   
   /* Right Image Section */

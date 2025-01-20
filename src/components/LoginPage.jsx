@@ -421,6 +421,7 @@ const InputContainer = styled.div`
         align-items: center;
         border: 2px solid #FFFFFF;
         border-radius: 15px;
+
     }
 `
 const PasswordContainer = styled.div`

@@ -44,7 +44,9 @@ const ResidentButton = styled.button`
 
   }
 
-
+  @media (max-width: 630px) {
+    width: 70vw;
+  }
 `;
 
 const CompanyButton = styled.button`
@@ -70,6 +72,11 @@ const CompanyButton = styled.button`
     background-color: #228822; 
 
   }
+  @media (max-width: 630px) {
+    width: 70vw;
+    font-size: 18px;
+  }
+
 `;
 
 const AgencyButton = styled.button`

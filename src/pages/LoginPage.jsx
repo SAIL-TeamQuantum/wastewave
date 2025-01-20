@@ -2,20 +2,13 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 import GoogleIcon from "../assets/google.png";
-import Remem from "../assets/remem.png";
-import Biohazard from "../assets/biohazard.png";
-import Calenda from "../assets/calenda.png";
-import Calendar from "../assets/calendar.png";
-import HandHear from "../assets/handear.png";
-import HandHeart from "../assets/handheart.png";
-import Radioactive from "../assets/radioactive.png";
-import Shieldplus from "../assets/shieldplus.png";
-import Shieldplu from "../assets/shieldplu.png";
 import lockkey from "../assets/lockkey.png";
 import eye from "../assets/eye.png";
 import Logo from "../assets/logo.png";
+import Remem from "../assets/remem.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +16,7 @@ const LoginPage = () => {
   // const [formData, setFormData] = useState({"email": "", "password": ""})
   const navigate = useNavigate();
 
+ 
   const handleEmailInput = (e) => {
     setEmail(e.target.value);
     console.log(email);
@@ -35,19 +29,27 @@ const LoginPage = () => {
   const [responseMessage, setResponseMessage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const payload = { email, password };
 
       console.log(payload);
+
       const response = await axios.post(
         "https:/wastewave-backend.onrender.com/api/signin",
         payload
       );
       const userId = response.data.data._id;
       console.log(userId);
-      navigate(`/home/${userId}`);
+      
+      navigate(`/home`);
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
+      if (error.response) {
+        setResponseMessage(`Error: ${error.response.data.message}`);
+      } else {
+        setResponseMessage(`Error: ${error.message}`);
+      }
       if (error.response) {
         setResponseMessage(`Error: ${error.response.data.message}`);
       } else {
@@ -61,17 +63,11 @@ const LoginPage = () => {
         <img src={Logo} alt="logo" />
         <h1>ASTE WAVE</h1>
       </LogoSec>
-      {/* <img id="bio" src={Biohazard} alt="" />
-      <img id="Cal" src={Calenda} alt="" />
-      <img id="cld" src={Calendar} alt="" />
-      <img id="Han" src={HandHear} alt="" />
-      <img id="Heart" src={HandHeart} alt="" />
-      <img id="Rad" src={Radioactive} alt="" />
-      <img id="shield" src={Shieldplu} alt="" />
-      <img id="shlpls" src={Shieldplus} alt="" /> */}
-      <Wrapper>
+     
+   
+   <Wrapper>
         <Header>Log In</Header>
-        <Label>Email Address</Label>
+        <Label>Email address</Label>
         <InputContainer>
           <div>
             <input
@@ -83,10 +79,10 @@ const LoginPage = () => {
               autoComplete="email"
               required
             />
-
             {/* <p>You typed: {email}</p> */}
           </div>
         </InputContainer>
+
         <Label>Password</Label>
         <PasswordContainer>
           <div>
@@ -101,6 +97,7 @@ const LoginPage = () => {
             <img src={eye} alt=" Icon" id="Eyecon" />
           </div>
         </PasswordContainer>
+
         <Remember>
           <p>Remember me</p>
           <img src={Remem} alt="" />
@@ -108,10 +105,10 @@ const LoginPage = () => {
         <Buttons to="" type="submit" onClick={handleSubmit}>
           Log In
         </Buttons>
-        {/* <GoogleButton>
+        <GoogleButton>
           <img src={GoogleIcon} alt="Google Icon" />
           <span>Log in with Google</span>
-        </GoogleButton> */}
+        </GoogleButton>
         <ForgotPasswordText>
           Forgot your password? <a href="">click here</a>
         </ForgotPasswordText>
@@ -123,8 +120,10 @@ const LoginPage = () => {
           By signing up, you agree to our <br />
           <span>Terms of Service</span> and <span>Privacy Policy</span>{" "}
         </Bysign>
+      
       </Wrapper>
     </Anowrap>
+    
   );
 };
 
@@ -134,18 +133,19 @@ const LogoSec = styled.div`
   position: relative;
   width: 300px;
   margin: auto;
-  /* margin-left: 300px; */
-  margin-bottom: 50px;
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 70px;
 
-
+  @media (max-width: 450px) {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
   img {
     width: 100px;
   }
-
   h1 {
     position: absolute;
-    top: 30px;
+    top: 38px;
     left: 85px;
     color: #000000;
   }
@@ -154,42 +154,48 @@ const LogoSec = styled.div`
 const Anowrap = styled.div`
   background-color: white;
   position: relative;
-
+  overflow: hidden;
   #bio {
     position: absolute;
     /* background-color: aqua;  */
-    top: 30px;
-    left: 340px;
+    top: 230px;
+    left: 250px;
   }
+
   #Cal {
     position: absolute;
     /* background-color: yellow; */
     top: 450px;
-    left: 340px;
+    left: 240px;
   }
+
   #cld {
     position: absolute;
     /* background-color: red; */
     top: 750px;
-    left: 343px;
+    left: 243px;
   }
+
   #Han {
     position: absolute;
     /* background-color: purple; */
-    left: 630px;
-    top: 750px;
+    left: 930px;
+    top: 550px;
   }
+
   #Heart {
     position: absolute;
     /* background-color: #008022; */
-    top: -30px;
-    left: 650px;
+    bottom: 30px;
+    left: 950px;
   }
+ 
   #Rad {
     position: absolute;
     /* background-color: #800000; */
     top: -20px;
     left: 940px;
+  
   }
   #shield {
     position: absolute;
@@ -212,16 +218,18 @@ const Remember = styled.div`
   width: 385px;
   height: 14px;
 
-  p {
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 16.21px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    color: #fff;
-  }
-`;
+
+p{
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.21px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #fff;
+
+}
+`
 
 const Label = styled.p`
   margin-bottom: -10px;
@@ -231,10 +239,12 @@ const Label = styled.p`
   line-height: 25px;
   color: #fff;
   text-align: left;
-`;
+
+`
 
 const Wrapper = styled.div`
-  width: 574px;
+  /* width: 574px; */
+  max-width: 574px;
   height: 715px;
   border-radius: 30px;
   display: flex;
@@ -243,15 +253,15 @@ const Wrapper = styled.div`
   gap: 1.5rem;
   margin: auto;
   margin-top: -30px;
-  justify-content: center;
-  background-color: #000000;
+  justify-content: center; 
+  background-color:#000000;
   padding: 40px;
 
-  @media (max-width: 450px) {
-    width: 100%;
-    margin-top: -20px;
-    padding: 10px;
-    border-radius: 25px;
+  @media(max-width: 450px){
+       width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
   }
 `;
 
@@ -262,8 +272,9 @@ const Header = styled.h1`
   line-height: 30px;
   letter-spacing: -0.04em;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   /* border: 2px solid blue; */
+  
 `;
 const Buttons = styled.button`
   display: flex;
@@ -283,11 +294,12 @@ const Buttons = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #228822;
+    background-color: #228822; 
+ 
   }
 
   @media (max-width: 760px) {
-    width: 70vw;
+    width: 70%;
   }
 `;
 const GoogleButton = styled.button`
@@ -319,15 +331,23 @@ const GoogleButton = styled.button`
     height: 20px;
     margin-left: 1rem;
   }
+
+  @media (max-width: 450px) {
+    width: 300px;
+    border-radius: 30px;
+    /* margin-top: -15px; */
+  }
+  @media (max-width: 380px) {
+    width: 280px;
+    border-radius: 15px;
+    /* margin-top: -15px; */
+  }
 `;
 
 const ForgotPasswordText = styled.p`
-  /* width: 280px;
-  height: 20px; */
   font-family: Inter;
   font-size: 14px;
   font-weight: 800;
-  line-height: 25px;
   text-align: center;
   color: #fff;
   cursor: pointer;
@@ -339,22 +359,23 @@ const ForgotPasswordText = styled.p`
 `;
 
 const SignUpText = styled.p`
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 15.13px;
-  letter-spacing: 0.05em;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #fff;
+font-family: Inter;
+font-size: 14px;
+font-weight: 600;
+line-height: 15.13px;
+letter-spacing: 0.05em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #fff;
+
+
 
   a {
     color: #228822;
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
       color: blue;
     }
   }
@@ -378,52 +399,44 @@ const Bysign = styled.h5`
     text-align: center;
     color: #228822;
 
-    &:hover {
-      color: blue;
-    }
+  &:hover {
+    color: blue;
   }
-`;
+ }
+`
 const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  /* @media (max-width: 450px) {
-    width: 80vw;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 25px;
-  } */
+    div {
+        position: relative;
+        margin: auto;
 
-  div {
-    position: relative;
-    margin: auto;
-
-    img {
-      position: absolute;
-      top: 18.72px;
-      left: 15px;
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
     }
-  }
-  input {
-    width: 478px;
-    height: 63px;
-    background-color: transparent;
-    padding: 0 10px 0 20px;
-    margin: auto;
-    margin-bottom: 5.2px;
-    font-size: 15px;
-    color: #ffffff;
-    align-items: center;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
+    input {
+        width: 478px;
+        height: 63px;
+        background-color: transparent;
+        padding: 0 10px 0 20px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
 
-    @media (max-width: 450px) {
-      width: 90vw;
-      margin-top: 20px;
-      padding: 10px;
-      border-radius: 15px;
+        @media(max-width: 760px){
+          width: 90vw;
+          /* border: 5px solid red; */
+        }
     }
-  }
+  
 `;
 const PasswordContainer = styled.div`
   display: flex;
@@ -433,42 +446,40 @@ const PasswordContainer = styled.div`
     position: relative;
     margin: auto;
 
-    img {
-      position: absolute;
-      top: 18.72px;
-      left: 15px;
+        img {
+            position: absolute;
+            top: 18.72px;
+            left: 15px
+        }
+        #Eyecon {
+          
+            left: 425px;
 
-      @media (max-width: 450px) {
-        /* top: 25px */
-        margin-top: 22px;
-      }
-  }
-    #Eyecon {
-      left: 425px;
-      /* right: 125px; */
-      @media (max-width: 450px) {
-        left: 310px;
-      }
+            /* @media (max-width: 760px) {
+              right: 20px;
+            } */
+            @media (max-width: 760px) {
+              left: 87%;
+            }
+            /* right: 125px; */
+        }
     }
-  }
-  input {
-    width: 478px;
-    height: 62.4px;
-    padding: 0 10px 0 50px;
-    margin: auto;
-    margin-bottom: 5.2px;
-    font-size: 15px;
-    color: #ffffff;
-    align-items: center;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
-    background-color: transparent;
+    input {
+        width: 478px;
+        height: 62.4px;
+        padding: 0 10px 0 50px;
+        margin: auto;
+        margin-bottom: 5.2px;
+        font-size: 15px;
+        color: #FFFFFF;
+        align-items: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        background-color: transparent;
 
-    @media (max-width: 450px) {
-    width: 90vw;
-    margin-top: 20px;
-    /* padding: 10px; */
-    border-radius: 15px;
-  }
-  }
-`;
+        @media(max-width: 760px){
+          width: 90vw;
+          /* border: 5px solid red; */
+        }
+}
+`

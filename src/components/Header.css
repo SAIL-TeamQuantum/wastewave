@@ -59,22 +59,19 @@
 
 
   }
+  
    
     }
+    .mobadd{
+      display: none;
+    }
+    
 
-  /* .nav-links a:hover {
-    color: #228822; 
-  
- 
-  } */
+
   
   .nav-links .active {
     color: #228822;
 
-    /* &:hover{
-      color: #fff;
-   
-    } */
     
   }
   #logiin{
@@ -122,15 +119,15 @@
     .nav-links.active {
       display: flex; /* Show nav links when active class is added */
     }
+    .mobadd{
+      display: inline-block;
+    }
   
     .hamburger {
       display: flex; /* Show hamburger menu on mobile */
     }
   
-    /* Hide Sign-Up Button */
-    .signup-btn {
-      display: none;
-    }
+  
   
     /* Show Sign-Up Button in Menu */
     .nav-links.active .signup-btn {

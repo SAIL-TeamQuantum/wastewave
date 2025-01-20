@@ -27,7 +27,7 @@ const Home = () => {
           healthy environment.
         </p>
     
-        <Link to="/signup"><button className="action-button">SEE HOW IT WORKS</button></Link>
+        <Link to="/userselectmenu"><button className="action-button">SEE HOW IT WORKS</button></Link>
       </div>
       <div className="image-container">
         <img src={image} alt="Waste Scheduling Illustration" />
