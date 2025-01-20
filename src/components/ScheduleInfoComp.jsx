@@ -63,7 +63,7 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
     // Only allow numeric input
     if (/^\d*$/.test(value)) {
       setBagCount(value);
-    }
+    } 
   };
 
   return (
