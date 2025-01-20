@@ -15,7 +15,7 @@ import lockkey from "../assets/lockkey.png";
 import eye from "../assets/eye.png";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
