@@ -102,14 +102,14 @@ const VerificationDMX = ({ length = 6 }) => {
             <img  src={Logo} alt="logo" />
             <h1>ASTE WAVE</h1>
         </LogoSec>
-        <img id="bio" src={Biohazard} alt="" />
+        {/* <img id="bio" src={Biohazard} alt="" />
         <img id="Cal" src={Calenda} alt="" />
         <img id="cld" src={Calendar} alt="" />
         <img id="Han" src={HandHear} alt="" />
         <img id="Heart" src={HandHeart} alt="" />
         <img id="Rad" src={Radioactive} alt="" />
         <img id="shield" src={Shieldplu} alt="" />
-        <img id="shlpls" src={Shieldplus} alt="" />
+        <img id="shlpls" src={Shieldplus} alt="" /> */}
 
         <Container>
           <p>Please enter the 6-digit code sent to <b>{`${userId.email}`}</b></p>
@@ -126,7 +126,7 @@ const VerificationDMX = ({ length = 6 }) => {
                     />
                 ))}
             </div>
-            <p>You typed: {otp}</p>
+            {/* <p>You typed: {otp}</p> */}
             <Buttons to="" type="submit" onClick={handleSubmit}>Log In</Buttons>
         </Container>
     </Wrapper>
@@ -213,7 +213,7 @@ const LogoSec = styled.div`
         position: absolute;
         top: 40px;
         left: 80px;
-        color: #81B622;
+        color: #000;
 }
 `
 const Container = styled.div`
@@ -227,13 +227,16 @@ const Container = styled.div`
     margin: auto;
     margin-top: 30px;
     justify-content: center; 
-    background-color:#81B622;
+    background-color:#000;
     padding: 40px;
+    color: white;
+    text-align: center;
 
     @media(max-width: 450px){
         width: 100%;
         margin-top: 20px;
-        padding: 10px;
+        padding-top: 50px;
+        /* padding: 10px; */
         border-radius: 25px;
     }
 `
@@ -254,8 +257,12 @@ const Buttons = styled.button`
   margin-top: 60px;
 
   &:hover {
-    background-color: blue; 
+    background-color: #228b22; 
  
+  }
+
+  @media (max-width: 760px) {
+    width: 70vw;
   }
 `;
 const Input = styled.input`
