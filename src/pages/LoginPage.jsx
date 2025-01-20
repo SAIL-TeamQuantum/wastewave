@@ -61,14 +61,14 @@ const LoginPage = () => {
         <img src={Logo} alt="logo" />
         <h1>ASTE WAVE</h1>
       </LogoSec>
-      <img id="bio" src={Biohazard} alt="" />
+      {/* <img id="bio" src={Biohazard} alt="" />
       <img id="Cal" src={Calenda} alt="" />
       <img id="cld" src={Calendar} alt="" />
       <img id="Han" src={HandHear} alt="" />
       <img id="Heart" src={HandHeart} alt="" />
       <img id="Rad" src={Radioactive} alt="" />
       <img id="shield" src={Shieldplu} alt="" />
-      <img id="shlpls" src={Shieldplus} alt="" />
+      <img id="shlpls" src={Shieldplus} alt="" /> */}
       <Wrapper>
         <Header>Log In</Header>
         <Label>Email Address</Label>
@@ -138,10 +138,6 @@ const LogoSec = styled.div`
   margin-bottom: 50px;
   margin-top: 40px;
 
-
-  @media (max-width: 450px) {
-    margin-left: -00px;
-  }
 
   img {
     width: 100px;
