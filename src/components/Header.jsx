@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css"; 
 import logo from "../assets/images/wlogo.png"; 
-import {NavLink, Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 const Header = () => {
@@ -30,9 +30,9 @@ const Header = () => {
       </div>
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <li><a className="active">HOME</a></li>
-        <li><NavLink to="/About"><a href="#about">ABOUT</a></NavLink></li>
+        <li><Link to=""><a href="">ABOUT</a></Link></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><NavLink><a href="/faqs">FAQ's</a></NavLink></li>
+        <li><Link><a href="/faqs">FAQ's</a></Link></li>
         <li><a href="#contact">CONTACT US</a></li>
       </ul>
      

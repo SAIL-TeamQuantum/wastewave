@@ -45,8 +45,9 @@
     list-style: none;
     display: flex;
     gap: 30px;
-  
     
+    
+ 
       }
       
   .nav-links a {
@@ -56,22 +57,27 @@
     font-size: 14px;
     transition: color 0.3s ease;
 
+    @media(max-width:450px){
+      color: #228822;
+
+
+  }
    
     }
 
-  .nav-links a:hover {
+  /* .nav-links a:hover {
     color: #228822; 
   
  
-  }
+  } */
   
   .nav-links .active {
     color: #228822;
 
-    &:hover{
+    /* &:hover{
       color: #fff;
    
-    }
+    } */
     
   }
   #logiin{
