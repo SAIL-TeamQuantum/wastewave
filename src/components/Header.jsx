@@ -3,6 +3,7 @@ import "./Header.css";
 import logo from "../assets/images/wlogo.png"; 
 import {Link} from "react-router-dom"
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,10 +29,10 @@ const Header = () => {
         <div className="line"></div>
       </div>
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-        <li><a href="/home" className="active">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
+        <li><a className="active">HOME</a></li>
+        <li><Link to=""><a href="">ABOUT</a></Link></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#faqs">FAQ's</a></li>
+        <li><Link><a href="/faqs">FAQ's</a></Link></li>
         <li><a href="#contact">CONTACT US</a></li>
       </ul>
      

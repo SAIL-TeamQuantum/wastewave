@@ -155,39 +155,23 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
       <SignupWrapper>
         <InputWrapper>
           <Header>Sign Up</Header>
-          <Label>First Name</Label>
+
+          <Label>FirstName</Label>
           <InputContainer>
             <div>
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter First Name"
-                value={firstName}
-                onInput={handleFirstNameInput}
-                onChange={handleFirstNameInput}
-                autoComplete="email"
-              />
+                <input id="email" type="email" placeholder="Enter FirstName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
 
-              {/* <p>You typed: {email}</p> */}
+                {/* <p>You typed: {email}</p> */}
             </div>
-            {errors.firstName && <ErrorText>{errors.firstName}</ErrorText>}
           </InputContainer>
-          <Label>Last Name</Label>
+          <Label>LastName</Label>
           <InputContainer>
             <div>
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter Last Name"
-                onInput={handleLastNameInput}
-                onChange={handleLastNameInput}
-                autoComplete="email"
-              />
+                <input id="email" type="email" placeholder="Enter LastName" onInput={handleEmailInput} onChange={handleEmailInput} autoComplete="email"/>
 
-              {/* <p>You typed: {email}</p> */}
-              {errors.lastName && <ErrorText>{errors.lastName}</ErrorText>}
+                {/* <p>You typed: {email}</p> */}
             </div>
-          </InputContainer>
+
           <Label>Email Address</Label>
           <InputContainer>
             <div>
@@ -233,6 +217,7 @@ const SignUpProps = ({ GoogleIcon = GoogleIconImg, Title }) => {
 
             </div>
           </PasswordContainer>
+          </InputContainer>
         </InputWrapper>
         <Wrapper>
           <p>
@@ -287,30 +272,33 @@ const ResponseMessage = styled.p`
   margin: 30px;
 `;
 const LogoSec = styled.div`
-  position: relative;
-  width: 300px;
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 70px;
+  
+    position: relative;
+    width: 300px;
+    margin: auto;
+    margin-left: 300px;
+    margin-bottom: 30px;
 
-  @media (max-width: 450px) {
-    margin-top: 40px;
-    margin-bottom: 60px;
-  }
-  img {
-    width: 100px;
-  }
+    @media(max-width: 450px){
+      position: relative;
+      right:250px
+    }
 
-  h1 {
-    position: absolute;
-    top: 38px;
-    left: 85px;
-    color: #000000;
-  }
-`;
+  
+    img {
+        width: 100px;
+    }
+
+    h1 {
+        position: absolute;
+        top: 30px;
+        left: 85px;
+        color: #000000;   
+}
+`
 const SignupWrapper = styled.div`
-  max-width: 574px;
-  height: auto;
+  width: 574px;
+  height: 920px;
   border-radius: 30px;
   background-color: #000000;
   display: flex;
@@ -318,12 +306,13 @@ const SignupWrapper = styled.div`
   align-items: center;
   border-radius: 30px;
   margin: auto;
-  padding-bottom: 50px;
+  margin-top: -30px;
 
-  @media (max-width: 450px) {
-    width: 100%;
-    padding: 20px 0px;
-    border-radius: 25px;
+  @media(max-width: 450px){
+       width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
   }
 `;
 
@@ -394,8 +383,7 @@ const SignupBtn = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 10px;
-
+  margin-top:10px;
   h3 {
     color: white;
   }
@@ -453,38 +441,47 @@ const InsideText = styled.div`
   letter-spacing: 5%;
   text-align: center;
 
-  #signup {
-    color: white;
-    font-weight: 600;
-  }
+    #signup {
+      color: white;
+      font-weight: 600;
+
+    }
 `;
 
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 50px;
+  /* border: 2px solid red; */
+  margin-top: 60px;
 
-  @media (max-width: 450px) {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 25px;
+
+
+  @media(max-width: 450px){
+   
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 25px;
   }
 `;
 
 const Label = styled.p`
-  margin-bottom: -10px;
-  /* border: 2px solid blue; */
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 25px;
-  text-align: left;
-  color: white;
-`;
+/* margin-bottom: -10px; */
+/* border: 2px solid blue; */
+font-family: Inter;
+font-size: 14px;
+font-weight: 800;
+line-height: 25px;
+text-align: left;
+color: white;
+/* border: 2px solid yellow; */
+
+
+  
+`
 const Password = styled.p`
-  margin-bottom: -10px;
+  /* margin-bottom: -10px; */
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;
@@ -494,7 +491,7 @@ const Password = styled.p`
   color: white;
 `;
 const Confirmation = styled.p`
-  margin-bottom: -10px;
+  /* margin-bottom: -10px; */
   /* border: 2px solid blue; */
   font-family: Inter;
   font-size: 14px;

@@ -13,7 +13,7 @@
     position: relative;
     z-index: 1000;
     background-color: black ;
-    /* border: 1px solid red; */
+
   }
   
   /* Logo Section */
@@ -24,7 +24,7 @@
     @media (max-width: 450px) {
       margin-top: 22px;
     }
-    /* border: 1px solid red; */
+
   }
 
 .hamburger {
@@ -45,23 +45,39 @@
     list-style: none;
     display: flex;
     gap: 30px;
-  }
-  
-  
+    
+    
+ 
+      }
+      
   .nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     font-size: 14px;
     transition: color 0.3s ease;
+
+    @media(max-width:450px){
+      color: #228822;
+
+
   }
+   
+    }
+
+  /* .nav-links a:hover {
+    color: #228822; 
   
-  .nav-links a:hover {
-    color: #4e8c1b; 
-  }
+ 
+  } */
   
   .nav-links .active {
-    color: #73b42d;
+    color: #228822;
+
+    /* &:hover{
+      color: #fff;
+   
+    } */
     
   }
   #logiin{
