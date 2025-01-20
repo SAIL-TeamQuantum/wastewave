@@ -435,7 +435,7 @@ const InputContainer = styled.div`
         border: 2px solid #FFFFFF;
         border-radius: 15px;
     }
-  }
+  
 `;
 const PasswordContainer = styled.div`
   display: flex;
