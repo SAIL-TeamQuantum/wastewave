@@ -38,7 +38,7 @@ const LoginPage = () => {
       console.log(payload);
 
       const response = await axios.post(
-        "https://wastewave-backend.onrender.com/api/login",
+        "https://wastewave-backend.onrender.com/api/signin",
         payload
       );
       console.log(response);
