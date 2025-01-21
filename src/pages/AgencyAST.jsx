@@ -133,6 +133,7 @@ const AgencyAst = () => {
            
 
             {visibleComponent === "dashboard" && (
+                
                 <div className="body-content ">
                     <div className="mobile-header">
                     <h className="body-H">WELCOME, {companyName}</h>

@@ -55,7 +55,7 @@ const ScheduleInfoAST = ({ selectedDate, onScheduleComplete, onBack }) => {
     };
 
   // Calculate the fees
-  const bagFee = bagCount ? parseInt(bagCount, 10) * 2 : 0;
+  const bagFee = bagCount ? parseInt(bagCount, 10) * 2000 : 0;
   const totalFee = bagFee + transportFee;
 
   const handleBagCountChange = (event) => {

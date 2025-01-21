@@ -153,6 +153,6 @@ text-align: left;
 
     &:hover{
         color: white;
-        background-color: red;
+        background-color: #228b22;
     }
 }

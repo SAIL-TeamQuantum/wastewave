@@ -114,7 +114,7 @@ const ScheduleAST = () => {
               <thead>
                 <tr>
                   <th>Sun</th>
-                  <th>Mon</th>
+                  <th>Mon</th> 
                   <th>Tues</th>
                   <th>Wed</th>
                   <th>Thur</th>

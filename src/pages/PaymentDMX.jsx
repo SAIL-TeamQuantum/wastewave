@@ -4,7 +4,7 @@ import axios from "axios";
 
 const CheckoutPage = () => {
   const [email, setEmail] = useState("");
-  const [totalAmount, setTotalAmount] = useState(5000); // Example amount in NGN kobo
+  const [totalAmount, setTotalAmount] = useState(450000); // Example amount in NGN kobo
   const [isProcessing, setIsProcessing] = useState(false);
 
   const handleCheckout = async () => {

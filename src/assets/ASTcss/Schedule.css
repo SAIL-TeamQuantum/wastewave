@@ -86,7 +86,7 @@
   
   .calendar td.selected {
     background-color: #228822;
-    color: #228822;
+    color: #000000;
     position: relative;
   }
   

@@ -29,6 +29,7 @@ const app = () => {
         <Route path='/userselectmenu' element={ <UserSelectMenu/>}/>
         <Route path='/signup' element={ <Signup/>}/>
         <Route path='/verification' element={ <VerificationDMX/>}/>
+        <Route path='/company/verification' element={ <CompanyVerification/>}/>
         <Route path='login' element={ <LoginPage/>}/>
         <Route path='/profile' element={<Profile />}/>
         <Route path='/about' element={<AboutDMX/>}/>

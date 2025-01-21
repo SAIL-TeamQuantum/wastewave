@@ -38,7 +38,7 @@ const LoginPage = () => {
       console.log(payload);
 
       const response = await axios.post(
-        "https:/wastewave-backend.onrender.com/api/signin",
+        "https://wastewave-backend.onrender.com/api/login",
         payload
       );
       console.log(response);
@@ -117,7 +117,8 @@ const LoginPage = () => {
 
         <Remember>
           <p>Remember me</p>
-          <img src={Remem} alt="" />
+          <input type="checkbox" name="" id="" />
+          {/* <img src={Remem} alt="" /> */}
         </Remember>
         <Buttons to="" type="submit" onClick={handleSubmit}>
           Log In
@@ -245,6 +246,14 @@ p{
   text-align: left;
   color: #fff;
 
+}
+input {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid blue ;
+  /* outline: 3px solid #228B22; */
+  
 }
 `
 
