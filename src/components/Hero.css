@@ -2,7 +2,7 @@
 .maincontainer{
     display: flex;
     max-width: 1440px;
-    height: calc(100vh - 56px);
+    height: calc(100vh);
     margin: auto;
     align-items: center;
     background-color: #fff;
