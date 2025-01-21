@@ -30,10 +30,10 @@
   width: 100vw;
   padding: 0 30px;
   margin: 0;
-  background-color: var(--background-color1);
+  background-color: #fff;
   position: fixed;
   z-index: 100;
-  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,7 @@
   height: 42px;
   border-radius: 50px 0 0 50px;
   background-color: var(--background-color2);
-  box-Shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-Shadow: 0 2px 3px rgba(0,0,0,0.2);
   padding: 0 20px;
   font-size: 15px;
   outline: none;
@@ -87,7 +87,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0px 50px 50px 0px;
-  background-color: var(--background-color3);
+  background-color: var(--primary-color);
   cursor: pointer;
   box-Shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -101,7 +101,7 @@
   height: 7px;
   width: 7px;
   position: absolute;
-  background-color: #fa7bb4;
+  background-color: black;
   border-radius: 50%;
   left: 19px;
   top: 8px;
@@ -109,9 +109,9 @@
 .dp {
   height: 40px;
   width: 40px;
-  background-color: #000000;
+  background-color: #fff;
   border-radius: 50%;
-  border: 2px solid var(--background-color3);
+  border: 2px solid var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +124,7 @@
 
 .dpicn {
   height: 42px;
-  color: var(--background-color3);
+  color: var(var(--primary-color));
 }
 
 
@@ -134,8 +134,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--background-color1);
-    box-Shadow: 0 2px 10px rgba(0,0,0,0.2);
+    background-color: #000000;
+    /* box-Shadow: 0 2px 10px rgba(0,0,0,0.2); */
     padding-top: 6%;
    
    
@@ -152,7 +152,7 @@
   .icon {
     height: 20px;
     width: 20px;
-    color: black;
+    color: white;
     margin: auto;
     margin-left: 0;
     margin-right: 0;
@@ -161,15 +161,16 @@
   p {
     font-size: 20px;
     font-weight: 600;
-    color: black;
+    color: white;
     margin: auto;
+    margin-top: 10px;
     margin-left: 0;
     margin-right: 0;
   }
 }
 
 .sidebar-content:hover {
-  background-color: var(--background-color3);
+  background-color: var(--primary-color);
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -180,7 +181,7 @@
     position: absolute;
     width: 100%;
     margin-left: 19%;
-    margin-top: 6%;
+    margin-top: 8%;
     padding: 0 8.2% 0 0%;
     overflow: hidden;
 
@@ -188,7 +189,7 @@
     .body-H {
         font-size: 20px;
         font-weight: 600;
-        color: var(--primary-color);
+        color: black;
         
     }
 }
@@ -250,7 +251,7 @@
 .icon {
     height: 20px;
     width: 20px;
-    color: var(--background-color3);
+    color: var(--primary-color);
     margin: auto;  
 }
 .boldP {
