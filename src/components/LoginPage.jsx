@@ -1,4 +1,4 @@
-
+import jwtDecode from 'jwt-decode';
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
@@ -45,7 +45,7 @@ const LoginPage = () => {
         const response = await axios.post('https:/wastewave-backend.onrender.com/api/signin', payload);
         const userId = response.data.data._id;
         console.log(userId)
-        navigate(`/home/${userId}`);
+        // navigate(`/home/${userId}`);
         setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
         if (error.response) {

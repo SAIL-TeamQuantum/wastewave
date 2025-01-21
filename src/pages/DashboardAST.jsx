@@ -15,15 +15,21 @@ import ScheduleAST from "./ScheduleAST";
 import DashboardHeaderAST from "../components/DashboardHeaderAST";
 import DashboardInfo from "../components/DashboardMoreInfoAST";
 import DashboardFooter from "../components/DashboardFooterAST";
+import { useLocation, useParams } from "react-router-dom";
+
 
 const DashboardAst = () => {
+  const { userId } = useParams(); // Extract userId from URL
+  const location = useLocation();
+  const firstName = location.state?.firstName || "Guest";
+
   return (
     <div className="body-container">
       <div className="main-container">
         <DashboardHeaderAST />
         <div className="flex-container Boxcontainer">
           <div className="">
-            <p>Good Day!</p>
+            <p>Good Day {firstName}!</p>
             <h3>
               Don’t forget to <span>schedule</span> the trash
             </h3>

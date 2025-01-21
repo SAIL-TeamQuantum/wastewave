@@ -8,6 +8,8 @@ import Logo from "../assets/logo.png";
 import Remem from "../assets/remem.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {jwtDecode} from 'jwt-decode';
+
 
 
 const LoginPage = () => {
@@ -39,10 +41,25 @@ const LoginPage = () => {
         "https:/wastewave-backend.onrender.com/api/signin",
         payload
       );
-      const userId = response.data.data._id;
-      console.log(userId);
+      console.log(response);
       
-      navigate(`/home`);
+      // const token = response.data.data.token;
+      // const decodedToken = jwtDecode(token);
+      // const userId = decodedToken.id; 
+
+      const { data } = response.data;
+      const token = data.token;
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.id; // Decode the user ID from the JWT token
+      const firstName = decodedToken.firstName; // Retrieve first name if available
+
+      console.log(decodedToken);
+      
+      console.log("User ID:", userId);
+      console.log("First Name:", firstName);
+      // const userId = response.data.data._id;
+      
+      navigate(`/home/${userId}`, { state: { firstName } });
       setResponseMessage(`Success: ${response.data.message}`);
     } catch (error) {
       if (error.response) {

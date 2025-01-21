@@ -1,14 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Logo from "../assets/logo.png"
-import Biohazard from '../assets/biohazard.png';
-import Calenda from '../assets/calenda.png';
-import Calendar from '../assets/calendar.png';
-import HandHear from '../assets/handear.png';
-import HandHeart from '../assets/handheart.png';
-import Radioactive from '../assets/radioactive.png';
-import Shieldplus from '../assets/shieldplus.png';
-import Shieldplu from '../assets/shieldplu.png';
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"; 
 
