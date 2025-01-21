@@ -34,12 +34,12 @@ const Header = () => {
         <li><a href="#services">SERVICES</a></li>
         <li><Link><a href="/faqs">FAQ's</a></Link></li>
         <li><a href="#contact">CONTACT US</a></li>
-        <li className="mobadd"><Link to="/login">LOGIN</Link></li>
-        <li className="mobadd"><Link to="/signup">SIGNUP</Link></li>
+        <li className="mobadd"><Link to="/loginselectmenu">LOGIN</Link></li>
+        <li className="mobadd"><Link to="/userselectmenu">SIGNUP</Link></li>
       </ul>
      
       <div className="signup-btn">
-      <Link id="logiin" to="/login"><button>LOG IN</button></Link>
+      <Link id="logiin" to="/loginselectmenu"><button>LOG IN</button></Link>
         <Link to="/userselectmenu"><button>SIGN UP</button></Link>
       </div>
     </nav>

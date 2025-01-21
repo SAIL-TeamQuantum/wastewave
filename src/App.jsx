@@ -14,7 +14,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPageDAMI'
 import PaymentDMX from '../src/pages/PaymentDMX'
 import Success from "./pages/Success";
+import CompanySignUp from "./pages/companySignUp";
+import CompanyLogin from "./pages/companyLogin";
 import VerificationDMX from "./pages/VerificationDMX"
+import CompanyVerification from "./pages/companyVerification"
+import LoginSelectMenu from './pages/LoginSelectMenu'
 
 const app = () => {
   return ( 
@@ -33,9 +37,13 @@ const app = () => {
         <Route path='/home/:id' element={<DashboardAST />}/>
         <Route path='/ScheduleAST' element={<ScheduleAST />}/>
         <Route path='/DashboardAST' element={<DashboardAST />}/>
-        <Route path='/AgencyAst' element={<AgencyAst />}/>   
+        <Route path='/company/home/:id' element={<AgencyAst />}/>   
         <Route path='/payment' element={<PaymentDMX />}/>   
         <Route path='payment-success' element={<Success />}/>   
+        <Route path='/company/signup' element={<CompanySignUp />}/>
+        <Route path='/company/login' element={<CompanyLogin />}/>
+        <Route path='/loginselectmenu' element={ <LoginSelectMenu/>}/>
+
       </Routes>
     </Router>
     {/* <h1>boy</h1> */}

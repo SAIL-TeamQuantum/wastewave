@@ -19,9 +19,12 @@ import {
 import YearlyStatsChart from "../components/ChartAST";
 import DataTable from "../components/OrderTable";
 import Setting from "../components/Settings";
+import { useLocation, useParams } from "react-router-dom";
 
 const AgencyAst = () => {
     
+  const location = useLocation();
+  const companyName = location.state?.companyName || "Guest";
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [visibleComponent, setVisibleComponent] = useState("dashboard"); // Default to 'dashboard'
 
@@ -132,7 +135,7 @@ const AgencyAst = () => {
             {visibleComponent === "dashboard" && (
                 <div className="body-content ">
                     <div className="mobile-header">
-                    <h className="body-H">WELCOME, ASTUTE</h>
+                    <h className="body-H">WELCOME, {companyName}</h>
                     <div className="dashboard-container mobile-flex">
                         <div className="dashboard-info ">
                             <div className="icon-bar">

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ButtonProps from "../Reusables/Buttonprops";
+import ButtonProps from "../Reusables/LoginButtonProps";
 import Biohazard from "../assets/biohazard.png";
 import Calenda from "../assets/calenda.png";
 import Calendar from "../assets/calendar.png";
@@ -12,7 +12,7 @@ import Shieldplu from "../assets/shieldplu.png";
 import Logo from "../assets/logo.png";
 import NavHeader from "../components/Header";
 
-const UserSelectMenu = () => {
+const LoginSelectMenu = () => {
   return (
     <Cover>
       <LogoSec>
@@ -41,7 +41,7 @@ const UserSelectMenu = () => {
   );
 };
 
-export default UserSelectMenu;
+export default LoginSelectMenu;
 
 const LogoSec = styled.div`
   position: relative;
@@ -145,7 +145,6 @@ const MenuDiv = styled.div`
     margin-bottom: 5rem;
     text-align: center;
     /* margin-bottom: 200px; */
-
     @media (max-width: 630px) {
       font-size: 12px;
     }
@@ -160,6 +159,5 @@ const MenuDiv = styled.div`
   @media (max-width: 630px) {
     width: 90vw;
     margin-top: 50px;
-    /* border: 1px solid red; */
   }
 `;
